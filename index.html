@@ -1,148 +1,444 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بطاقة التواصل - عيسى محمد</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <title>بطاقة التواصل الشخصية - عيسى محمد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Tajawal', sans-serif;
-            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
-            color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 600px;
+        
+        body {
+            background: linear-gradient(135deg, #303031, #1E1D1D);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #e6e6e6;
+        }
+        
+        .container {
             width: 100%;
-            padding: 30px;
+            max-width: 800px;
+            background-color: #1E1D1D;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+            border: 1px solid #5A4D41;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            background: linear-gradient(to right, #5A4D41, #7E6957);
+            color: #e6e6e6;
             text-align: center;
+            padding: 30px 20px;
             position: relative;
         }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .content {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .section-title {
+            color: #867C70;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #7E6957;
+            font-size: 1.8rem;
+            text-align: center;
+            width: 90%;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #1E1D1D, #303031);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            transform: scale(0.95);
+            transition: transform 0.5s ease;
+            margin: 20px 0 40px;
+            border: 1px solid #5A4D41;
+        }
+        
+        .contact-card.active {
+            transform: scale(1);
+        }
+        
+        .avatar-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
+        }
+        
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             background: linear-gradient(135deg, #7E6957, #5A4D41);
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: #fff;
-            font-size: 40px;
+            align-items: center;
+            color: #e6e6e6;
+            font-size: 60px;
             font-weight: bold;
-            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
         }
-        h1 {
-            margin: 10px 0 5px;
-            font-size: 1.8rem;
+        
+        .avatar-ring {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #867C70, #5A4D41);
+            z-index: 1;
+            animation: rotate 15s linear infinite;
         }
-        .title {
-            color: #777;
-            font-size: 1.1rem;
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        .info {
-            margin-top: 30px;
+        
+        .contact-name {
+            font-size: 2.2rem;
+            color: #e6e6e6;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .contact-title {
+            color: #867C70;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            position: relative;
+            display: inline-block;
+            padding: 0 15px;
+        }
+        
+        .contact-title:before,
+        .contact-title:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: #7E6957;
+        }
+        
+        .contact-title:before {
+            right: 100%;
+        }
+        
+        .contact-title:after {
+            left: 100%;
+        }
+        
+        .contact-info {
+            text-align: right;
+            margin: 35px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(90, 77, 65, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid #5A4D41;
+        }
+        
+        .contact-item:hover {
+            background: rgba(90, 77, 65, 0.4);
+            transform: translateX(-5px);
+        }
+        
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #7E6957, #5A4D41);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6e6e6;
+            margin-left: 15px;
+            font-size: 22px;
+        }
+        
+        .contact-details {
+            flex: 1;
             text-align: right;
         }
-        .info-item {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .info-item i {
-            background: #5A4D41;
-            color: #fff;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 18px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .info-text {
-            flex: 1;
-        }
-        .label {
+        
+        .contact-label {
             font-size: 0.9rem;
-            color: #888;
+            color: #867C70;
+            margin-bottom: 3px;
         }
-        .value {
+        
+        .contact-value {
             font-size: 1.1rem;
-            color: #333;
-            font-weight: bold;
+            color: #e6e6e6;
+            font-weight: 500;
         }
-        .whatsapp {
+        
+        .contact-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
-        .whatsapp a {
-            text-decoration: none;
-            background: #25D366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-size: 1rem;
-            display: inline-flex;
+        
+        .social-link {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7E6957, #5A4D41);
+            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
-            transition: background 0.3s ease;
+            color: #e6e6e6;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .whatsapp a:hover {
-            background: #1ebe5d;
+        
+        .social-link:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #867C70, #7E6957);
+            z-index: -1;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            border-radius: 50%;
         }
+        
+        .social-link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-link:hover:before {
+            transform: scale(1);
+        }
+        
         .footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #5A4D41, #303031);
+            color: #867C70;
+            font-size: 1.1rem;
+            border-top: 1px solid #5A4D41;
+        }
+        
+        .decoration {
+            position: absolute;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .dec-1 {
+            top: 20px;
+            left: 20px;
+            font-size: 8rem;
+            transform: rotate(15deg);
+        }
+        
+        .dec-2 {
+            bottom: 20px;
+            right: 20px;
+            font-size: 6rem;
+            transform: rotate(-20deg);
+        }
+        
+        .watermark {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: rgba(134, 124, 112, 0.15);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transform: rotate(-15deg);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-name {
+                font-size: 1.8rem;
+            }
+            
+            .contact-title {
+                font-size: 1.1rem;
+            }
+            
+            .contact-item {
+                padding: 12px;
+            }
+            
+            .contact-item i {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+            
+            .avatar-container {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .avatar-ring {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-name {
+                font-size: 1.6rem;
+            }
+            
+            .contact-title {
+                font-size: 1rem;
+            }
+            
+            .contact-title:before,
+            .contact-title:after {
+                width: 20px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-item i {
+                margin: 0 auto 10px;
+            }
+            
+            .contact-details {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="avatar">ع م</div>
-        <h1>عيسى محمد</h1>
-        <div class="title">طالب يسعى إلى التميّز</div>
-        <div class="info">
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <div class="info-text">
-                    <div class="label">البريد الإلكتروني</div>
-                    <div class="value">ysym7003@gmail.com</div>
+    <div class="container">
+        <header>
+            <div class="decoration dec-1"><i class="fas fa-address-card"></i></div>
+            <div class="decoration dec-2"><i class="fas fa-id-card"></i></div>
+            
+            <h1><i class="fas fa-address-card"></i> بطاقة التواصل الشخصية</h1>
+            <p>معلومات الاتصال والبيانات الشخصية</p>
+        </header>
+        
+        <div class="content">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> المعلومات الشخصية</h2>
+            
+            <div class="contact-card active">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar">ع م</div>
+                </div>
+                
+                <h3 class="contact-name">عيسى محمد</h3>
+                <p class="contact-title">طالب</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">البريد الإلكتروني</div>
+                            <div class="contact-value">ysym7003@gmail.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">رقم الهاتف</div>
+                            <div class="contact-value">01288840809</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">العنوان</div>
+                            <div class="contact-value">Wadi El-Kamar, Al Meks, Dekhela, Alexandria Governorate, Egypt</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">الموقع الإلكتروني</div>
+                            <div class="contact-value">www.example.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="info-item">
-                <i class="fas fa-mobile-alt"></i>
-                <div class="info-text">
-                    <div class="label">رقم الهاتف</div>
-                    <div class="value">01288840809</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="info-text">
-                    <div class="label">العنوان</div>
-                    <div class="value">وادي القمر - المكس - الدخيلة - الإسكندرية</div>
-                </div>
-            </div>
+            
+            <div class="watermark">عيسى محمد</div>
         </div>
-        <div class="whatsapp">
-            <a href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank">
-                <i class="fab fa-whatsapp"></i> تواصل على واتساب
-            </a>
+        
+        <div class="footer">
+            <p>© 2023 بطاقة التواصل الشخصية | تم التصميم باستخدام الألوان المطلوبة</p>
         </div>
-        <div class="footer">© 2025 - بطاقة شخصية رقمية | تصميم خاص لعيسى محمد</div>
     </div>
 </body>
-</html>
+    </html>
