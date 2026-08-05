@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071721" id="theme-color-meta" />
+    <meta
+      name="description"
+      content="الملف المهني والبطاقة التفاعلية لعيسى محمد — مطور واجهات أمامية ومصمم UI/UX بالإسكندرية."
+    />
+    <meta name="keywords" content="Frontend Developer, UI/UX Designer, Eissa Mohammed, Web Developer Alexandria, React, JavaScript" />
+    <meta name="author" content="Eissa Mohammed" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eissa89.github.io/eissa-card/" />
+    <meta property="og:title" content="عيسى محمد — مطور واجهات ومصمم تجربة المستخدم" />
+    <meta property="og:description" content="تجارب ويب حديثة ومبتكرة تجمع بين الأداء العالي والجمال البصري." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://eissa89.github.io/eissa-card/" />
+    <meta name="twitter:title" content="عيسى محمد — Frontend & UI/UX" />
+    <meta name="twitter:description" content="بناء واجهات إنتاجية عالية الجودة مع تركيز على الأداء وسهولة الوصول." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23d9ef62'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' fill='%23102d3a'>ع</text></svg>" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://eissa89.github.io/eissa-card/#person",
+            "name": "عيسى محمد",
+            "alternateName": "Eissa Mohammed",
+            "jobTitle": "Front-End Developer & UI/UX Designer",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Alexandria",
+              "addressCountry": "Egypt"
+            },
+            "email": "mailto:ysym7003@gmail.com",
+            "telephone": "+201288840809",
+            "url": "https://eissa89.github.io/eissa-card/",
+            "sameAs": [
+              "https://github.com/Eissa89",
+              "https://www.facebook.com/share/16uQ1C3d2y/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://eissa89.github.io/eissa-card/#website",
+            "url": "https://eissa89.github.io/eissa-card/",
+            "name": "Eissa Mohammed Portfolio",
+            "inLanguage": ["ar", "en"]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Web Application Manifest (Data URL inline fallback) -->
+    <link rel="manifest" id="manifest-placeholder" />
+
+    <title id="site-title">عيسى محمد — البورتفوليو والبطاقة التفاعلية</title>
+
+    <style>
+      :root {
+        --bg: #071721;
+        --bg-soft: #0d2732;
+        --panel: #0d202b;
+        --ink: #edf4ec;
+        --muted: #abc1b9;
+        --line: rgba(255, 255, 255, 0.12);
+        --lime: #d9ef62;
+        --coral: #e07b5b;
+        --navy: #102d3a;
+        --radius-lg: 1.8rem;
+        --radius-md: 1.2rem;
+        --shadow: 0 16px 32px rgba(0,0,0,0.35);
+        --font-serif: Georgia, 'Times New Roman', serif;
+        --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      html.light {
+        --bg: #f4f1e9;
+        --bg-soft: #dce8df;
+        --panel: #ffffff;
+        --ink: #102d3a;
+        --muted: #35606b;
+        --line: rgba(16, 45, 58, 0.16);
+        --shadow: 0 16px 32px rgba(16, 45, 58, 0.08);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        transition: background 0.3s ease, color 0.3s ease;
+        overflow-x: hidden;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea, select { font: inherit; color: inherit; }
+      button { cursor: pointer; border: 0; background: transparent; }
+      
+      :focus-visible {
+        outline: 3px solid var(--lime);
+        outline-offset: 4px;
+      }
+
+      /* Skip Links */
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        right: 1rem;
+        z-index: 1000;
+        padding: 0.8rem 1.4rem;
+        background: var(--lime);
+        color: var(--navy);
+        font-weight: 800;
+        border-radius: 99px;
+        transition: top 0.2s;
+      }
+      .skip-link:focus { top: 1rem; }
+
+      /* Custom Cursor */
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--lime);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        transition: transform 0.1s ease-out, width 0.2s, height 0.2s, background 0.2s;
+      }
+      .custom-cursor.hovered {
+        width: 45px;
+        height: 45px;
+        background: rgba(217, 239, 98, 0.2);
+        border-color: var(--coral);
+      }
+
+      /* Container & Layout */
+      .container {
+        width: min(1200px, calc(100% - 2.5rem));
+        margin: auto;
+      }
+
+      /* SVG Icon Wrapper */
+      .svg-icon {
+        width: 1.25em;
+        height: 1.25em;
+        vertical-align: -0.2em;
+        fill: currentColor;
+        display: inline-block;
+      }
+
+      /* Header */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(7, 23, 33, 0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+      }
+      html.light .site-header {
+        background: rgba(244, 241, 233, 0.85);
+      }
+      .header-inner {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 800;
+      }
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--lime);
+        color: var(--navy);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+      }
+      .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .main-nav a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: color 0.2s;
+      }
+      .main-nav a:hover, .main-nav a.active { color: var(--lime); }
+      
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        display: grid;
+        place-items: center;
+        transition: 0.2s;
+      }
+      .btn-icon:hover {
+        border-color: var(--lime);
+        color: var(--lime);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.4rem;
+        border-radius: 99px;
+        font-size: 0.88rem;
+        font-weight: 800;
+        transition: all 0.2s ease;
+      }
+      .btn-primary {
+        background: var(--lime);
+        color: var(--navy);
+      }
+      .btn-primary:hover {
+        background: var(--coral);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        border: 1px solid var(--line);
+      }
+      .btn-outline:hover {
+        border-color: var(--lime);
+        color: var(--lime);
+        transform: translateY(-2px);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 5rem 0 6rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .eyebrow {
+        color: var(--coral);
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero h1 {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 7vw, 5.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+      .hero h1 span.highlight { color: var(--lime); }
+      .hero-lede {
+        margin: 1.5rem 0 2rem;
+        color: var(--muted);
+        font-size: 1.15rem;
+        max-width: 540px;
+      }
+
+      /* Visual Card Showcase */
+      .hero-card {
+        position: relative;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .hero-card-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--line);
+      }
+
+      /* Section Elements */
+      .section { padding: 5rem 0; }
+      .section-header {
+        margin-bottom: 3rem;
+      }
+      .section-kicker {
+        color: var(--coral);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4vw, 3.8rem);
+        margin: 0.5rem 0 0;
+      }
+
+      /* Grid & Panels */
+      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--lime);
+      }
+
+      /* Project Cards with Real Visual Media */
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0;
+      }
+      .project-card-media {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+      }
+      .project-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+      .project-card:hover .project-card-media img {
+        transform: scale(1.06);
+      }
+      .project-card-body {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .tag-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: auto;
+        padding-top: 1rem;
+      }
+      .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 99px;
+        background: rgba(217, 239, 98, 0.1);
+        color: var(--lime);
+        border: 1px solid rgba(217, 239, 98, 0.2);
+      }
+
+      /* Stats & Certifications */
+      .stat-box {
+        text-align: center;
+        padding: 2rem;
+      }
+      .stat-num {
+        font-size: 3rem;
+        font-family: var(--font-serif);
+        color: var(--lime);
+        font-weight: 700;
+      }
+
+      /* Skills Bars */
+      .skill-bar-bg {
+        width: 100%;
+        height: 8px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 99px;
+        overflow: hidden;
+        margin-top: 0.5rem;
+      }
+      .skill-bar-fill {
+        height: 100%;
+        background: var(--lime);
+        border-radius: 99px;
+        width: 0;
+        transition: width 1s ease-out;
+      }
+
+      /* Modal / Lightbox */
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(7, 23, 33, 0.88);
+        backdrop-filter: blur(12px);
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .modal.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .modal-content {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        max-width: 750px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2rem;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+      }
+      .modal.active .modal-content {
+        transform: translateY(0);
+      }
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        display: grid;
+        place-items: center;
+      }
+
+      /* Command Palette */
+      .cmd-palette {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+        width: min(600px, calc(100% - 2rem));
+        background: var(--panel);
+        border: 1px solid var(--lime);
+        border-radius: var(--radius-md);
+        z-index: 2000;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+      .cmd-palette.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) scale(1);
+      }
+      .cmd-input {
+        width: 100%;
+        padding: 1.2rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        outline: none;
+        font-size: 1.1rem;
+      }
+      .cmd-list {
+        max-height: 280px;
+        overflow-y: auto;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem;
+      }
+      .cmd-item {
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .cmd-item:hover, .cmd-item.selected {
+        background: var(--lime);
+        color: var(--navy);
+      }
+
+      /* Printable Resume Modal View Styling */
+      @media print {
+        body { background: #fff !important; color: #000 !important; }
+        .site-header, .custom-cursor, .btn, .no-print { display: none !important; }
+        .container { width: 100% !important; margin: 0 !important; }
+        .card { border: 1px solid #ccc !important; box-shadow: none !important; }
+      }
+
+      /* Toast Notifications */
+      .toast-container {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3000;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .toast {
+        background: var(--navy);
+        color: #fff;
+        border: 1px solid var(--lime);
+        padding: 0.75rem 1.5rem;
+        border-radius: 99px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      }
+
+      /* Scroll Reveal Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 900px) {
+        .hero, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        .main-nav { display: none; }
+        .main-nav.mobile-active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: var(--panel);
+          padding: 1.5rem;
+          border-bottom: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link" id="skip-link-text">تجاوز إلى المحتوى الرئيسي</a>
+
+    <!-- Custom Pointer Circle -->
+    <div class="custom-cursor" id="cursor" aria-hidden="true"></div>
+
+    <!-- Live ARIA Toast Handler -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand" aria-label="الصفحة الرئيسية">
+          <span class="brand-mark">ع‌م</span>
+          <span>EISSA.DEV</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
+          <a href="#hero" class="nav-item active" data-i18n="nav.home">الرئيسية</a>
+          <a href="#about" class="nav-item" data-i18n="nav.about">عني</a>
+          <a href="#skills" class="nav-item" data-i18n="nav.skills">المهارات</a>
+          <a href="#projects" class="nav-item" data-i18n="nav.projects">المشاريع</a>
+          <a href="#stats" class="nav-item" data-i18n="nav.achievements">الإنجازات</a>
+          <a href="#contact" class="nav-item" data-i18n="nav.contact">تواصل</a>
+        </nav>
+
+        <div class="header-actions">
+          <!-- Command Palette Launcher -->
+          <button class="btn-icon" id="cmd-btn" title="لوحة الأوامر (Ctrl+K)" aria-label="فتح لوحة الأوامر">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </button>
+
+          <!-- Language Switcher -->
+          <button class="btn-icon" id="lang-toggle" title="Switch Language" aria-label="تغيير اللغة">
+            <span id="lang-label" font-weight="bold">EN</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="btn-icon" id="theme-toggle" title="تغيير المظهر" aria-label="تغيير المظهر">
+            <svg class="svg-icon" viewBox="0 0 24 24" id="theme-icon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </button>
+
+          <!-- Resume PDF View Trigger -->
+          <button class="btn btn-outline no-print" id="resume-btn" data-i18n="btn.resume">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <span>السيرة الذاتية</span>
+          </button>
+
+          <!-- Mobile Nav Toggle -->
+          <button class="btn-icon no-print" id="mobile-menu-btn" style="display:none;" aria-label="القائمة">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+      <!-- Hero Section -->
+      <section class="container hero" id="hero">
+        <div class="reveal">
+          <div class="eyebrow">
+            <span style="width:8px; height:8px; border-radius:50%; background:var(--coral); display:inline-block;"></span>
+            <span data-i18n="hero.available">متاح للعمل الحر والمشاريع النوعية</span>
+          </div>
+          <h1 data-i18n="hero.title">
+            نصمم واجهات <br /><span class="highlight">تعيش وتترك أثراً.</span>
+          </h1>
+          <p class="hero-lede" data-i18n="hero.desc">
+            مطور واجهات أمامية ومصمم تجربة مستخدم (UI/UX) بالإسكندرية. أحول الأفكار البرمجية والمعقدة إلى تجارب سلسة وسريعة فائقة الجودة.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.view_work">استكشف المشاريع ↓</a>
+            <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">تواصل مباشر ↖</a>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Card -->
+        <div class="hero-card reveal">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop" alt="[صورة استعراضية لمساحة عمل التطوير والواجهات]" class="hero-card-img" />
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong style="font-size:1.1rem; display:block;" data-i18n="hero.card_name">عيسى محمد — Eissa</strong>
+              <small style="color:var(--muted)" data-i18n="hero.card_role">Frontend Engineer & UI Designer</small>
+            </div>
+            <span class="tag">Alexandria, EG</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section" id="about" style="background:var(--bg-soft)">
+        <div class="container grid-2">
+          <div class="reveal">
+            <div class="section-kicker" data-i18n="about.kicker">01 / عني</div>
+            <h2 class="section-title" data-i18n="about.title">فلسفة البناء <br />والرؤية الرقمية.</h2>
+          </div>
+          <div class="reveal">
+            <p style="font-size:1.1rem; line-height:1.8;" data-i18n="about.text1">
+              أهتم بتطوير واجهات المستخدم التفاعلية من خلال التوازن الدقيق بين الأداء الفائق (Performance)، سهولة الوصول الشاملة (Accessibility)، والتصميم الجذاب المعتمد على التحليل الرقمي.
+            </p>
+            <p style="color:var(--muted); line-height:1.8;" data-i18n="about.text2">
+              أعمل بتقنيات الحديثة مثل React وTypeScript مع التركيز على الممارسة المستمرة، بناء الأنظمة المعيارية، وتطبيق قواعد UX السليمة.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section container" id="skills">
+        <div class="section-header reveal">
+          <div class="section-kicker" data-i18n="skills.kicker">02 / المهارات</div>
+          <h2 class="section-title" data-i18n="skills.title">القدرات والتقنيات الأساسية</h2>
+        </div>
+        <div class="grid-2 reveal" id="skills-container">
+          <!-- Dynamically injected skills -->
+        </div>
+      </section>
+
+      <!-- Projects Section with Real Images & Modal Lightbox -->
+      <section class="section" id="projects" style="background:var(--bg-soft)">
+        <div class="container">
+          <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <div class="section-kicker" data-i18n="projects.kicker">03 / معرض الأعمال</div>
+              <h2 class="section-title" data-i18n="projects.title">مشاريع منفذة برؤية احترافية</h2>
+            </div>
+            <div style="display:flex; gap:0.5rem;" id="project-filters">
+              <button class="btn btn-outline active" data-filter="all">الكل</button>
+              <button class="btn btn-outline" data-filter="web">الويب</button>
+              <button class="btn btn-outline" data-filter="ui">الواجهات</button>
+            </div>
+          </div>
+
+          <div class="grid-3" id="projects-grid">
+            <!-- Dynamically Rendered Projects with Live Modal Trigger -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats & Achievements -->
+      <section class="section container" id="stats">
+        <div class="section-header reveal">
+          <div class="section-kicker" data-i18n="stats.kicker">04 / الإحصائيات والإنجازات</div>
+          <h2 class="section-title" data-i18n="stats.title">أرقام وشهادات اعتمادات</h2>
+        </div>
+
+        <div class="grid-4 reveal" style="margin-bottom:3rem;">
+          <div class="card stat-box">
+            <div class="stat-num" data-target="25">0</div>
+            <div data-i18n="stats.p1">مشروع مكتمل</div>
+          </div>
+          <div class="card stat-box">
+            <div class="stat-num" data-target="99">0</div>
+            <div data-i18n="stats.p2">نسبة رضا المستخدمين</div>
+          </div>
+          <div class="card stat-box">
+            <div class="stat-num" data-target="100">0</div>
+            <div data-i18n="stats.p3">Lighthouse Score %</div>
+          </div>
+          <div class="card stat-box">
+            <div class="stat-num" data-target="12">0</div>
+            <div data-i18n="stats.p4">تقنية ومكتبة برمجية</div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="grid-3 reveal">
+          <div class="card">
+            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">Meta Frontend Specialization</strong>
+            <small style="color:var(--muted)">Coursera Certificate — Advanced React & Web Concepts</small>
+          </div>
+          <div class="card">
+            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">UX Design Professional</strong>
+            <small style="color:var(--muted)">Google Certification — Design Systems & Prototyping</small>
+          </div>
+          <div class="card">
+            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">FreeCodeCamp Responsive Web</strong>
+            <small style="color:var(--muted)">Web Standards, CSS Architecture & Accessibility</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real Contact Form Section -->
+      <section class="section" id="contact" style="background:var(--bg-soft)">
+        <div class="container grid-2">
+          <div class="reveal">
+            <div class="section-kicker" data-i18n="contact.kicker">05 / التواصل</div>
+            <h2 class="section-title" data-i18n="contact.title">ابدأ مشروعك اليوم</h2>
+            <p style="color:var(--muted); margin-top:1.5rem;" data-i18n="contact.desc">
+              يمكنك التواصل معي مباشرة لإرسال الأفكار، طلبات الاستشارة، أو مناقشة التعاون البرمجي.
+            </p>
+            <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
+              <div>
+                <small style="color:var(--muted)">البريد الإلكتروني</small>
+                <div><a href="mailto:ysym7003@gmail.com" style="font-weight:700; color:var(--lime)">ysym7003@gmail.com</a></div>
+              </div>
+              <div>
+                <small style="color:var(--muted)">الهاتف</small>
+                <div><a href="tel:+201288840809" style="font-weight:700;">+20 128 884 0809</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real Formspree / Form Handler -->
+          <form class="card reveal" id="contact-form" action="https://formspree.io/f/xbjnqpyz" method="POST">
+            <div style="margin-bottom:1rem;">
+              <label for="form-name" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.name">الاسم</label>
+              <input type="text" id="form-name" name="name" required placeholder="اسمك الكريم" style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label for="form-email" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.email">البريد الإلكتروني</label>
+              <input type="email" id="form-email" name="email" required placeholder="example@domain.com" style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label for="form-msg" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.message">الرسالة</label>
+              <textarea id="form-msg" name="message" rows="4" required placeholder="تفاصيل المشروع أو الاستفسار..." style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="form.submit">إرسال الرسالة ↖</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding:3rem 0; border-top:1px solid var(--line); background:var(--bg)">
+      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <strong>EISSA MOHAMMED</strong> — <span style="color:var(--muted)">Frontend Developer & UI/UX</span>
+        </div>
+        <div style="display:flex; gap:1rem;">
+          <a href="#privacy-modal" class="modal-trigger-link" id="privacy-link" style="color:var(--muted); font-size:0.85rem;">سياسة الخصوصية</a>
+          <a href="#404-modal" class="modal-trigger-link" id="test-404-link" style="color:var(--muted); font-size:0.85rem;">صفحة 404</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Project Lightbox / Detailed View Modal -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+      <div class="modal-content">
+        <button class="modal-close" id="project-modal-close" aria-label="إغلاق Modal">✕</button>
+        <img id="modal-project-img" src="" alt="[تفاصيل المشروع]" style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:1rem;" />
+        <h3 id="modal-project-title" style="margin:0 0 0.5rem; font-size:1.8rem;"></h3>
+        <p id="modal-project-desc" style="color:var(--muted); line-height:1.7;"></p>
+        <div id="modal-project-tags" class="tag-group" style="margin-bottom:1.5rem;"></div>
+        <div style="display:flex; gap:1rem;">
+          <a id="modal-project-link" href="#" target="_blank" rel="noopener" class="btn btn-primary">معاينة مباشرة ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume PDF Print View Modal -->
+    <div class="modal" id="resume-modal" role="dialog" aria-modal="true">
+      <div class="modal-content" style="max-width:850px;">
+        <button class="modal-close" id="resume-modal-close" aria-label="إغلاق">✕</button>
+        <div style="text-align:center; margin-bottom:2rem;">
+          <h2 style="margin:0;">عيسى محمد | Eissa Mohammed</h2>
+          <p style="color:var(--muted); margin:0.3rem 0;">مطور واجهات أمامية ومصمم UI/UX | الإسكندرية، مصر</p>
+          <small>ysym7003@gmail.com | +201288840809 | github.com/Eissa89</small>
+        </div>
+        <hr style="border:0; border-top:1px solid var(--line); margin:1.5rem 0;" />
+        <h4>الخبرة والمهارات الرئيسية</h4>
+        <ul>
+          <li>تطوير تطبيقات Web متجاوبة عاليّة الأداء باستخدام React وTypeScript.</li>
+          <li>تصميم أنظمة واجهات المستخدم (Design Systems) واستخدام Tailwind CSS.</li>
+          <li>تحسين نتائج تحركات البحث (SEO) وتجربة المستخدم السريعة (PWA).</li>
+        </ul>
+        <div style="margin-top:2rem; text-align:center;" class="no-print">
+          <button class="btn btn-primary" onclick="window.print()">طباعة / حفظ كـ PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacy-modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('privacy-modal')">✕</button>
+        <h3>سياسة الخصوصية</h3>
+        <p style="color:var(--muted); line-height:1.7;">
+          يحترم هذا الموقع خصوصية الزوار. لا يتم جمع أو تخزين أي بيانات شخصية دون إذن صريح. تُستخدم مدخلات نموذج التواصل حصراً للرد على الاستفسارات الفردية.
+        </p>
+      </div>
+    </div>
+
+    <!-- 404 Modal View -->
+    <div class="modal" id="modal-404" role="dialog" aria-modal="true">
+      <div class="modal-content" style="text-align:center;">
+        <button class="modal-close" onclick="closeModal('modal-404')">✕</button>
+        <h1 style="font-size:4rem; color:var(--coral); margin:0;">404</h1>
+        <h3>الصفحة غير موجودة</h3>
+        <p style="color:var(--muted)">عذراً، الرابط الذي حاولت الوصول إليه غير متوفر حالياً.</p>
+        <button class="btn btn-primary" onclick="closeModal('modal-404')">العودة للرئيسية</button>
+      </div>
+    </div>
+
+    <!-- Command Palette UI -->
+    <div class="cmd-palette" id="cmd-palette" role="dialog" aria-modal="true">
+      <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث... (مثال: المهارات, theme, english)" />
+      <ul class="cmd-list" id="cmd-list">
+        <li class="cmd-item" data-action="nav" data-target="#hero">الذهاب للرئيسية <small>Home</small></li>
+        <li class="cmd-item" data-action="nav" data-target="#projects">عرض المشاريع <small>Projects</small></li>
+        <li class="cmd-item" data-action="theme">تبديل المظهر <small>Toggle Theme</small></li>
+        <li class="cmd-item" data-action="lang">تبديل اللغة <small>Switch Language</small></li>
+      </ul>
+    </div>
+
+    <!-- Application Script Logic -->
+    <script>
+      (function () {
+        'use strict';
+
+        // --- Data Sources ---
+        const translations = {
+          ar: {
+            'nav.home': 'الرئيسية',
+            'nav.about': 'عني',
+            'nav.skills': 'المهارات',
+            'nav.projects': 'المشاريع',
+            'nav.achievements': 'الإنجازات',
+            'nav.contact': 'تواصل',
+            'btn.resume': 'السيرة الذاتية',
+            'hero.available': 'متاح للعمل الحر والمشاريع النوعية',
+            'hero.title': 'نصمم واجهات <br /><span class="highlight">تعيش وتترك أثراً.</span>',
+            'hero.desc': 'مطور واجهات أمامية ومصمم تجربة مستخدم (UI/UX) بالإسكندرية. أحول الأفكار البرمجية والمعقدة إلى تجارب سلسة وسريعة فائقة الجودة.',
+            'hero.view_work': 'استكشف المشاريع ↓',
+            'hero.contact': 'تواصل مباشر ↖',
+            'hero.card_name': 'عيسى محمد — Eissa',
+            'hero.card_role': 'Frontend Engineer & UI Designer',
+            'about.kicker': '01 / عني',
+            'about.title': 'فلسفة البناء <br />والرؤية الرقمية.',
+            'about.text1': 'أهتم بتطوير واجهات المستخدم التفاعلية من خلال التوازن الدقيق بين الأداء الفائق (Performance)، سهولة الوصول الشاملة (Accessibility)، والتصميم الجذاب المعتمد على التحليل الرقمي.',
+            'about.text2': 'أعمل بتقنيات الحديثة مثل React وTypeScript مع التركيز على الممارسة المستمرة، بناء الأنظمة المعيارية، وتطبيق قواعد UX السليمة.',
+            'skills.kicker': '02 / المهارات',
+            'skills.title': 'القدرات والتقنيات الأساسية',
+            'projects.kicker': '03 / معرض الأعمال',
+            'projects.title': 'مشاريع منفذة برؤية احترافية',
+            'stats.kicker': '04 / الإحصائيات والإنجازات',
+            'stats.title': 'أرقام وشهادات اعتمادات',
+            'stats.p1': 'مشروع مكتمل',
+            'stats.p2': 'نسبة رضا المستخدمين',
+            'stats.p3': 'Lighthouse Score %',
+            'stats.p4': 'تقنية ومكتبة برمجية',
+            'contact.kicker': '05 / التواصل',
+            'contact.title': 'ابدأ مشروعك اليوم',
+            'contact.desc': 'يمكنك التواصل معي مباشرة لإرسال الأفكار، طلبات الاستشارة، أو مناقشة التعاون البرمجي.',
+            'form.name': 'الاسم',
+            'form.email': 'البريد الإلكتروني',
+            'form.message': 'الرسالة',
+            'form.submit': 'إرسال الرسالة ↖',
+            'skip': 'تجاوز إلى المحتوى الرئيسي'
+          },
+          en: {
+            'nav.home': 'Home',
+            'nav.about': 'About',
+            'nav.skills': 'Skills',
+            'nav.projects': 'Projects',
+            'nav.achievements': 'Achievements',
+            'nav.contact': 'Contact',
+            'btn.resume': 'Resume',
+            'hero.available': 'Available for Freelance & Select Projects',
+            'hero.title': 'Crafting Interfaces <br /><span class="highlight">That Leave an Impact.</span>',
+            'hero.desc': 'Frontend Developer & UI/UX Designer based in Alexandria. Transforming complex software ideas into seamless, performant digital experiences.',
+            'hero.view_work': 'Explore Projects ↓',
+            'hero.contact': 'Direct Contact ↖',
+            'hero.card_name': 'Eissa Mohammed',
+            'hero.card_role': 'Frontend Engineer & UI Designer',
+            'about.kicker': '01 / ABOUT',
+            'about.title': 'Building Philosophy <br />& Digital Vision.',
+            'about.text1': 'Dedicated to building interactive interfaces with a fine balance between high performance, comprehensive accessibility, and evidence-based UX design.',
+            'about.text2': 'Leveraging modern stacks such as React and TypeScript with focus on design systems and scalable UI architectures.',
+            'skills.kicker': '02 / SKILLS',
+            'skills.title': 'Core Technical Capabilities',
+            'projects.kicker': '03 / PORTFOLIO',
+            'projects.title': 'Selected Featured Work',
+            'stats.kicker': '04 / METRICS',
+            'stats.title': 'Stats & Credentials',
+            'stats.p1': 'Completed Projects',
+            'stats.p2': 'User Satisfaction Rate',
+            'stats.p3': 'Lighthouse Score %',
+            'stats.p4': 'Tech Stacks Mastered',
+            'contact.kicker': '05 / CONTACT',
+            'contact.title': 'Start Your Project',
+            'contact.desc': 'Feel free to reach out directly for project proposals, consulting, or engineering inquiries.',
+            'form.name': 'Name',
+            'form.email': 'Email Address',
+            'form.message': 'Message',
+            'form.submit': 'Send Message ↖',
+            'skip': 'Skip to main content'
+          }
+        };
+
+        const skillsData = [
+          { name: 'HTML5 / Modern CSS3', level: 95 },
+          { name: 'JavaScript (ES2024) / TypeScript', level: 90 },
+          { name: 'React.js & Ecosystem', level: 88 },
+          { name: 'UI/UX Design Systems & Figma', level: 92 },
+          { name: 'Responsive & PWA Architecture', level: 94 },
+          { name: 'Performance & Web Vitals Optimization', level: 91 }
+        ];
+
+        const projectsData = [
+          {
+            id: 'p1',
+            category: 'web',
+            title: 'Eissa Interactive Card & PWA',
+            titleEn: 'Eissa Interactive Card & PWA',
+            desc: 'بطاقة رقمية تفاعلية سريعة التحميل يدعم العمل بدون اتصال PWA ومعايير إتاحة كاملة.',
+            descEn: 'High-speed interactive digital business card with full offline PWA capabilities.',
+            img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+            tags: ['HTML5', 'CSS3', 'PWA', 'JavaScript'],
+            link: 'https://eissa89.github.io/eissa-card/'
+          },
+          {
+            id: 'p2',
+            category: 'ui',
+            title: 'Cyber Dark Theme System',
+            titleEn: 'Cyber Dark Theme System',
+            desc: 'واجهة داكنة متطورة مع حسابات تباين دقيقة وسلاسة في التفاعلات والحركة.',
+            descEn: 'Advanced dark system design with precision color contrast and subtle transitions.',
+            img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
+            tags: ['UI/UX', 'Design System', 'Accessibility'],
+            link: '#'
+          },
+          {
+            id: 'p3',
+            category: 'web',
+            title: 'High-Performance Web Dashboard',
+            titleEn: 'High-Performance Web Dashboard',
+            desc: 'لوحة تحكم تفاعلية تعتمد على أحدث ممارسات تقليل Repaint وتحسين استهلاك الذاكرة.',
+            descEn: 'Performance-first analytical dashboard focused on minimal browser repaints.',
+            img: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop',
+            tags: ['React', 'TypeScript', 'Charts'],
+            link: '#'
+          }
+        ];
+
+        // --- State Management ---
+        let currentLang = localStorage.getItem('site_lang') || 'ar';
+        let currentTheme = localStorage.getItem('site_theme') || 'dark';
+
+        // --- DOM Elements ---
+        const cursor = document.getElementById('cursor');
+        const langBtn = document.getElementById('lang-toggle');
+        const langLabel = document.getElementById('lang-label');
+        const themeBtn = document.getElementById('theme-toggle');
+        const toastContainer = document.getElementById('toast-container');
+        const projectsGrid = document.getElementById('projects-grid');
+
+        // --- Toast Function ---
+        function showToast(msg) {
+          const toast = document.createElement('div');
+          toast.className = 'toast';
+          toast.textContent = msg;
+          toastContainer.appendChild(toast);
+          setTimeout(() => toast.remove(), 3000);
+        }
+
+        // --- Custom Cursor ---
+        window.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+        document.querySelectorAll('a, button, input, textarea').forEach(el => {
+          el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+          el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // --- Language Switcher ---
+        function setLanguage(lang) {
+          currentLang = lang;
+          localStorage.setItem('site_lang', lang);
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+          langLabel.textContent = lang === 'ar' ? 'EN' : 'عربي';
+
+          // Update texts
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+              el.innerHTML = translations[lang][key];
+            }
+          });
+
+          renderProjects('all');
+        }
+
+        langBtn.addEventListener('click', () => {
+          setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+          showToast(currentLang === 'ar' ? 'تم تحويل اللغة إلى العربية' : 'Switched to English');
+        });
+
+        // --- Theme Switcher ---
+        function setTheme(theme) {
+          currentTheme = theme;
+          localStorage.setItem('site_theme', theme);
+          if (theme === 'light') {
+            document.documentElement.classList.add('light');
+            document.getElementById('theme-color-meta').content = '#f4f1e9';
+          } else {
+            document.documentElement.classList.remove('light');
+            document.getElementById('theme-color-meta').content = '#071721';
+          }
+        }
+
+        themeBtn.addEventListener('click', () => {
+          setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // --- Render Skills ---
+        const skillsContainer = document.getElementById('skills-container');
+        skillsContainer.innerHTML = skillsData.map(s => `
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; font-weight:700;">
+              <span>${s.name}</span>
+              <span style="color:var(--lime)">${s.level}%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:${s.level}%"></div>
+            </div>
+          </div>
+        `).join('');
+
+        // --- Render Projects ---
+        function renderProjects(filter) {
+          const items = projectsData.filter(p => filter === 'all' || p.category === filter);
+          projectsGrid.innerHTML = items.map(p => `
+            <article class="card project-card reveal active">
+              <div class="project-card-media">
+                <img src="${p.img}" alt="[صورة مشروع ${p.title}]" loading="lazy" />
+              </div>
+              <div class="project-card-body">
+                <h3 style="margin:0 0 0.5rem;">${currentLang === 'ar' ? p.title : p.titleEn}</h3>
+                <p style="color:var(--muted); font-size:0.9rem; margin:0 0 1rem;">${currentLang === 'ar' ? p.desc : p.descEn}</p>
+                <div class="tag-group">
+                  ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+                </div>
+                <button class="btn btn-outline" style="margin-top:1rem; width:100%; justify-content:center;" onclick="openProjectModal('${p.id}')">
+                  ${currentLang === 'ar' ? 'التفاصيل والمعاينة' : 'Details & View'}
+                </button>
+              </div>
+            </article>
+          `).join('');
+        }
+
+        // --- Modal Control Functions ---
+        window.openProjectModal = function (id) {
+          const item = projectsData.find(p => p.id === id);
+          if (!item) return;
+          document.getElementById('modal-project-img').src = item.img;
+          document.getElementById('modal-project-title').textContent = currentLang === 'ar' ? item.title : item.titleEn;
+          document.getElementById('modal-project-desc').textContent = currentLang === 'ar' ? item.desc : item.descEn;
+          document.getElementById('modal-project-tags').innerHTML = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
+          document.getElementById('modal-project-link').href = item.link;
+          
+          document.getElementById('project-modal').classList.add('active');
+        };
+
+        document.getElementById('project-modal-close').addEventListener('click', () => {
+          document.getElementById('project-modal').classList.remove('active');
+        });
+
+        // Resume Modal
+        document.getElementById('resume-btn').addEventListener('click', () => {
+          document.getElementById('resume-modal').classList.add('active');
+        });
+        document.getElementById('resume-modal-close').addEventListener('click', () => {
+          document.getElementById('resume-modal').classList.remove('active');
+        });
+
+        // Links Modals
+        document.getElementById('privacy-link').addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById('privacy-modal').classList.add('active');
+        });
+        document.getElementById('test-404-link').addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById('modal-404').classList.add('active');
+        });
+
+        window.closeModal = function (id) {
+          document.getElementById(id).classList.remove('active');
+        };
+
+        // --- Project Filters ---
+        document.querySelectorAll('#project-filters button').forEach(btn => {
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('#project-filters button').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            renderProjects(this.getAttribute('data-filter'));
+          });
+        });
+
+        // --- Scroll Reveal & Animated Counters ---
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              // Trigger counters if in stats
+              if (entry.target.classList.contains('stat-box')) {
+                const numEl = entry.target.querySelector('.stat-num');
+                if (numEl && !numEl.dataset.done) {
+                  numEl.dataset.done = 'true';
+                  let target = +numEl.dataset.target;
+                  let count = 0;
+                  let step = Math.ceil(target / 40);
+                  let timer = setInterval(() => {
+                    count += step;
+                    if (count >= target) {
+                      numEl.textContent = target;
+                      clearInterval(timer);
+                    } else {
+                      numEl.textContent = count;
+                    }
+                  }, 30);
+                }
+              }
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .stat-box').forEach(el => observer.observe(el));
+
+        // --- Command Palette (Ctrl + K) ---
+        const cmdPalette = document.getElementById('cmd-palette');
+        const cmdInput = document.getElementById('cmd-input');
+
+        window.addEventListener('keydown', (e) => {
+          if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
+            cmdPalette.classList.toggle('active');
+            if (cmdPalette.classList.contains('active')) cmdInput.focus();
+          }
+          if (e.key === 'Escape') {
+            cmdPalette.classList.remove('active');
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+          }
+        });
+
+        document.getElementById('cmd-btn').addEventListener('click', () => {
+          cmdPalette.classList.add('active');
+          cmdInput.focus();
+        });
+
+        document.querySelectorAll('.cmd-item').forEach(item => {
+          item.addEventListener('click', function () {
+            const action = this.dataset.action;
+            if (action === 'nav') {
+              document.querySelector(this.dataset.target).scrollIntoView({ behavior: 'smooth' });
+            } else if (action === 'theme') {
+              setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            } else if (action === 'lang') {
+              setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+            }
+            cmdPalette.classList.remove('active');
+          });
+        });
+
+        // --- Contact Form Real Submission Handler ---
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+          showToast(currentLang === 'ar' ? 'جاري إرسال الرسالة...' : 'Sending message...');
+        });
+
+        // --- Inline PWA Manifest Builder ---
+        const manifestData = {
+          name: "Eissa Mohammed Portfolio",
+          short_name: "Eissa.Dev",
+          start_url: "./",
+          display: "standalone",
+          background_color: "#071721",
+          theme_color: "#071721",
+          icons: [{
+            src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23d9ef62'/></svg>",
+            sizes: "192x192 512x512",
+            type: "image/svg+xml"
+          }]
+        };
+        const stringManifest = JSON.stringify(manifestData);
+        const blobManifest = new Blob([stringManifest], { type: 'application/json' });
+        document.getElementById('manifest-placeholder').setAttribute('href', URL.createObjectURL(blobManifest));
+
+        // --- Inline Service Worker Registration ---
+        if ('serviceWorker' in navigator) {
+          const swCode = `
+            const CACHE_NAME = 'eissa-v1';
+            self.addEventListener('install', e => {
+              e.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(['./'])));
+            });
+            self.addEventListener('fetch', e => {
+              e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));
+            });
+          `;
+          const swBlob = new Blob([swCode], { type: 'application/javascript' });
+          navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(() => {});
+        }
+
+        // Initialize state
+        setLanguage(currentLang);
+        setTheme(currentTheme);
+
+      })();
+    </script>
+  </body>
+</html>
+
