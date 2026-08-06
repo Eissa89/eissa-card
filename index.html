@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#071721" id="theme-color-meta" />
     <meta
       name="description"
@@ -134,28 +134,33 @@
       }
       .skip-link:focus { top: 1rem; }
 
-      /* Custom Cursor */
-      .custom-cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border: 2px solid var(--lime);
-        border-radius: 50%;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-        transition: transform 0.1s ease-out, width 0.2s, height 0.2s, background 0.2s;
+      /* Custom Cursor - Mouse Only */
+      @media (pointer: fine) {
+        .custom-cursor {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          border: 2px solid var(--lime);
+          border-radius: 50%;
+          pointer-events: none;
+          transform: translate(-50%, -50%);
+          z-index: 9999;
+          transition: transform 0.1s ease-out, width 0.2s, height 0.2s, background 0.2s;
+        }
+        .custom-cursor.hovered {
+          width: 45px;
+          height: 45px;
+          background: rgba(217, 239, 98, 0.2);
+          border-color: var(--coral);
+        }
       }
-      .custom-cursor.hovered {
-        width: 45px;
-        height: 45px;
-        background: rgba(217, 239, 98, 0.2);
-        border-color: var(--coral);
+      @media (pointer: coarse) {
+        .custom-cursor { display: none !important; }
       }
 
       /* Container & Layout */
       .container {
-        width: min(1200px, calc(100% - 2.5rem));
+        width: min(1200px, calc(100% - 2rem));
         margin: auto;
       }
 
@@ -173,40 +178,43 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        background: rgba(7, 23, 33, 0.85);
+        background: rgba(7, 23, 33, 0.92);
         backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         border-bottom: 1px solid var(--line);
       }
       html.light .site-header {
-        background: rgba(244, 241, 233, 0.85);
+        background: rgba(244, 241, 233, 0.92);
       }
       .header-inner {
-        min-height: 72px;
+        min-height: 64px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 0.5rem;
       }
       .brand {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.5rem;
         font-weight: 800;
+        font-size: 0.95rem;
       }
       .brand-mark {
-        width: 42px;
-        height: 42px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: var(--lime);
         color: var(--navy);
         display: grid;
         place-items: center;
         font-weight: 900;
+        font-size: 0.85rem;
       }
       .main-nav {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.25rem;
       }
       .main-nav a {
         color: var(--muted);
@@ -219,16 +227,17 @@
       .header-actions {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.35rem;
       }
       .btn-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         border: 1px solid var(--line);
         display: grid;
         place-items: center;
         transition: 0.2s;
+        flex-shrink: 0;
       }
       .btn-icon:hover {
         border-color: var(--lime);
@@ -240,11 +249,12 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.75rem 1.4rem;
+        padding: 0.65rem 1.2rem;
         border-radius: 99px;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
         font-weight: 800;
         transition: all 0.2s ease;
+        white-space: nowrap;
       }
       .btn-primary {
         background: var(--lime);
@@ -264,36 +274,54 @@
         transform: translateY(-2px);
       }
 
+      /* Mobile Navigation Menu Drawer */
+      .mobile-menu-drawer {
+        display: none;
+        flex-direction: column;
+        background: var(--panel);
+        border-bottom: 1px solid var(--line);
+        padding: 1rem;
+        gap: 0.75rem;
+      }
+      .mobile-menu-drawer.active {
+        display: flex;
+      }
+      .mobile-menu-drawer a {
+        padding: 0.5rem 0;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+
       /* Hero Section */
       .hero {
-        padding: 5rem 0 6rem;
+        padding: 3rem 0 4rem;
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
-        gap: 3rem;
+        gap: 2.5rem;
         align-items: center;
       }
       .eyebrow {
         color: var(--coral);
         font-family: var(--font-mono);
-        font-size: 0.85rem;
-        letter-spacing: 0.1em;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
       }
       .hero h1 {
         margin: 0;
         font-family: var(--font-serif);
-        font-size: clamp(3rem, 7vw, 5.5rem);
-        line-height: 1.05;
-        letter-spacing: -0.04em;
+        font-size: clamp(2.3rem, 6vw, 5.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
       }
       .hero h1 span.highlight { color: var(--lime); }
       .hero-lede {
-        margin: 1.5rem 0 2rem;
+        margin: 1.25rem 0 1.75rem;
         color: var(--muted);
-        font-size: 1.15rem;
+        font-size: 1rem;
         max-width: 540px;
       }
 
@@ -303,46 +331,46 @@
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: var(--radius-lg);
-        padding: 2.5rem;
+        padding: 1.5rem;
         box-shadow: var(--shadow);
         overflow: hidden;
       }
       .hero-card-img {
         width: 100%;
-        height: 240px;
+        height: 200px;
         object-fit: cover;
         border-radius: var(--radius-md);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         border: 1px solid var(--line);
       }
 
       /* Section Elements */
-      .section { padding: 5rem 0; }
+      .section { padding: 3.5rem 0; }
       .section-header {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
       .section-kicker {
         color: var(--coral);
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         text-transform: uppercase;
       }
       .section-title {
         font-family: var(--font-serif);
-        font-size: clamp(2.2rem, 4vw, 3.8rem);
-        margin: 0.5rem 0 0;
+        font-size: clamp(1.8rem, 4vw, 3.8rem);
+        margin: 0.4rem 0 0;
       }
 
       /* Grid & Panels */
-      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-      .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 
       .card {
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: var(--radius-md);
-        padding: 1.5rem;
+        padding: 1.25rem;
         transition: transform 0.25s ease, border-color 0.25s ease;
       }
       .card:hover {
@@ -350,7 +378,7 @@
         border-color: var(--lime);
       }
 
-      /* Project Cards with Real Visual Media */
+      /* Project Cards */
       .project-card {
         display: flex;
         flex-direction: column;
@@ -360,7 +388,7 @@
       .project-card-media {
         position: relative;
         width: 100%;
-        height: 200px;
+        height: 180px;
         overflow: hidden;
       }
       .project-card-media img {
@@ -373,7 +401,7 @@
         transform: scale(1.06);
       }
       .project-card-body {
-        padding: 1.5rem;
+        padding: 1.25rem;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -381,13 +409,13 @@
       .tag-group {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.4rem;
+        gap: 0.35rem;
         margin-top: auto;
-        padding-top: 1rem;
+        padding-top: 0.8rem;
       }
       .tag {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.6rem;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
         border-radius: 99px;
         background: rgba(217, 239, 98, 0.1);
         color: var(--lime);
@@ -397,10 +425,10 @@
       /* Stats & Certifications */
       .stat-box {
         text-align: center;
-        padding: 2rem;
+        padding: 1.5rem;
       }
       .stat-num {
-        font-size: 3rem;
+        font-size: 2.3rem;
         font-family: var(--font-serif);
         color: var(--lime);
         font-weight: 700;
@@ -430,9 +458,10 @@
         z-index: 1000;
         background: rgba(7, 23, 33, 0.88);
         backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         display: grid;
         place-items: center;
-        padding: 1.5rem;
+        padding: 1rem;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
@@ -447,9 +476,9 @@
         border-radius: var(--radius-lg);
         max-width: 750px;
         width: 100%;
-        max-height: 90vh;
+        max-height: 85vh;
         overflow-y: auto;
-        padding: 2rem;
+        padding: 1.5rem;
         position: relative;
         transform: translateY(20px);
         transition: transform 0.3s ease;
@@ -459,10 +488,10 @@
       }
       .modal-close {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
-        width: 36px;
-        height: 36px;
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         background: rgba(255,255,255,0.1);
         display: grid;
@@ -472,10 +501,10 @@
       /* Command Palette */
       .cmd-palette {
         position: fixed;
-        top: 20%;
+        top: 15%;
         left: 50%;
         transform: translateX(-50%) scale(0.95);
-        width: min(600px, calc(100% - 2rem));
+        width: min(500px, calc(100% - 1.5rem));
         background: var(--panel);
         border: 1px solid var(--lime);
         border-radius: var(--radius-md);
@@ -492,27 +521,28 @@
       }
       .cmd-input {
         width: 100%;
-        padding: 1.2rem;
+        padding: 1rem;
         background: transparent;
         border: 0;
         border-bottom: 1px solid var(--line);
         outline: none;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .cmd-list {
-        max-height: 280px;
+        max-height: 240px;
         overflow-y: auto;
         list-style: none;
         margin: 0;
         padding: 0.5rem;
       }
       .cmd-item {
-        padding: 0.75rem 1rem;
+        padding: 0.6rem 0.8rem;
         border-radius: 8px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        font-size: 0.9rem;
       }
       .cmd-item:hover, .cmd-item.selected {
         background: var(--lime);
@@ -530,51 +560,53 @@
       /* Toast Notifications */
       .toast-container {
         position: fixed;
-        bottom: 1.5rem;
+        bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3000;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        width: min(320px, calc(100% - 2rem));
       }
       .toast {
         background: var(--navy);
         color: #fff;
         border: 1px solid var(--lime);
-        padding: 0.75rem 1.5rem;
+        padding: 0.6rem 1.2rem;
         border-radius: 99px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 700;
         box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        text-align: center;
       }
 
       /* Scroll Reveal Classes */
       .reveal {
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
       }
       .reveal.active {
         opacity: 1;
         transform: translateY(0);
       }
 
-      /* Responsive Adjustments */
-      @media (max-width: 900px) {
-        .hero, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      /* Responsive Adjustments for Mobile Devices */
+      @media (max-width: 899px) {
+        .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        .grid-4 { grid-template-columns: repeat(2, 1fr); }
         .main-nav { display: none; }
-        .main-nav.mobile-active {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 72px;
-          left: 0;
-          right: 0;
-          background: var(--panel);
-          padding: 1.5rem;
-          border-bottom: 1px solid var(--line);
-        }
+        .mobile-toggle-btn { display: grid !important; }
+        .btn-resume-header { display: none !important; }
+      }
+
+      @media (max-width: 480px) {
+        .grid-4 { grid-template-columns: 1fr; }
+        .container { width: calc(100% - 1.5rem); }
+        .hero-card { padding: 1rem; }
+        .hero-card-img { height: 160px; }
+        .modal-content { padding: 1.2rem; }
       }
     </style>
   </head>
@@ -613,7 +645,7 @@
 
           <!-- Language Switcher -->
           <button class="btn-icon" id="lang-toggle" title="Switch Language" aria-label="تغيير اللغة">
-            <span id="lang-label" font-weight="bold">EN</span>
+            <span id="lang-label" style="font-weight:bold; font-size:0.75rem;">EN</span>
           </button>
 
           <!-- Theme Toggle -->
@@ -622,16 +654,27 @@
           </button>
 
           <!-- Resume PDF View Trigger -->
-          <button class="btn btn-outline no-print" id="resume-btn" data-i18n="btn.resume">
+          <button class="btn btn-outline no-print btn-resume-header" id="resume-btn" data-i18n="btn.resume">
             <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
             <span>السيرة الذاتية</span>
           </button>
 
-          <!-- Mobile Nav Toggle -->
-          <button class="btn-icon no-print" id="mobile-menu-btn" style="display:none;" aria-label="القائمة">
+          <!-- Mobile Nav Toggle Toggle -->
+          <button class="btn-icon no-print mobile-toggle-btn" id="mobile-menu-btn" style="display:none;" aria-label="فتح القائمة">
             <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
           </button>
         </div>
+      </div>
+
+      <!-- Mobile Dropdown Drawer -->
+      <div class="mobile-menu-drawer" id="mobile-drawer">
+        <a href="#hero" class="mobile-nav-item" data-i18n="nav.home">الرئيسية</a>
+        <a href="#about" class="mobile-nav-item" data-i18n="nav.about">عني</a>
+        <a href="#skills" class="mobile-nav-item" data-i18n="nav.skills">المهارات</a>
+        <a href="#projects" class="mobile-nav-item" data-i18n="nav.projects">المشاريع</a>
+        <a href="#stats" class="mobile-nav-item" data-i18n="nav.achievements">الإنجازات</a>
+        <a href="#contact" class="mobile-nav-item" data-i18n="nav.contact">تواصل</a>
+        <button class="btn btn-outline" id="resume-btn-mobile" style="width:100%; justify-content:center; margin-top:0.5rem;" data-i18n="btn.resume">السيرة الذاتية</button>
       </div>
     </header>
 
@@ -651,7 +694,7 @@
           <p class="hero-lede" data-i18n="hero.desc">
             مطور واجهات أمامية ومصمم تجربة مستخدم (UI/UX) بالإسكندرية. أحول الأفكار البرمجية والمعقدة إلى تجارب سلسة وسريعة فائقة الجودة.
           </p>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
             <a href="#projects" class="btn btn-primary" data-i18n="hero.view_work">استكشف المشاريع ↓</a>
             <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">تواصل مباشر ↖</a>
           </div>
@@ -662,8 +705,8 @@
           <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop" alt="[صورة استعراضية لمساحة عمل التطوير والواجهات]" class="hero-card-img" />
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <strong style="font-size:1.1rem; display:block;" data-i18n="hero.card_name">عيسى محمد — Eissa</strong>
-              <small style="color:var(--muted)" data-i18n="hero.card_role">Frontend Engineer & UI Designer</small>
+              <strong style="font-size:1rem; display:block;" data-i18n="hero.card_name">عيسى محمد — Eissa</strong>
+              <small style="color:var(--muted); font-size:0.75rem;" data-i18n="hero.card_role">Frontend Engineer & UI Designer</small>
             </div>
             <span class="tag">Alexandria, EG</span>
           </div>
@@ -678,10 +721,10 @@
             <h2 class="section-title" data-i18n="about.title">فلسفة البناء <br />والرؤية الرقمية.</h2>
           </div>
           <div class="reveal">
-            <p style="font-size:1.1rem; line-height:1.8;" data-i18n="about.text1">
+            <p style="font-size:1rem; line-height:1.7;" data-i18n="about.text1">
               أهتم بتطوير واجهات المستخدم التفاعلية من خلال التوازن الدقيق بين الأداء الفائق (Performance)، سهولة الوصول الشاملة (Accessibility)، والتصميم الجذاب المعتمد على التحليل الرقمي.
             </p>
-            <p style="color:var(--muted); line-height:1.8;" data-i18n="about.text2">
+            <p style="color:var(--muted); line-height:1.7; font-size:0.9rem;" data-i18n="about.text2">
               أعمل بتقنيات الحديثة مثل React وTypeScript مع التركيز على الممارسة المستمرة، بناء الأنظمة المعيارية، وتطبيق قواعد UX السليمة.
             </p>
           </div>
@@ -707,7 +750,7 @@
               <div class="section-kicker" data-i18n="projects.kicker">03 / معرض الأعمال</div>
               <h2 class="section-title" data-i18n="projects.title">مشاريع منفذة برؤية احترافية</h2>
             </div>
-            <div style="display:flex; gap:0.5rem;" id="project-filters">
+            <div style="display:flex; gap:0.35rem;" id="project-filters">
               <button class="btn btn-outline active" data-filter="all">الكل</button>
               <button class="btn btn-outline" data-filter="web">الويب</button>
               <button class="btn btn-outline" data-filter="ui">الواجهات</button>
@@ -727,38 +770,38 @@
           <h2 class="section-title" data-i18n="stats.title">أرقام وشهادات اعتمادات</h2>
         </div>
 
-        <div class="grid-4 reveal" style="margin-bottom:3rem;">
+        <div class="grid-4 reveal" style="margin-bottom:2rem;">
           <div class="card stat-box">
             <div class="stat-num" data-target="25">0</div>
-            <div data-i18n="stats.p1">مشروع مكتمل</div>
+            <div data-i18n="stats.p1" style="font-size:0.85rem;">مشروع مكتمل</div>
           </div>
           <div class="card stat-box">
             <div class="stat-num" data-target="99">0</div>
-            <div data-i18n="stats.p2">نسبة رضا المستخدمين</div>
+            <div data-i18n="stats.p2" style="font-size:0.85rem;">نسبة رضا المستخدمين</div>
           </div>
           <div class="card stat-box">
             <div class="stat-num" data-target="100">0</div>
-            <div data-i18n="stats.p3">Lighthouse Score %</div>
+            <div data-i18n="stats.p3" style="font-size:0.85rem;">Lighthouse Score %</div>
           </div>
           <div class="card stat-box">
             <div class="stat-num" data-target="12">0</div>
-            <div data-i18n="stats.p4">تقنية ومكتبة برمجية</div>
+            <div data-i18n="stats.p4" style="font-size:0.85rem;">تقنية ومكتبة برمجية</div>
           </div>
         </div>
 
         <!-- Certifications -->
         <div class="grid-3 reveal">
           <div class="card">
-            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">Meta Frontend Specialization</strong>
-            <small style="color:var(--muted)">Coursera Certificate — Advanced React & Web Concepts</small>
+            <strong style="color:var(--lime); display:block; margin-bottom:0.3rem; font-size:0.95rem;">Meta Frontend Specialization</strong>
+            <small style="color:var(--muted); font-size:0.8rem;">Coursera Certificate — Advanced React & Web Concepts</small>
           </div>
           <div class="card">
-            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">UX Design Professional</strong>
-            <small style="color:var(--muted)">Google Certification — Design Systems & Prototyping</small>
+            <strong style="color:var(--lime); display:block; margin-bottom:0.3rem; font-size:0.95rem;">UX Design Professional</strong>
+            <small style="color:var(--muted); font-size:0.8rem;">Google Certification — Design Systems & Prototyping</small>
           </div>
           <div class="card">
-            <strong style="color:var(--lime); display:block; margin-bottom:0.4rem;">FreeCodeCamp Responsive Web</strong>
-            <small style="color:var(--muted)">Web Standards, CSS Architecture & Accessibility</small>
+            <strong style="color:var(--lime); display:block; margin-bottom:0.3rem; font-size:0.95rem;">FreeCodeCamp Responsive Web</strong>
+            <small style="color:var(--muted); font-size:0.8rem;">Web Standards, CSS Architecture & Accessibility</small>
           </div>
         </div>
       </section>
@@ -769,34 +812,34 @@
           <div class="reveal">
             <div class="section-kicker" data-i18n="contact.kicker">05 / التواصل</div>
             <h2 class="section-title" data-i18n="contact.title">ابدأ مشروعك اليوم</h2>
-            <p style="color:var(--muted); margin-top:1.5rem;" data-i18n="contact.desc">
+            <p style="color:var(--muted); margin-top:1rem; font-size:0.9rem;" data-i18n="contact.desc">
               يمكنك التواصل معي مباشرة لإرسال الأفكار، طلبات الاستشارة، أو مناقشة التعاون البرمجي.
             </p>
-            <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
+            <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
               <div>
-                <small style="color:var(--muted)">البريد الإلكتروني</small>
-                <div><a href="mailto:ysym7003@gmail.com" style="font-weight:700; color:var(--lime)">ysym7003@gmail.com</a></div>
+                <small style="color:var(--muted); font-size:0.75rem;">البريد الإلكتروني</small>
+                <div><a href="mailto:ysym7003@gmail.com" style="font-weight:700; color:var(--lime); font-size:0.95rem;">ysym7003@gmail.com</a></div>
               </div>
               <div>
-                <small style="color:var(--muted)">الهاتف</small>
-                <div><a href="tel:+201288840809" style="font-weight:700;">+20 128 884 0809</a></div>
+                <small style="color:var(--muted); font-size:0.75rem;">الهاتف</small>
+                <div><a href="tel:+201288840809" style="font-weight:700; font-size:0.95rem;">+20 128 884 0809</a></div>
               </div>
             </div>
           </div>
 
-          <!-- Real Formspree / Form Handler -->
-          <form class="card reveal" id="contact-form" action="https://formspree.io/f/xbjnqpyz" method="POST">
-            <div style="margin-bottom:1rem;">
-              <label for="form-name" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.name">الاسم</label>
-              <input type="text" id="form-name" name="name" required placeholder="اسمك الكريم" style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
+          <!-- Form Handlers -->
+          <form class="card reveal" id="contact-form" action="https://formspree.io/f/xbjnqpyz" method="POST" style="margin-top:1rem;">
+            <div style="margin-bottom:0.8rem;">
+              <label for="form-name" style="display:block; margin-bottom:0.3rem; font-weight:700; font-size:0.85rem;" data-i18n="form.name">الاسم</label>
+              <input type="text" id="form-name" name="name" required placeholder="اسمك الكريم" style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
             </div>
-            <div style="margin-bottom:1rem;">
-              <label for="form-email" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.email">البريد الإلكتروني</label>
-              <input type="email" id="form-email" name="email" required placeholder="example@domain.com" style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
+            <div style="margin-bottom:0.8rem;">
+              <label for="form-email" style="display:block; margin-bottom:0.3rem; font-weight:700; font-size:0.85rem;" data-i18n="form.email">البريد الإلكتروني</label>
+              <input type="email" id="form-email" name="email" required placeholder="example@domain.com" style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;" />
             </div>
-            <div style="margin-bottom:1rem;">
-              <label for="form-msg" style="display:block; margin-bottom:0.4rem; font-weight:700;" data-i18n="form.message">الرسالة</label>
-              <textarea id="form-msg" name="message" rows="4" required placeholder="تفاصيل المشروع أو الاستفسار..." style="width:100%; padding:0.8rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;"></textarea>
+            <div style="margin-bottom:0.8rem;">
+              <label for="form-msg" style="display:block; margin-bottom:0.3rem; font-weight:700; font-size:0.85rem;" data-i18n="form.message">الرسالة</label>
+              <textarea id="form-msg" name="message" rows="3" required placeholder="تفاصيل المشروع أو الاستفسار..." style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:8px;"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="form.submit">إرسال الرسالة ↖</button>
           </form>
@@ -806,14 +849,14 @@
     </main>
 
     <!-- Footer -->
-    <footer style="padding:3rem 0; border-top:1px solid var(--line); background:var(--bg)">
-      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-        <div>
-          <strong>EISSA MOHAMMED</strong> — <span style="color:var(--muted)">Frontend Developer & UI/UX</span>
+    <footer style="padding:2rem 0; border-top:1px solid var(--line); background:var(--bg)">
+      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+        <div style="font-size:0.85rem;">
+          <strong>EISSA MOHAMMED</strong> — <span style="color:var(--muted)">Frontend Developer</span>
         </div>
         <div style="display:flex; gap:1rem;">
-          <a href="#privacy-modal" class="modal-trigger-link" id="privacy-link" style="color:var(--muted); font-size:0.85rem;">سياسة الخصوصية</a>
-          <a href="#404-modal" class="modal-trigger-link" id="test-404-link" style="color:var(--muted); font-size:0.85rem;">صفحة 404</a>
+          <a href="#privacy-modal" class="modal-trigger-link" id="privacy-link" style="color:var(--muted); font-size:0.8rem;">سياسة الخصوصية</a>
+          <a href="#404-modal" class="modal-trigger-link" id="test-404-link" style="color:var(--muted); font-size:0.8rem;">صفحة 404</a>
         </div>
       </div>
     </footer>
@@ -822,12 +865,12 @@
     <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
       <div class="modal-content">
         <button class="modal-close" id="project-modal-close" aria-label="إغلاق Modal">✕</button>
-        <img id="modal-project-img" src="" alt="[تفاصيل المشروع]" style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:1rem;" />
-        <h3 id="modal-project-title" style="margin:0 0 0.5rem; font-size:1.8rem;"></h3>
-        <p id="modal-project-desc" style="color:var(--muted); line-height:1.7;"></p>
-        <div id="modal-project-tags" class="tag-group" style="margin-bottom:1.5rem;"></div>
-        <div style="display:flex; gap:1rem;">
-          <a id="modal-project-link" href="#" target="_blank" rel="noopener" class="btn btn-primary">معاينة مباشرة ↗</a>
+        <img id="modal-project-img" src="" alt="[تفاصيل المشروع]" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:0.8rem;" />
+        <h3 id="modal-project-title" style="margin:0 0 0.4rem; font-size:1.4rem;"></h3>
+        <p id="modal-project-desc" style="color:var(--muted); line-height:1.6; font-size:0.88rem;"></p>
+        <div id="modal-project-tags" class="tag-group" style="margin-bottom:1.2rem;"></div>
+        <div style="display:flex; gap:0.8rem;">
+          <a id="modal-project-link" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">معاينة مباشرة ↗</a>
         </div>
       </div>
     </div>
@@ -836,19 +879,19 @@
     <div class="modal" id="resume-modal" role="dialog" aria-modal="true">
       <div class="modal-content" style="max-width:850px;">
         <button class="modal-close" id="resume-modal-close" aria-label="إغلاق">✕</button>
-        <div style="text-align:center; margin-bottom:2rem;">
-          <h2 style="margin:0;">عيسى محمد | Eissa Mohammed</h2>
-          <p style="color:var(--muted); margin:0.3rem 0;">مطور واجهات أمامية ومصمم UI/UX | الإسكندرية، مصر</p>
-          <small>ysym7003@gmail.com | +201288840809 | github.com/Eissa89</small>
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <h2 style="margin:0; font-size:1.5rem;">عيسى محمد | Eissa Mohammed</h2>
+          <p style="color:var(--muted); margin:0.3rem 0; font-size:0.85rem;">مطور واجهات أمامية ومصمم UI/UX | الإسكندرية، مصر</p>
+          <small style="font-size:0.75rem;">ysym7003@gmail.com | +201288840809</small>
         </div>
-        <hr style="border:0; border-top:1px solid var(--line); margin:1.5rem 0;" />
-        <h4>الخبرة والمهارات الرئيسية</h4>
-        <ul>
-          <li>تطوير تطبيقات Web متجاوبة عاليّة الأداء باستخدام React وTypeScript.</li>
+        <hr style="border:0; border-top:1px solid var(--line); margin:1rem 0;" />
+        <h4 style="margin:0 0 0.5rem; font-size:1rem;">الخبرة والمهارات الرئيسية</h4>
+        <ul style="font-size:0.85rem; padding-right:1.2rem;">
+          <li>تطوير تطبيقات Web متجاوبة عالية الأداء باستخدام React وTypeScript.</li>
           <li>تصميم أنظمة واجهات المستخدم (Design Systems) واستخدام Tailwind CSS.</li>
-          <li>تحسين نتائج تحركات البحث (SEO) وتجربة المستخدم السريعة (PWA).</li>
+          <li>تحسين نتائج محركات البحث (SEO) وتجربة المستخدم السريعة (PWA).</li>
         </ul>
-        <div style="margin-top:2rem; text-align:center;" class="no-print">
+        <div style="margin-top:1.5rem; text-align:center;" class="no-print">
           <button class="btn btn-primary" onclick="window.print()">طباعة / حفظ كـ PDF</button>
         </div>
       </div>
@@ -859,7 +902,7 @@
       <div class="modal-content">
         <button class="modal-close" onclick="closeModal('privacy-modal')">✕</button>
         <h3>سياسة الخصوصية</h3>
-        <p style="color:var(--muted); line-height:1.7;">
+        <p style="color:var(--muted); line-height:1.6; font-size:0.85rem;">
           يحترم هذا الموقع خصوصية الزوار. لا يتم جمع أو تخزين أي بيانات شخصية دون إذن صريح. تُستخدم مدخلات نموذج التواصل حصراً للرد على الاستفسارات الفردية.
         </p>
       </div>
@@ -869,16 +912,16 @@
     <div class="modal" id="modal-404" role="dialog" aria-modal="true">
       <div class="modal-content" style="text-align:center;">
         <button class="modal-close" onclick="closeModal('modal-404')">✕</button>
-        <h1 style="font-size:4rem; color:var(--coral); margin:0;">404</h1>
+        <h1 style="font-size:3rem; color:var(--coral); margin:0;">404</h1>
         <h3>الصفحة غير موجودة</h3>
-        <p style="color:var(--muted)">عذراً، الرابط الذي حاولت الوصول إليه غير متوفر حالياً.</p>
+        <p style="color:var(--muted); font-size:0.85rem;">عذراً، الرابط الذي حاولت الوصول إليه غير متوفر حالياً.</p>
         <button class="btn btn-primary" onclick="closeModal('modal-404')">العودة للرئيسية</button>
       </div>
     </div>
 
     <!-- Command Palette UI -->
     <div class="cmd-palette" id="cmd-palette" role="dialog" aria-modal="true">
-      <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث... (مثال: المهارات, theme, english)" />
+      <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث..." />
       <ul class="cmd-list" id="cmd-list">
         <li class="cmd-item" data-action="nav" data-target="#hero">الذهاب للرئيسية <small>Home</small></li>
         <li class="cmd-item" data-action="nav" data-target="#projects">عرض المشاريع <small>Projects</small></li>
@@ -1028,6 +1071,8 @@
         const themeBtn = document.getElementById('theme-toggle');
         const toastContainer = document.getElementById('toast-container');
         const projectsGrid = document.getElementById('projects-grid');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
 
         // --- Toast Function ---
         function showToast(msg) {
@@ -1035,18 +1080,33 @@
           toast.className = 'toast';
           toast.textContent = msg;
           toastContainer.appendChild(toast);
-          setTimeout(() => toast.remove(), 3000);
+          setTimeout(() => toast.remove(), 2500);
         }
 
-        // --- Custom Cursor ---
-        window.addEventListener('mousemove', (e) => {
-          cursor.style.left = `${e.clientX}px`;
-          cursor.style.top = `${e.clientY}px`;
-        });
-        document.querySelectorAll('a, button, input, textarea').forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-        });
+        // --- Custom Cursor Logic (Only on fine-pointer desktop devices) ---
+        if (window.matchMedia('(pointer: fine)').matches && cursor) {
+          window.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+          });
+          document.querySelectorAll('a, button, input, textarea').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+          });
+        }
+
+        // --- Mobile Menu Drawer Toggle ---
+        if (mobileMenuBtn && mobileDrawer) {
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('active');
+          });
+
+          document.querySelectorAll('.mobile-nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileDrawer.classList.remove('active');
+            });
+          });
+        }
 
         // --- Language Switcher ---
         function setLanguage(lang) {
@@ -1056,7 +1116,6 @@
           document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
           langLabel.textContent = lang === 'ar' ? 'EN' : 'عربي';
 
-          // Update texts
           document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang][key]) {
@@ -1093,7 +1152,7 @@
         const skillsContainer = document.getElementById('skills-container');
         skillsContainer.innerHTML = skillsData.map(s => `
           <div class="card">
-            <div style="display:flex; justify-content:space-between; font-weight:700;">
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:0.9rem;">
               <span>${s.name}</span>
               <span style="color:var(--lime)">${s.level}%</span>
             </div>
@@ -1112,12 +1171,12 @@
                 <img src="${p.img}" alt="[صورة مشروع ${p.title}]" loading="lazy" />
               </div>
               <div class="project-card-body">
-                <h3 style="margin:0 0 0.5rem;">${currentLang === 'ar' ? p.title : p.titleEn}</h3>
-                <p style="color:var(--muted); font-size:0.9rem; margin:0 0 1rem;">${currentLang === 'ar' ? p.desc : p.descEn}</p>
+                <h3 style="margin:0 0 0.4rem; font-size:1.1rem;">${currentLang === 'ar' ? p.title : p.titleEn}</h3>
+                <p style="color:var(--muted); font-size:0.85rem; margin:0 0 0.8rem;">${currentLang === 'ar' ? p.desc : p.descEn}</p>
                 <div class="tag-group">
                   ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
                 </div>
-                <button class="btn btn-outline" style="margin-top:1rem; width:100%; justify-content:center;" onclick="openProjectModal('${p.id}')">
+                <button class="btn btn-outline" style="margin-top:0.8rem; width:100%; justify-content:center;" onclick="openProjectModal('${p.id}')">
                   ${currentLang === 'ar' ? 'التفاصيل والمعاينة' : 'Details & View'}
                 </button>
               </div>
@@ -1142,10 +1201,14 @@
           document.getElementById('project-modal').classList.remove('active');
         });
 
-        // Resume Modal
-        document.getElementById('resume-btn').addEventListener('click', () => {
+        // Resume Modals Trigger
+        const triggerResume = () => {
           document.getElementById('resume-modal').classList.add('active');
-        });
+          if(mobileDrawer) mobileDrawer.classList.remove('active');
+        };
+        document.getElementById('resume-btn').addEventListener('click', triggerResume);
+        document.getElementById('resume-btn-mobile').addEventListener('click', triggerResume);
+
         document.getElementById('resume-modal-close').addEventListener('click', () => {
           document.getElementById('resume-modal').classList.remove('active');
         });
@@ -1174,19 +1237,18 @@
         });
 
         // --- Scroll Reveal & Animated Counters ---
-        const observerOptions = { threshold: 0.15 };
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('active');
-              // Trigger counters if in stats
               if (entry.target.classList.contains('stat-box')) {
                 const numEl = entry.target.querySelector('.stat-num');
                 if (numEl && !numEl.dataset.done) {
                   numEl.dataset.done = 'true';
                   let target = +numEl.dataset.target;
                   let count = 0;
-                  let step = Math.ceil(target / 40);
+                  let step = Math.ceil(target / 30);
                   let timer = setInterval(() => {
                     count += step;
                     if (count >= target) {
@@ -1195,7 +1257,7 @@
                     } else {
                       numEl.textContent = count;
                     }
-                  }, 30);
+                  }, 40);
                 }
               }
             }
@@ -1239,43 +1301,10 @@
           });
         });
 
-        // --- Contact Form Real Submission Handler ---
+        // --- Contact Form Handler ---
         document.getElementById('contact-form').addEventListener('submit', function (e) {
           showToast(currentLang === 'ar' ? 'جاري إرسال الرسالة...' : 'Sending message...');
         });
-
-        // --- Inline PWA Manifest Builder ---
-        const manifestData = {
-          name: "Eissa Mohammed Portfolio",
-          short_name: "Eissa.Dev",
-          start_url: "./",
-          display: "standalone",
-          background_color: "#071721",
-          theme_color: "#071721",
-          icons: [{
-            src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23d9ef62'/></svg>",
-            sizes: "192x192 512x512",
-            type: "image/svg+xml"
-          }]
-        };
-        const stringManifest = JSON.stringify(manifestData);
-        const blobManifest = new Blob([stringManifest], { type: 'application/json' });
-        document.getElementById('manifest-placeholder').setAttribute('href', URL.createObjectURL(blobManifest));
-
-        // --- Inline Service Worker Registration ---
-        if ('serviceWorker' in navigator) {
-          const swCode = `
-            const CACHE_NAME = 'eissa-v1';
-            self.addEventListener('install', e => {
-              e.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(['./'])));
-            });
-            self.addEventListener('fetch', e => {
-              e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));
-            });
-          `;
-          const swBlob = new Blob([swCode], { type: 'application/javascript' });
-          navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(() => {});
-        }
 
         // Initialize state
         setLanguage(currentLang);
