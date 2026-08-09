@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <meta name="theme-color" content="#071721" id="theme-color-meta" />
+    <meta name="theme-color" content="#0a0a0c" id="theme-color-meta" />
     <meta name="version" content="4.2.0" />
 
     <!-- الرابط المعياري Canonical Link -->
@@ -33,12 +33,12 @@
     <meta name="twitter:image" content="https://eissa89.github.io/eissa-card/1000081078.png" />
 
     <!-- أيقونة الموقع -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23d9ef62'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' fill='%23071721'>ع</text></svg>" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f0b429'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' fill='%23171008'>ع</text></svg>" />
 
     <!-- Preconnect للخطوط لتحسين الأداء -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- بيانات هيكلية JSON-LD Schema -->
     <script type="application/ld+json">
@@ -59,7 +59,12 @@
             },
             "email": "mailto:ysym7003@gmail.com",
             "telephone": "+201288840809",
-            "url": "https://eissa89.github.io/eissa-card/"
+            "url": "https://eissa89.github.io/eissa-card/",
+            "sameAs": [
+              "https://www.linkedin.com/in/eissa-dev",
+              "https://github.com/Eissa89",
+              "https://www.facebook.com/share/16uQ1C3d2y/"
+            ]
           }
         ]
       }
@@ -69,38 +74,44 @@
 
     <style>
       :root {
-        --bg: #071721;
-        --bg-soft: #0d2732;
-        --panel: #0d202b;
-        --panel-glass: rgba(13, 32, 43, 0.85);
-        --ink: #edf4ec;
-        --muted: #abc1b9;
-        --line: rgba(255, 255, 255, 0.14);
-        --lime: #d9ef62;
-        --lime-glow: rgba(217, 239, 98, 0.22);
-        --coral: #e07b5b;
-        --navy: #102d3a;
-        --radius-lg: 2rem;
-        --radius-md: 1.4rem;
-        --shadow: 14px 16px 0 var(--coral);
-        --font-sans: 'Cairo', Arial, Tahoma, sans-serif;
-        --font-serif: Georgia, 'Times New Roman', serif;
+        --bg: #0a0a0c;
+        --bg-soft: #141317;
+        --panel: #17161a;
+        --panel-glass: rgba(20, 19, 23, 0.88);
+        --ink: #f4f0e8;
+        --muted: #9d968b;
+        --line: rgba(244, 240, 232, 0.11);
+        --lime: #f0b429;
+        --lime-glow: rgba(240, 180, 41, 0.2);
+        --coral: #d97a5c;
+        --navy: #171008;
+        --surface-strong: #141019;
+        --contact-bg: #f0b429;
+        --contact-ink: #1c1408;
+        --radius-lg: 1.75rem;
+        --radius-md: 1.05rem;
+        --radius-sm: 0.6rem;
+        --shadow: 0 34px 70px -32px rgba(0, 0, 0, 0.6);
+        --shadow-soft: 0 16px 36px -20px rgba(0, 0, 0, 0.5);
+        --font-sans: 'Cairo', Tahoma, Arial, sans-serif;
+        --font-serif: 'Amiri', Georgia, 'Times New Roman', serif;
         --font-mono: 'JetBrains Mono', monospace;
       }
 
       html.light {
-        --bg: #f4f1e9;
-        --bg-soft: #dce8df;
-        --panel: #f8f5ed;
-        --panel-glass: rgba(248, 245, 237, 0.9);
-        --ink: #0d232e;
-        --muted: #2d5059;
-        --line: rgba(13, 35, 46, 0.18);
-        --lime: #0d232e;
-        --lime-glow: rgba(13, 35, 46, 0.12);
-        --coral: #d45937;
-        --navy: #d9ef62;
-        --shadow: 10px 12px 0 var(--coral);
+        --bg: #f8f4ea;
+        --bg-soft: #efe7d6;
+        --panel: #fffdf9;
+        --panel-glass: rgba(255, 253, 248, 0.92);
+        --ink: #1a170f;
+        --muted: #6d6459;
+        --line: rgba(26, 23, 15, 0.13);
+        --lime: #8a5710;
+        --lime-glow: rgba(138, 87, 16, 0.12);
+        --coral: #a8482a;
+        --navy: #f0b429;
+        --shadow: 0 22px 48px -26px rgba(26, 23, 15, 0.24);
+        --shadow-soft: 0 12px 28px -18px rgba(26, 23, 15, 0.16);
       }
 
       *, *::before, *::after { box-sizing: border-box; }
@@ -108,21 +119,34 @@
       body {
         margin: 0;
         background: var(--bg);
+        background-image: radial-gradient(1200px 620px at 88% -8%, color-mix(in srgb, var(--lime) 10%, transparent), transparent 60%);
+        background-repeat: no-repeat;
         color: var(--ink);
         font-family: var(--font-sans);
         line-height: 1.6;
         transition: background-color 0.3s ease, color 0.3s ease;
         overflow-x: hidden;
+         text-rendering: optimizeLegibility;
+         -webkit-font-smoothing: antialiased;
       }
 
       a { color: inherit; text-decoration: none; }
       button, input, textarea { font: inherit; color: inherit; }
       button { cursor: pointer; border: 0; background: transparent; touch-action: manipulation; }
       button, a { -webkit-tap-highlight-color: transparent; }
+      button, a, input, textarea { min-height: 44px; }
+      input, textarea { min-width: 0; }
+
+      ::selection { background: var(--lime); color: var(--navy); }
+      ::-webkit-scrollbar { width: 11px; height: 11px; }
+      ::-webkit-scrollbar-track { background: var(--bg); }
+      ::-webkit-scrollbar-thumb { background: var(--bg-soft); border-radius: 99px; border: 2px solid var(--bg); }
+      ::-webkit-scrollbar-thumb:hover { background: var(--line); }
 
       :focus-visible {
         outline: 3px solid var(--coral);
         outline-offset: 4px;
+        border-radius: 4px;
       }
 
       /* إتاحة الوصول Skip Link */
@@ -154,22 +178,23 @@
       }
 
       /* مؤشر الفأرة المخصص */
-      @media (pointer: fine) {
+      @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
         .custom-cursor {
           position: fixed;
-          width: 18px;
-          height: 18px;
-          border: 2px solid var(--lime);
+          width: 16px;
+          height: 16px;
+          border: 1.5px solid var(--lime);
           border-radius: 50%;
           pointer-events: none;
           transform: translate3d(-50%, -50%, 0);
           z-index: 9999;
-          transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+          transition: width 0.18s ease, height 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
         }
         .custom-cursor.hovered {
-          width: 38px;
-          height: 38px;
+          width: 42px;
+          height: 42px;
           background: var(--lime-glow);
+          border-color: transparent;
         }
       }
 
@@ -184,12 +209,12 @@
         top: 0;
         z-index: 100;
         border-bottom: 1px solid var(--line);
-        background: rgba(7, 23, 33, 0.9);
+        background: rgba(10, 10, 12, 0.78);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
       }
       html.light .site-header {
-        background: rgba(244, 241, 233, 0.9);
+        background: rgba(248, 244, 234, 0.82);
       }
       .header-inner {
         min-height: 72px;
@@ -222,24 +247,41 @@
         object-fit: cover;
       }
       .brand-name {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 800;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.18em;
         direction: ltr;
+        color: var(--muted);
       }
       .main-nav {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 22px;
       }
       .main-nav a, .mobile-nav a {
+        position: relative;
         color: var(--muted);
         text-decoration: none;
         font-size: 13px;
         font-weight: 700;
         transition: color 0.2s ease;
       }
+      .main-nav a::after {
+        content: "";
+        position: absolute;
+        right: 0; left: 0;
+        bottom: -6px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--lime);
+        transform: scaleX(0);
+        transition: transform 0.25s ease;
+      }
       .main-nav a:hover, .main-nav a.active, .mobile-nav a:hover {
+        color: var(--ink);
+      }
+      .main-nav a.active::after, .main-nav a:hover::after { transform: scaleX(1); }
+      .main-nav a.active, .mobile-nav a.active {
         color: var(--lime);
       }
       .header-actions {
@@ -256,12 +298,13 @@
         color: inherit;
         border: 1px solid var(--line);
         background: transparent;
-        font-size: 16px;
+        font-size: 15px;
         transition: 0.2s ease;
       }
       .icon-button:hover, .menu-button:hover {
         color: var(--lime);
         border-color: var(--lime);
+        transform: translateY(-1px);
       }
       .outline-button, .primary-button {
         display: inline-flex;
@@ -269,20 +312,22 @@
         justify-content: center;
         gap: 9px;
         border-radius: 999px;
-        padding: 10px 18px;
+        padding: 10px 20px;
         text-decoration: none;
         font-size: 13px;
         font-weight: 800;
-        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
       }
       .outline-button {
-        border: 1px solid currentColor;
+        border: 1px solid var(--line);
         background: transparent;
       }
       .outline-button:hover {
+        border-color: var(--lime);
         background: var(--lime);
         color: var(--navy);
         transform: translateY(-2px);
+        box-shadow: var(--shadow-soft);
       }
       .primary-button {
         border: 0;
@@ -293,6 +338,7 @@
         background: var(--coral);
         color: white;
         transform: translateY(-2px);
+        box-shadow: var(--shadow-soft);
       }
       .menu-button { display: none; }
       .mobile-nav {
@@ -303,14 +349,57 @@
       .mobile-nav.open { display: block; }
       .mobile-nav a { display: block; padding: 10px 0; }
 
+      /* Performance / interaction refinements */
+      .site-header,
+      .modal {
+        isolation: isolate;
+      }
+
+      .project-card {
+        content-visibility: auto;
+        contain-intrinsic-size: 280px;
+      }
+
+      .cmd-item {
+        width: 100%;
+        min-height: 44px;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: inherit;
+      }
+
+      .cmd-item + .cmd-item { margin-top: 2px; }
+
+      [aria-disabled="true"] {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .mobile-nav.open {
+        animation: menuIn 0.18s ease-out;
+      }
+
+      @keyframes menuIn {
+        from { opacity: 0; transform: translateY(-4px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
       /* قسم الرئيسية Hero */
       .hero {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
         align-items: center;
-        gap: 48px;
+        gap: 56px;
+        min-height: calc(100svh - 72px);
         padding-top: 80px;
         padding-bottom: 110px;
+      }
+      .hero-name {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font: 700 clamp(1.1rem, 2vw, 1.4rem)/1.2 var(--font-sans);
+        letter-spacing: 0.01em;
       }
       .availability {
         display: flex;
@@ -320,7 +409,7 @@
         color: var(--muted);
         font-size: 12px;
         font-weight: 800;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
       }
       .pulse-dot {
         width: 8px;
@@ -332,26 +421,26 @@
       .eyebrow {
         color: var(--lime);
         font: 700 12px/1.2 var(--font-mono);
-        letter-spacing: 0.16em;
+        letter-spacing: 0.18em;
       }
       .location-line {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        margin: 0 0 20px;
+        margin: 0 0 22px;
         color: var(--muted);
         font: 12px var(--font-mono);
       }
       .hero h1, .section-title {
         margin: 0;
         font-family: var(--font-serif);
-        font-weight: 400;
-        letter-spacing: -0.06em;
+        font-weight: 700;
+        letter-spacing: -0.01em;
       }
       .hero h1 {
-        max-width: 700px;
-        font-size: clamp(3.5rem, 8.5vw, 7.5rem);
-        line-height: 0.9;
+        max-width: 720px;
+        font-size: clamp(3.2rem, 8vw, 7rem);
+        line-height: 1.05;
       }
       .coral { color: var(--coral); }
       .lime { color: var(--lime); }
@@ -375,20 +464,21 @@
         position: relative;
         min-height: 520px;
         aspect-ratio: 4 / 5;
+        contain: layout paint;
       }
       .art-back {
         position: absolute;
-        inset: 30px 30px 0 0;
-        border-radius: 36px;
-        background: var(--bg-soft);
-        transform: rotate(3deg);
+        inset: 26px 26px 0 0;
+        border-radius: var(--radius-lg);
+        background: linear-gradient(155deg, color-mix(in srgb, var(--lime) 16%, var(--bg-soft)), var(--bg-soft));
+        transform: rotate(2.5deg);
         border: 1px solid var(--line);
       }
       .art-card {
         position: absolute;
         inset: 0;
         overflow: hidden;
-        border-radius: 36px;
+        border-radius: var(--radius-lg);
         background: var(--panel);
         box-shadow: var(--shadow);
         border: 1px solid var(--line);
@@ -403,7 +493,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center top;
-        filter: contrast(1.05) brightness(0.95);
+        filter: contrast(1.05) brightness(0.95) saturate(0.96);
         transition: transform 0.5s ease;
       }
       .art-card:hover .hero-portrait-img {
@@ -412,7 +502,7 @@
       .hero-portrait-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(7, 23, 33, 0.1) 0%, rgba(7, 23, 33, 0.85) 85%, rgba(7, 23, 33, 0.95) 100%);
+        background: linear-gradient(180deg, rgba(10, 9, 8, 0.08) 0%, rgba(10, 9, 8, 0.82) 84%, rgba(10, 9, 8, 0.94) 100%);
       }
       .art-topline {
         position: absolute;
@@ -423,11 +513,11 @@
         letter-spacing: 0.16em;
         direction: ltr;
         z-index: 2;
-        background: rgba(7, 23, 33, 0.6);
+        background: rgba(10, 9, 8, 0.55);
         padding: 4px 12px;
         border-radius: 99px;
         backdrop-filter: blur(8px);
-        border: 1px solid var(--line);
+        border: 1px solid rgba(244, 240, 232, 0.16);
       }
       .art-message {
         position: relative;
@@ -435,7 +525,7 @@
         padding: 32px;
       }
       .art-message small {
-        color: var(--muted);
+        color: rgba(244, 240, 232, 0.6);
         font: 10px var(--font-mono);
         letter-spacing: 0.2em;
         direction: ltr;
@@ -444,29 +534,29 @@
       .art-message strong {
         display: block;
         margin-top: 8px;
-        color: var(--ink);
-        font: 400 clamp(2.2rem, 5vw, 3.8rem) / 0.95 var(--font-serif);
-        letter-spacing: -0.04em;
+        color: #f4f0e8;
+        font: 400 clamp(2rem, 4.6vw, 3.4rem) / 1.05 var(--font-serif);
+        letter-spacing: -0.01em;
         direction: ltr;
       }
       .art-message em { color: var(--lime); font-style: normal; }
       .floating-note {
         position: absolute;
-        right: -15px;
-        bottom: -15px;
+        right: -14px;
+        bottom: -18px;
         z-index: 3;
         padding: 14px 18px;
         border: 1px solid var(--line);
-        border-radius: 18px;
+        border-radius: var(--radius-md);
         background: var(--panel);
-        box-shadow: 6px 6px 0 var(--lime);
+        box-shadow: var(--shadow-soft), 0 0 0 1px var(--lime-glow);
         animation: float 5s ease-in-out infinite;
       }
       .floating-note small { display: block; color: var(--muted); font: 10px var(--font-mono); }
       .floating-note strong { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 13px; }
 
       /* الأقسام */
-      .section { padding: 96px 0; }
+      .section { padding: 104px 0; }
       .band {
         border-top: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
@@ -475,17 +565,23 @@
       .section-kicker {
         color: var(--coral);
         font: 700 12px var(--font-mono);
-        letter-spacing: 0.18em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
       }
       .section-title {
         margin-top: 16px;
-        font-size: clamp(2.8rem, 5vw, 4.8rem);
-        line-height: 0.95;
+        font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+        line-height: 1.08;
       }
       .panel {
         border: 1px solid var(--line);
         border-radius: var(--radius-lg);
         background: var(--panel);
+        transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .panel:focus-within, .panel:hover {
+        border-color: color-mix(in srgb, var(--lime) 45%, var(--line));
+        box-shadow: var(--shadow-soft);
       }
 
       /* بطاقة التعريف Profile */
@@ -508,7 +604,7 @@
         height: 80px;
         display: grid;
         place-items: center;
-        border-radius: 24px;
+        border-radius: var(--radius-md);
         background: var(--lime);
         color: var(--navy);
         font: 700 28px var(--font-serif);
@@ -521,7 +617,7 @@
         height: 100%;
         object-fit: cover;
       }
-      .identity h3 { margin: 0; font-size: 22px; }
+      .identity h3 { margin: 0; font-size: 22px; font-family: var(--font-serif); font-weight: 700; }
       .identity p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
       .available-label {
         display: flex;
@@ -540,8 +636,8 @@
         height: 38px;
         display: grid;
         place-items: center;
-        border-radius: 12px;
-        background: rgba(224, 123, 91, 0.15);
+        border-radius: var(--radius-sm);
+        background: color-mix(in srgb, var(--coral) 16%, transparent);
         color: var(--coral);
         font-size: 16px;
       }
@@ -565,6 +661,7 @@
         background: transparent;
         font-size: 12px;
         font-weight: 800;
+        transition: 0.2s ease;
       }
       .small-button:hover { border-color: var(--lime); color: var(--lime); }
       .small-button.primary { border-color: var(--lime); background: var(--lime); color: var(--navy); }
@@ -578,7 +675,7 @@
         height: 140px;
         margin: 20px auto;
         padding: 8px;
-        border-radius: 12px;
+        border-radius: var(--radius-sm);
         background: white;
         display: grid;
         place-items: center;
@@ -590,25 +687,27 @@
       }
       .socials { display: flex; gap: 10px; margin-top: 18px; }
       .social-button {
-        width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; color: white; transition: transform 0.2s;
+        width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; color: white; transition: transform 0.2s; font-weight: 700;
       }
       .social-button:hover { transform: translateY(-3px); }
       .whatsapp { background: #25d366; }
       .facebook { background: #1877f2; }
+      .linkedin { background: #0a66c2; }
 
       /* المهارات والتصنيفات */
       .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
-      .skill-card { padding: 20px; }
-      .skill-name-row { display: flex; justify-content: space-between; font-weight: 700; font-size: 14px; }
-      .progress { height: 8px; margin-top: 12px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
-      .progress span { display: block; height: 100%; background: var(--lime); border-radius: inherit; transition: width 1s ease; }
+      .skill-card { padding: 22px; }
+      .skill-card h3 { margin: 0; color: var(--lime); font: 700 12px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; }
+      .skill-items { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+      .skill-items li { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px; }
+      .skill-items li::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px var(--lime-glow); }
       .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-      .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; }
+      .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; color: var(--muted); }
 
       /* الخبرات */
       .timeline { position: relative; display: grid; gap: 20px; margin-top: 40px; }
       .timeline::before {
-        content: ""; position: absolute; right: 11px; top: 12px; bottom: 12px; width: 1px; background: rgba(224, 123, 91, 0.4);
+        content: ""; position: absolute; right: 11px; top: 12px; bottom: 12px; width: 1px; background: color-mix(in srgb, var(--coral) 45%, transparent);
       }
       .timeline-item { position: relative; padding-right: 40px; }
       .timeline-dot {
@@ -619,79 +718,164 @@
 
       /* الإحصائيات */
       .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
-      .stat-card { padding: 24px; text-align: center; }
-      .stat-num { font-size: 2.8rem; font-weight: 900; font-family: var(--font-mono); color: var(--lime); line-height: 1; }
+      .stat-card { padding: 26px 20px; text-align: center; }
+      .stat-card-wide { max-width: 360px; }
+      .stat-num { font-size: 2.6rem; font-weight: 700; font-family: var(--font-serif); color: var(--lime); line-height: 1; }
 
       /* المشاريع */
       .projects-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; }
       .filter-buttons { display: flex; gap: 8px; }
       .filter-button {
-        border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 12px; font-weight: 800;
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 12px; font-weight: 800; transition: 0.2s ease;
       }
       .filter-button.active { border-color: var(--lime); background: var(--lime); color: var(--navy); }
       .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
-      .project-card { padding: 24px; transition: transform 0.3s ease, border-color 0.3s ease; }
-      .project-card:hover { transform: translateY(-6px); border-color: var(--lime); }
+      .project-card { padding: 26px; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+      .project-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--lime) 45%, var(--line)); box-shadow: var(--shadow-soft); }
+      .project-topline { display: flex; justify-content: space-between; align-items: center; }
+      .project-number { font-family: var(--font-mono); }
+      .project-top-meta { display: flex; align-items: center; gap: 12px; }
+      .project-category {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 8px;
+        color: var(--muted);
+        font: 700 9px var(--font-mono);
+        letter-spacing: 0.08em;
+      }
+      .project-symbol { font-size: 24px; }
+      .project-title { margin: 20px 0 0; font-size: 20px; }
+      .project-description { color: var(--muted); font-size: 13px; margin-top: 10px; line-height: 1.7; }
+      .project-actions { display: flex; gap: 8px; margin-top: 16px; }
+      .project-actions > * { flex: 1; justify-content: center; }
       .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
-      .project-tags span { border-radius: 999px; padding: 4px 8px; background: rgba(255,255,255,0.06); font-size: 11px; }
+      .project-tags span { border-radius: 999px; padding: 4px 8px; background: color-mix(in srgb, var(--ink) 6%, transparent); font-size: 11px; color: var(--muted); }
 
       /* نموذج التواصل */
-      .contact-band { background: var(--lime); color: var(--navy); }
+      .contact-band { background: var(--contact-bg); color: var(--contact-ink); }
+      .contact-band .section-kicker { color: var(--contact-ink); opacity: 0.65; }
       .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
-      .contact-title { margin: 18px 0 0; font: 400 clamp(3.2rem, 7vw, 6rem)/0.88 var(--font-serif); }
-      .contact-form { padding: 30px; border: 1px solid rgba(16, 45, 58, 0.2); border-radius: var(--radius-lg); background: rgba(255, 255, 255, 0.25); }
+      .contact-title { margin: 18px 0 0; font: 700 clamp(3rem, 6.4vw, 5.6rem)/1.02 var(--font-serif); }
+      .contact-form { padding: 30px; border: 1px solid rgba(28, 20, 8, 0.16); border-radius: var(--radius-lg); background: rgba(255, 255, 255, 0.3); }
       .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .contact-form label { display: block; margin-top: 14px; font-size: 13px; font-weight: 800; }
       .form-grid label { margin-top: 0; }
       .contact-form input, .contact-form textarea {
-        display: block; width: 100%; margin-top: 6px; border: 1px solid rgba(16, 45, 58, 0.2); border-radius: 12px; padding: 12px 14px; color: var(--navy); background: rgba(255, 255, 255, 0.5); outline: 0;
+        display: block; width: 100%; margin-top: 6px; border: 1px solid rgba(28, 20, 8, 0.18); border-radius: var(--radius-sm); padding: 12px 14px; color: var(--contact-ink); background: rgba(255, 255, 255, 0.55); outline: 0;
       }
       .contact-form input[aria-invalid="true"], .contact-form textarea[aria-invalid="true"] {
-        border-color: #d32f2f;
+        border-color: #9a2e20;
       }
       .submit-button {
-        display: flex; align-items: center; justify-content: center; width: 100%; gap: 9px; margin-top: 20px; border: 0; border-radius: 12px; padding: 13px; background: var(--navy); color: white; font-size: 13px; font-weight: 800;
+        display: flex; align-items: center; justify-content: center; width: 100%; gap: 9px; margin-top: 20px; border: 0; border-radius: var(--radius-sm); padding: 13px; background: var(--surface-strong); color: white; font-size: 13px; font-weight: 800; transition: 0.2s ease;
       }
       .submit-button:hover { background: var(--coral); }
 
       /* Modals & Toasts */
       .modal {
-        position: fixed; inset: 0; z-index: 2000; display: none; place-items: center; padding: 20px; background: rgba(7, 23, 33, 0.88); backdrop-filter: blur(12px);
+        position: fixed; inset: 0; z-index: 2000; display: none; place-items: center; padding: 20px; background: rgba(6, 5, 4, 0.82); backdrop-filter: blur(14px); overflow-y: auto;
       }
       .modal.open { display: grid; }
-      .modal-card { position: relative; width: min(540px, 100%); padding: 40px 32px 32px; text-align: center; }
+      .modal-card { position: relative; width: min(540px, 100%); max-height: min(720px, calc(100dvh - 40px)); overflow-y: auto; padding: 40px 32px 32px; text-align: center; box-shadow: var(--shadow); }
       .modal-card .close {
-        position: absolute; left: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; font-size: 20px;
+        position: absolute; left: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; border: 1px solid var(--line);
       }
+      .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 22px 0; text-align: right; }
+      .case-study-grid > div { padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--ink) 3.5%, transparent); }
+      .case-study-grid dt { color: var(--coral); font: 700 10px var(--font-mono); letter-spacing: 0.08em; }
+      .case-study-grid dd { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+      .field-error { display: block; min-height: 0; margin-top: 5px; color: #d9694f; font-size: 11px; font-weight: 700; }
+      .field-error:empty { display: none; }
+      .modal-open { overflow: hidden; }
       .toast {
-        position: fixed; bottom: 24px; left: 50%; z-index: 3000; transform: translateX(-50%); border-radius: 999px; padding: 12px 24px; background: var(--navy); color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-size: 13px; font-weight: 800; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s;
+        position: fixed; bottom: 24px; left: 50%; z-index: 3000; transform: translateX(-50%); border-radius: 999px; padding: 12px 24px; background: var(--surface-strong); color: white; box-shadow: var(--shadow-soft); font-size: 13px; font-weight: 800; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s;
       }
       .toast.show { opacity: 1; transform: translate(-50%, -6px); }
 
       /* Command Palette */
       .cmd-palette {
-        position: fixed; top: 20%; left: 50%; transform: translate(-50%, 0); width: min(480px, calc(100% - 30px)); background: var(--panel); border: 1px solid var(--lime); border-radius: var(--radius-md); z-index: 2500; box-shadow: 0 20px 40px rgba(0,0,0,0.5); opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+        position: fixed; top: 20%; left: 50%; transform: translate(-50%, 0); width: min(480px, calc(100% - 30px)); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-md); z-index: 2500; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
       }
       .cmd-palette.open { opacity: 1; pointer-events: auto; }
       .cmd-input { width: 100%; padding: 16px; background: transparent; border: 0; border-bottom: 1px solid var(--line); outline: none; font-size: 14px; }
       .cmd-list { list-style: none; margin: 0; padding: 8px; max-height: 240px; overflow-y: auto; }
       .cmd-item { padding: 10px 14px; border-radius: 8px; display: flex; justify-content: space-between; cursor: pointer; font-size: 13px; }
       .cmd-item:hover { background: var(--lime); color: var(--navy); }
+      .cmd-item:focus-visible { background: var(--lime); color: var(--navy); outline: 0; }
 
       /* الفوتر */
-      .footer { background: var(--navy); color: #abc9bc; }
-      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 0; }
+      .footer { background: var(--surface-strong); color: #b4ac9f; }
+      .footer-link {
+        min-height: 44px;
+        padding: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .footer-link:hover { color: var(--ink); }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 34px 0; }
 
       /* إيقاف الحركة عند طلب المستخدم (Prefers Reduced Motion) */
+      @media print {
+        .site-header, .custom-cursor, .toast, .modal, .cmd-palette,
+        .hero-actions, .card-actions, .socials, .filter-buttons,
+        .floating-note, .submit-button {
+          display: none !important;
+        }
+
+        body {
+          background: #fff !important;
+          color: #111 !important;
+          overflow: visible !important;
+        }
+
+        .section, .hero {
+          padding: 32px 0 !important;
+          min-height: auto !important;
+        }
+
+        .panel {
+          box-shadow: none !important;
+          break-inside: avoid;
+        }
+
+        .contact-band {
+          background: #fff !important;
+          color: #111 !important;
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
           animation: none !important;
           transition: none !important;
           scroll-behavior: auto !important;
         }
+
+        .site-header,
+        .modal {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+        }
       }
 
-      @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(224, 123, 91, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(224, 123, 91, 0); } }
+      @media (max-width: 700px) {
+        .site-header {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+          background: color-mix(in srgb, var(--bg) 96%, transparent);
+        }
+
+        .modal {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+        }
+
+        .hero-portrait-img {
+          transition-duration: 0.25s;
+        }
+      }
+
+      @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--coral) 40%, transparent); } 50% { box-shadow: 0 0 0 8px transparent; } }
       @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
       @media (max-width: 900px) {
@@ -701,7 +885,33 @@
         .hero-art { min-height: 420px; order: -1; }
         .projects-grid { grid-template-columns: 1fr; }
         .skills-grid { grid-template-columns: 1fr; }
+        .hero { min-height: auto; padding-top: 54px; padding-bottom: 80px; }
+        .hero-copy { order: 2; }
+        .hero-art { order: 1; }
       }
+
+      @media (max-width: 560px) {
+        .container { width: min(100% - 28px, 1200px); }
+        .header-inner { min-height: 64px; }
+        .hero h1 { font-size: clamp(2.8rem, 16vw, 5rem); line-height: 1.06; }
+        .hero-lede { font-size: 16px; line-height: 1.75; }
+        .hero-actions { align-items: stretch; }
+        .hero-actions > * { width: 100%; }
+        .hero-art { min-height: 360px; }
+        .art-message { padding: 22px; }
+        .floating-note { right: 8px; bottom: -10px; max-width: calc(100% - 16px); }
+        .profile-card, .side-panel, .timeline-card, .project-card, .contact-form { padding: 20px; }
+        .profile-top { align-items: flex-start; flex-direction: column; }
+        .stats-grid { grid-template-columns: 1fr; gap: 10px; }
+        .stat-card { padding: 18px 10px; }
+        .stat-card-wide { max-width: none; }
+        .stat-num { font-size: 1.9rem; }
+        .form-grid, .case-study-grid { grid-template-columns: 1fr; }
+        .modal { padding: 12px; }
+        .modal-card { padding: 42px 20px 22px; max-height: calc(100dvh - 24px); }
+        .footer-inner { align-items: flex-start; flex-direction: column; padding: 26px 0; }
+      }
+
     </style>
   </head>
   <body>
@@ -734,19 +944,19 @@
         </nav>
 
         <div class="header-actions">
-          <button class="icon-button" id="cmd-btn" title="لوحة الأوامر (Ctrl+K)" aria-label="فتح لوحة الأوامر">⌘</button>
+          <button type="button" class="icon-button" id="cmd-btn" title="لوحة الأوامر (Ctrl+K)" aria-label="فتح لوحة الأوامر">⌘</button>
 
-          <button class="icon-button" id="lang-toggle" title="Switch Language" aria-label="تغيير اللغة">
+          <button type="button" class="icon-button" id="lang-toggle" title="Switch Language" aria-label="تغيير اللغة">
             <span id="lang-label" style="font-size:11px; font-weight:800; font-family:var(--font-mono);">EN</span>
           </button>
 
-          <button class="icon-button" id="theme-toggle" aria-label="تغيير المظهر" title="تغيير المظهر">☼</button>
+          <button type="button" class="icon-button" id="theme-toggle" aria-label="تغيير المظهر" title="تغيير المظهر">☼</button>
 
           <a class="outline-button" href="#contact" data-i18n="nav.cta">
             تواصل معي ↖
           </a>
 
-          <button class="menu-button" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+          <button type="button" class="menu-button" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">☰</button>
         </div>
       </div>
 
@@ -766,6 +976,7 @@
       <!-- قسم الرئيسية Hero -->
       <section class="container hero" id="hero">
         <div class="hero-copy">
+          <p class="hero-name">عيسى محمد</p>
           <div class="availability">
             <span class="pulse-dot"></span> <span data-i18n="hero.available">متاح للتواصل والتعلم والعمل الحر</span>
           </div>
@@ -785,16 +996,19 @@
             <a class="primary-button" href="#profile" data-i18n="hero.explore">
               استكشف الملف ↓
             </a>
-            <button class="outline-button" id="resume-open-btn" data-i18n="hero.resume">
+            <button type="button" class="outline-button" id="resume-open-btn" data-i18n="hero.resume">
               📄 السيرة الذاتية (PDF)
             </button>
             <a class="outline-button" href="https://github.com/Eissa89" target="_blank" rel="noopener noreferrer">
               GitHub ↗
             </a>
+            <a class="outline-button" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer">
+              LinkedIn ↗
+            </a>
           </div>
         </div>
 
-        <div class="hero-art" aria-label="صورة عيسى محمد الشخصية">
+        <div class="hero-art">
           <div class="art-back"></div>
           <div class="art-card">
             <picture>
@@ -818,8 +1032,8 @@
       <!-- قسم بطاقة التعريف Profile -->
       <section class="band section" id="profile">
         <div class="container">
-          <div class="section-kicker">01 / بطاقة التعريف</div>
-          <h2 class="section-title">بياناتي،<br /><span class="lime">بوضوح.</span></h2>
+          <div class="section-kicker" data-i18n="profile.kicker">01 / بطاقة التعريف</div>
+          <h2 class="section-title" data-i18n="profile.title">بياناتي،<br /><span class="lime">بوضوح.</span></h2>
 
           <div class="profile-grid">
             <article class="panel profile-card">
@@ -880,7 +1094,7 @@
                 </div>
                 <!-- كود QR حقيقي مشفر ببيانات vCard -->
                 <div class="qr-box" id="qr-container">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Feissa-dev%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
                 </div>
                 <p style="margin:0; color:var(--muted); text-align:center; font-size:12px;" data-i18n="profile.qr_desc">
                   امسح الكود بواسطة كاميرا الهاتف لمشاركة جهة الاتصال
@@ -892,6 +1106,7 @@
                   <span style="color:var(--lime)">⌯</span> <span data-i18n="profile.social">روابط التواصل</span>
                 </div>
                 <div class="socials">
+                  <a class="social-button linkedin" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على LinkedIn">in</a>
                   <a class="social-button whatsapp" href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر WhatsApp">◔</a>
                   <a class="social-button facebook" href="https://www.facebook.com/share/16uQ1C3d2y/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على Facebook">f</a>
                   <button class="social-button" style="border:1px solid var(--line);" type="button" data-copy="https://eissa89.github.io/eissa-card/" data-label="رابط الموقع" aria-label="نسخ رابط الموقع">◎</button>
@@ -904,8 +1119,8 @@
 
       <!-- قسم عني About -->
       <section class="container section" id="about">
-        <div class="section-kicker">02 / عني</div>
-        <h2 class="section-title">مطور<br />يفكر<br /><span class="coral">بعين مصمم.</span></h2>
+        <div class="section-kicker" data-i18n="about.kicker">02 / عني</div>
+        <h2 class="section-title" data-i18n="about.title">مطور<br />يفكر<br /><span class="coral">بعين مصمم.</span></h2>
         <p style="max-width: 680px; margin-top:20px; font-size:18px; color:var(--muted); line-height:1.8;" data-i18n="about.body">
           أنا عيسى محمد، طالب ومطور واجهات أمامية من الإسكندرية. أهتم بتجربة المستخدم، تحسين الأداء، سهولة الوصول (Accessibility)، والكود النظيف. أحول الأفكار المعقدة إلى تجارب واضحة تشعر بأنها جيدة بقدر ما تعمل.
         </p>
@@ -914,8 +1129,8 @@
       <!-- قسم المهارات Skills -->
       <section class="band section" id="skills">
         <div class="container">
-          <div class="section-kicker">03 / المهارات والقدرات</div>
-          <h2 class="section-title">الأدوات التي<br /><span class="lime">أصل بها للفكرة.</span></h2>
+          <div class="section-kicker" data-i18n="skills.kicker">03 / المهارات والقدرات</div>
+          <h2 class="section-title" data-i18n="skills.title">الأدوات التي<br /><span class="lime">أصل بها للفكرة.</span></h2>
           <div class="skills-grid" id="skills-grid"></div>
           <div class="tag-list" id="tag-list"></div>
         </div>
@@ -923,13 +1138,13 @@
 
       <!-- قسم الخبرات Timeline -->
       <section class="container section" id="experience">
-        <div class="section-kicker">04 / المسار والخبرات</div>
-        <h2 class="section-title">رحلة تعلم<br /><span class="coral">مستمرة.</span></h2>
+        <div class="section-kicker" data-i18n="experience.kicker">04 / المسار والخبرات</div>
+        <h2 class="section-title" data-i18n="experience.title">رحلة تعلم<br /><span class="coral">مستمرة.</span></h2>
         <div class="timeline">
           <article class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="panel timeline-card">
-              <span class="timeline-date">2024 — الحالي</span>
+              <span class="timeline-date" data-i18n="experience.current">2024 — الحالي</span>
               <h3 data-i18n="exp.e1_title">مطور مشاريع الويب والتطبيقات</h3>
               <p data-i18n="exp.e1_desc">العمل على مشاريع ويب تفاعلية وتطبيقات شخصية قائمة على أحدث الممارسات البرمجية.</p>
             </div>
@@ -937,7 +1152,7 @@
           <article class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="panel timeline-card">
-              <span class="timeline-date">2023 — 2024</span>
+              <span class="timeline-date" data-i18n="experience.previous">2023 — 2024</span>
               <h3 data-i18n="exp.e2_title">دراسة البرمجيات والتقنيات الحديثة</h3>
               <p data-i18n="exp.e2_desc">التركيز على بناء الواجهات والأداء وتجارب المستخدم مع مراعاة كاملة للوصولية الشاملة.</p>
             </div>
@@ -948,24 +1163,12 @@
       <!-- قسم الإحصائيات الحية Stats -->
       <section class="band section" id="stats">
         <div class="container">
-          <div class="section-kicker">05 / الأرقام والإحصائيات</div>
-          <h2 class="section-title">مؤشرات الأداء<br /><span class="lime">المباشرة.</span></h2>
+          <div class="section-kicker" data-i18n="stats.kicker">05 / الأرقام والإحصائيات</div>
+          <h2 class="section-title" data-i18n="stats.title">مؤشرات الأداء<br /><span class="lime">المباشرة.</span></h2>
           <div class="stats-grid">
-            <div class="panel stat-card">
-              <div class="stat-num" id="stat-repos" data-target="15">0</div>
-              <small style="color:var(--muted)" data-i18n="stats.repos">مستودع (GitHub)</small>
-            </div>
-            <div class="panel stat-card">
-              <div class="stat-num" id="stat-stars" data-target="5">0</div>
-              <small style="color:var(--muted)" data-i18n="stats.stars">إجمالي النجوم</small>
-            </div>
-            <div class="panel stat-card">
-              <div class="stat-num" data-target="100">0</div>
-              <small style="color:var(--muted)" data-i18n="stats.lighthouse">Lighthouse Score %</small>
-            </div>
-            <div class="panel stat-card">
-              <div class="stat-num" data-target="12">0</div>
-              <small style="color:var(--muted)" data-i18n="stats.tools">تقنية وأداة برمجية</small>
+            <div class="panel stat-card stat-card-wide">
+              <div class="stat-num" id="stat-repos" data-target="0">—</div>
+              <small style="color:var(--muted)" data-i18n="stats.repos">مستودعات GitHub العامة</small>
             </div>
           </div>
         </div>
@@ -975,13 +1178,13 @@
       <section class="container section" id="projects">
         <div class="projects-header">
           <div>
-            <div class="section-kicker">06 / المشاريع</div>
-            <h2 class="section-title">أعمال تصنع<br /><span class="lime">فرقاً.</span></h2>
+            <div class="section-kicker" data-i18n="projects.kicker">06 / المشاريع</div>
+            <h2 class="section-title" data-i18n="projects.title">أعمال تصنع<br /><span class="lime">فرقاً.</span></h2>
           </div>
-          <div class="filter-buttons" role="tablist">
-            <button class="filter-button active" type="button" data-filter="all" data-i18n="proj.all">الكل</button>
-            <button class="filter-button" type="button" data-filter="web" data-i18n="proj.web">الويب</button>
-            <button class="filter-button" type="button" data-filter="ui" data-i18n="proj.ui">الواجهات</button>
+          <div class="filter-buttons" role="group" aria-label="تصفية المشاريع">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="proj.all">الكل</button>
+            <button class="filter-button" type="button" data-filter="web" aria-pressed="false" data-i18n="proj.web">الويب</button>
+            <button class="filter-button" type="button" data-filter="ui" aria-pressed="false" data-i18n="proj.ui">الواجهات</button>
           </div>
         </div>
         <div class="projects-grid" id="projects-grid"></div>
@@ -991,29 +1194,33 @@
       <section class="contact-band section" id="contact">
         <div class="container contact-grid">
           <div>
-            <div class="section-kicker">07 / تواصل معي</div>
-            <h2 class="contact-title">لديك<br /><span class="coral">فكرة؟</span></h2>
+            <div class="section-kicker" data-i18n="contact.kicker">07 / تواصل معي</div>
+            <h2 class="contact-title" data-i18n="contact.title">لديك<br /><span class="coral">فكرة؟</span></h2>
             <p style="margin-top:20px; font-size:18px;" data-i18n="contact.lede">لنجعلها مفيدة، جميلة، ومختلفة عن المعتاد.</p>
           </div>
 
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xbjnqpyz" method="POST" novalidate>
+          <form class="contact-form" id="contact-form" data-mailto="ysym7003@gmail.com" novalidate>
             <div class="form-grid">
               <label for="form-name">
                 <span data-i18n="form.name">الاسم</span>
-                <input id="form-name" name="name" required autocomplete="name" aria-required="true" aria-invalid="false" placeholder="اكتب اسمك" />
+                <input id="form-name" name="name" required autocomplete="name" aria-required="true" aria-invalid="false" aria-describedby="form-name-error" placeholder="اكتب اسمك" data-i18n-placeholder="form.name_placeholder" />
+                <small class="field-error" id="form-name-error" role="alert"></small>
               </label>
               <label for="form-email">
                 <span data-i18n="form.email">البريد الإلكتروني</span>
-                <input id="form-email" name="email" required type="email" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="name@example.com" />
+                <input id="form-email" name="email" required type="email" autocomplete="email" aria-required="true" aria-invalid="false" aria-describedby="form-email-error" placeholder="name@example.com" data-i18n-placeholder="form.email_placeholder" />
+                <small class="field-error" id="form-email-error" role="alert"></small>
               </label>
             </div>
             <label for="form-subject">
               <span data-i18n="form.subject">الموضوع</span>
-              <input id="form-subject" name="subject" required autocomplete="off" aria-required="true" aria-invalid="false" placeholder="كيف يمكنني مساعدتك؟" />
+              <input id="form-subject" name="subject" required autocomplete="off" aria-required="true" aria-invalid="false" aria-describedby="form-subject-error" placeholder="كيف يمكنني مساعدتك؟" data-i18n-placeholder="form.subject_placeholder" />
+              <small class="field-error" id="form-subject-error" role="alert"></small>
             </label>
             <label for="form-message">
               <span data-i18n="form.message">الرسالة</span>
-              <textarea id="form-message" name="message" required aria-required="true" aria-invalid="false" placeholder="اكتب رسالتك هنا..."></textarea>
+              <textarea id="form-message" name="message" required aria-required="true" aria-invalid="false" aria-describedby="form-message-error" placeholder="اكتب رسالتك هنا..." data-i18n-placeholder="form.message_placeholder"></textarea>
+              <small class="field-error" id="form-message-error" role="alert"></small>
             </label>
             <button class="submit-button" type="submit" data-i18n="form.submit">
               ↖ إرسال الرسالة
@@ -1028,33 +1235,39 @@
     <footer class="footer">
       <div class="container footer-inner">
         <div>
-          <div style="font:400 22px var(--font-serif); color:#f4f1e9;">
+          <div style="font:700 22px var(--font-serif); color:#f4f0e8;">
             Eissa Mohammed <span class="lime">عيسى محمد</span>
           </div>
           <div style="font:10px var(--font-mono); margin-top:4px;">FRONT-END / UI / UX / ALEXANDRIA — v4.2.0</div>
         </div>
         <div style="display:flex; gap:16px;">
-          <a href="#" id="privacy-link" style="font-size:12px; color:var(--muted)" data-i18n="footer.privacy">الخصوصية</a>
+          <button type="button" id="privacy-link" class="footer-link" data-i18n="footer.privacy">الخصوصية</button>
           <a href="#hero" style="font-size:12px; font-weight:800;" data-i18n="footer.top">للأعلى ↗</a>
         </div>
       </div>
     </footer>
 
     <!-- Modals -->
-    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-project-title">
       <div class="panel modal-card">
         <button class="close" type="button" id="project-modal-close" aria-label="إغلاق النافذة">×</button>
         <h3 id="modal-project-title" style="margin:10px 0 0; font-size:22px;"></h3>
         <p id="modal-project-desc" style="color:var(--muted); margin-top:10px; font-size:14px; line-height:1.7;"></p>
         <div id="modal-project-tags" class="project-tags" style="justify-content:center; margin-bottom:20px;"></div>
-        <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer" class="primary-button" style="width:100%">
+        <dl class="case-study-grid" id="modal-project-meta" aria-live="polite" hidden>
+          <div><dt data-i18n="modal.problem">المشكلة / Problem</dt><dd id="modal-project-problem">ستضاف عند توفر تفاصيل دراسة الحالة.</dd></div>
+          <div><dt data-i18n="modal.solution">الحل / Solution</dt><dd id="modal-project-solution">ستضاف عند توفر تفاصيل دراسة الحالة.</dd></div>
+          <div><dt data-i18n="modal.role">الدور / Role</dt><dd id="modal-project-role">ستضاف عند توفر تفاصيل دراسة الحالة.</dd></div>
+          <div><dt data-i18n="modal.preview">المعاينة / Preview</dt><dd id="modal-project-preview">الرابط متاح أدناه عند توفره.</dd></div>
+        </dl>
+        <a id="modal-project-link" target="_blank" rel="noopener noreferrer" class="primary-button" style="width:100%">
           معاينة مباشرة ↗
         </a>
       </div>
     </div>
 
     <!-- السيرة الذاتية PDF Export Modal -->
-    <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+    <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="resume-title">
       <div class="panel modal-card" style="width:min(680px, 100%); text-align:right;">
         <button class="close" type="button" id="resume-modal-close" aria-label="إغلاق النافذة">×</button>
         <div id="resume-export-target" style="padding:16px; background:var(--panel);">
@@ -1066,51 +1279,50 @@
             </div>
           </div>
           <p style="color:var(--muted); font-size:13px;">ysym7003@gmail.com | +201288840809 | الإسكندرية، مصر</p>
+          <p style="color:var(--muted); font-size:13px;">LinkedIn: linkedin.com/in/eissa-dev</p>
           <hr style="border:0; border-top:1px solid var(--line); margin:16px 0;" />
-          <h4 style="margin:0 0 8px;">الملخص المهني:</h4>
+          <h4 style="margin:0 0 8px;" data-i18n="resume.summary_title">الملخص المهني:</h4>
           <p style="font-size:13px; color:var(--muted); line-height:1.7;">
             مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية وعالية الأداء باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول وتحسين محركات البحث.
           </p>
         </div>
         <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
-          <button class="primary-button" id="download-pdf-btn">تحميل PDF حقيقي ⇩</button>
-          <button class="outline-button" onclick="window.print()">طباعة</button>
+          <button type="button" class="primary-button" id="download-pdf-btn" data-i18n="resume.download">تحميل PDF حقيقي ⇩</button>
+          <button class="outline-button" id="resume-print-btn" type="button" data-i18n="resume.print">طباعة</button>
         </div>
       </div>
     </div>
 
     <!-- Privacy Modal -->
-    <div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-heading">
+    <div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-heading">
       <div class="panel modal-card">
-        <button class="close" type="button" onclick="closeModal('privacy-modal')" aria-label="إغلاق النافذة">×</button>
-        <h3 id="privacy-heading">سياسة الخصوصية</h3>
+        <button class="close" type="button" id="privacy-modal-close" aria-label="إغلاق النافذة">×</button>
+        <h3 id="privacy-heading" data-i18n="privacy.title">سياسة الخصوصية</h3>
         <p style="color:var(--muted); font-size:13px; margin-top:12px; line-height:1.7;">
-          يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.
+          <span data-i18n="privacy.body">يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.</span>
         </p>
       </div>
     </div>
 
     <!-- Command Palette -->
-    <div class="cmd-palette" id="cmd-palette" role="dialog" aria-modal="true" aria-label="لوحة الأوامر">
-      <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث..." aria-label="البحث" />
+    <div class="cmd-palette" id="cmd-palette" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cmd-title">
+        <h2 id="cmd-title" class="sr-only" data-i18n="cmd.title">لوحة الأوامر</h2>
+        <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث..." data-i18n-placeholder="cmd.placeholder" aria-label="البحث" aria-labelledby="cmd-title" />
       <ul class="cmd-list">
-        <li class="cmd-item" data-action="nav" data-target="#hero">الرئيسية <small>Home</small></li>
-        <li class="cmd-item" data-action="nav" data-target="#projects">المشاريع <small>Projects</small></li>
-        <li class="cmd-item" data-action="resume">السيرة الذاتية <small>Resume</small></li>
-        <li class="cmd-item" data-action="theme">تبديل المظهر <small>Theme</small></li>
-        <li class="cmd-item" data-action="lang">تبديل اللغة <small>Language</small></li>
+        <li><button type="button" class="cmd-item" data-action="nav" data-target="#hero"><span data-i18n="cmd.home">الرئيسية</span> <small>Home</small></button></li>
+        <li><button type="button" class="cmd-item" data-action="nav" data-target="#projects"><span data-i18n="cmd.projects">المشاريع</span> <small>Projects</small></button></li>
+        <li><button type="button" class="cmd-item" data-action="resume"><span data-i18n="cmd.resume">السيرة الذاتية</span> <small>Resume</small></button></li>
+        <li><button type="button" class="cmd-item" data-action="theme"><span data-i18n="cmd.theme">تبديل المظهر</span> <small>Theme</small></button></li>
+        <li><button type="button" class="cmd-item" data-action="lang"><span data-i18n="cmd.lang">تبديل اللغة</span> <small>Language</small></button></li>
       </ul>
     </div>
-
-    <!-- مكتبة html2pdf الخارجية محملة بـ defer وأمان SRI -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" xintegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
     <!-- المنطق البرمجي السلوكي الموحد -->
     <script>
       (function () {
         "use strict";
 
-        // تسجيل Service Worker و PWA Manifest ديناميكياً
+        // إضافة Web App Manifest خفيف عند توفر Service Worker API
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
             const manifest = {
@@ -1118,8 +1330,8 @@
               short_name: "Eissa",
               start_url: "./",
               display: "standalone",
-              background_color: "#071721",
-              theme_color: "#071721",
+              background_color: "#0a0a0c",
+              theme_color: "#0a0a0c",
               icons: [{ src: "1000081078.png", sizes: "192x192", type: "image/png" }]
             };
             const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
@@ -1128,6 +1340,7 @@
             link.rel = 'manifest';
             link.href = manifestURL;
             document.head.appendChild(link);
+            window.setTimeout(() => URL.revokeObjectURL(manifestURL), 0);
           });
         }
 
@@ -1178,9 +1391,15 @@
             "form.subject": "الموضوع",
             "form.message": "الرسالة",
             "form.submit": "↖ إرسال الرسالة",
+            "form.name_placeholder": "اكتب اسمك",
+            "form.email_placeholder": "name@example.com",
+            "form.subject_placeholder": "كيف يمكنني مساعدتك؟",
+            "form.message_placeholder": "اكتب رسالتك هنا...",
+            "cmd.placeholder": "اكتب أمراً أو ابحث...",
             "footer.privacy": "الخصوصية",
             "footer.top": "للأعلى ↗",
-            "skip": "تجاوز إلى المحتوى الرئيسي"
+            "skip": "تجاوز إلى المحتوى الرئيسي",
+            "profile.kicker": "01 / بطاقة التعريف", "profile.title": "بياناتي،<br /><span class=\"lime\">بوضوح.</span>", "about.kicker": "02 / عني", "about.title": "مطور<br />يفكر<br /><span class=\"coral\">بعين مصمم.</span>", "skills.kicker": "03 / المهارات والقدرات", "skills.title": "الأدوات التي<br /><span class=\"lime\">أصل بها للفكرة.</span>", "experience.kicker": "04 / المسار والخبرات", "experience.title": "رحلة تعلم<br /><span class=\"coral\">مستمرة.</span>", "experience.current": "2024 — الحالي", "experience.previous": "2023 — 2024", "stats.kicker": "05 / الأرقام والإحصائيات", "stats.title": "مؤشرات الأداء<br /><span class=\"lime\">المباشرة.</span>", "projects.kicker": "06 / المشاريع", "projects.title": "أعمال تصنع<br /><span class=\"lime\">فرقاً.</span>", "projects.filter_label": "تصفية المشاريع", "contact.kicker": "07 / تواصل معي", "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>", "project.details": "التفاصيل", "project.details_aria": "فتح تفاصيل", "project.open": "فتح المشروع ↗", "project.preview": "معاينة مباشرة ↗", "project.no_preview": "لا توجد معاينة منشورة", "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية وعالية الأداء باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول وتحسين محركات البحث.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "cmd.title": "لوحة الأوامر", "cmd.search_label": "البحث", "cmd.home": "الرئيسية", "cmd.projects": "المشاريع", "cmd.resume": "السيرة الذاتية", "cmd.theme": "تبديل المظهر", "cmd.lang": "تبديل اللغة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
           },
           en: {
             "nav.home": "Home",
@@ -1228,9 +1447,15 @@
             "form.subject": "Subject",
             "form.message": "Message",
             "form.submit": "↖ Send Message",
+            "form.name_placeholder": "Enter your name",
+            "form.email_placeholder": "name@example.com",
+            "form.subject_placeholder": "How can I help you?",
+            "form.message_placeholder": "Write your message here...",
+            "cmd.placeholder": "Type a command or search...",
             "footer.privacy": "Privacy",
             "footer.top": "Back to Top ↗",
-            "skip": "Skip to main content"
+            "skip": "Skip to main content",
+            "profile.kicker": "01 / Profile", "profile.title": "My details,<br /><span class=\"lime\">clearly.</span>", "about.kicker": "02 / About", "about.title": "A developer<br />who thinks<br /><span class=\"coral\">like a designer.</span>", "skills.kicker": "03 / Skills & Capabilities", "skills.title": "The tools I<br /><span class=\"lime\">use to shape ideas.</span>", "experience.kicker": "04 / Journey & Experience", "experience.title": "A continuous<br /><span class=\"coral\">learning journey.</span>", "experience.current": "2024 — Present", "experience.previous": "2023 — 2024", "stats.kicker": "05 / Metrics & Statistics", "stats.title": "Live performance<br /><span class=\"lime\">indicators.</span>", "projects.kicker": "06 / Projects", "projects.title": "Work that makes<br /><span class=\"lime\">a difference.</span>", "projects.filter_label": "Project filters", "contact.kicker": "07 / Contact", "contact.title": "Have an<br /><span class=\"coral\">idea?</span>", "project.details": "Details", "project.details_aria": "Open details for", "project.open": "Open project ↗", "project.preview": "Live preview ↗", "project.no_preview": "No published preview", "privacy.title": "Privacy Policy", "privacy.body": "This website respects your privacy and does not collect personal data without your permission. The contact form is used only to send direct inquiries.", "resume.summary_title": "Professional Summary", "resume.summary": "Front-end developer focused on building interactive, high-performance web applications using React, TypeScript, HTML5, and CSS3, with attention to accessibility and search engine optimization.", "resume.download": "Download PDF ⇩", "resume.print": "Print", "cmd.title": "Command Palette", "cmd.search_label": "Search", "cmd.home": "Home", "cmd.projects": "Projects", "cmd.resume": "Resume", "cmd.theme": "Toggle Theme", "cmd.lang": "Switch Language", "aria.close": "Close window", "form.invalid_required": "This field is required.", "form.invalid_email": "Enter a valid email address.", "form.invalid_summary": "Please complete all required fields.", "toast.email": "Opening your email app...", "toast.vcard": "Contact vCard downloaded", "toast.copy_failed": "Automatic copy failed", "toast.pdf": "Preparing the PDF...", "modal.problem": "Problem", "modal.solution": "Solution", "modal.role": "Role", "modal.preview": "Preview", "modal.available_later": "Details will be added when a case study is available.", "modal.link_available": "The link is available below when published."
           }
         };
 
@@ -1247,79 +1472,138 @@
           toastTimer = setTimeout(() => toast.classList.remove("show"), 2500);
         }
 
-        // ساعة الوقت الحية
+        // ساعة الوقت الحية — لا تعمل في الخلفية بلا حاجة.
+        const clockElement = document.getElementById("clock");
+        let clockTimer = 0;
+
         function updateClock() {
+          if (!clockElement) return;
           const now = new Date();
-          document.getElementById("clock").textContent =
-            new Intl.DateTimeFormat(currentLang === "ar" ? "ar-EG" : "en-US", {
-              hour: "2-digit", minute: "2-digit", second: "2-digit"
-            }).format(now);
+          clockElement.textContent = new Intl.DateTimeFormat(
+            currentLang === "ar" ? "ar-EG" : "en-US",
+            { hour: "2-digit", minute: "2-digit", second: "2-digit" }
+          ).format(now);
         }
-        updateClock();
-        setInterval(updateClock, 1000);
 
-        // مؤشر الفأرة التفاعلي
+        function scheduleClock() {
+          clearTimeout(clockTimer);
+          updateClock();
+          if (!document.hidden) {
+            const delay = 1000 - (Date.now() % 1000);
+            clockTimer = window.setTimeout(scheduleClock, delay);
+          }
+        }
+
+        document.addEventListener("visibilitychange", scheduleClock, { passive: true });
+        scheduleClock();
+
+        // مؤشر الفأرة التفاعلي: تحديث واحد لكل frame بدل تغيير الـDOM مع كل حركة
         const cursor = document.getElementById("cursor");
-        if (window.matchMedia("(pointer: fine)").matches && cursor) {
-          window.addEventListener("mousemove", (e) => {
-            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate3d(-50%, -50%, 0)`;
+        if (window.matchMedia("(pointer: fine) and (prefers-reduced-motion: no-preference)").matches && cursor) {
+          let pointerX = -100;
+          let pointerY = -100;
+          let cursorFrame = 0;
+          const renderCursor = () => {
+            cursor.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0) translate3d(-50%, -50%, 0)`;
+            cursorFrame = 0;
+          };
+          window.addEventListener("pointermove", (e) => {
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+            if (!cursorFrame) cursorFrame = requestAnimationFrame(renderCursor);
           }, { passive: true });
-          document.querySelectorAll("a, button, input, textarea").forEach((el) => {
-            el.addEventListener("mouseenter", () => cursor.classList.add("hovered"));
-            el.addEventListener("mouseleave", () => cursor.classList.remove("hovered"));
-          });
+          document.addEventListener("pointerover", (e) => {
+            if (e.target.closest("a, button, input, textarea")) cursor.classList.add("hovered");
+          }, { passive: true });
+          document.addEventListener("pointerout", (e) => {
+            if (e.target.closest("a, button, input, textarea") && !e.relatedTarget?.closest?.("a, button, input, textarea")) {
+              cursor.classList.remove("hovered");
+            }
+          }, { passive: true });
         }
 
-        // إدارة حبس التركيز (Focus Trap) في النوافذ المنبثقة Modals
-        function trapFocus(modal) {
-          const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-          if (!focusables.length) return;
+        // إدارة التركيز في النوافذ المنبثقة: حبس Tab + إعادة التركيز بعد الإغلاق.
+        const focusReturnTargets = new WeakMap();
+
+        function getFocusable(surface) {
+          return [...surface.querySelectorAll(
+            'button:not([disabled]), [href]:not([aria-disabled="true"]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          )].filter((el) => el.getClientRects().length);
+        }
+
+        function trapFocus(surface) {
+          const focusables = getFocusable(surface);
+          if (!focusables.length) {
+            surface.setAttribute("tabindex", "-1");
+            surface.focus();
+            return;
+          }
+
           const first = focusables[0];
           const last = focusables[focusables.length - 1];
 
-          modal.onkeydown = function (e) {
-            if (e.key === 'Tab') {
-              if (e.shiftKey) {
-                if (document.activeElement === first) {
-                  last.focus();
-                  e.preventDefault();
-                }
-              } else {
-                if (document.activeElement === last) {
-                  first.focus();
-                  e.preventDefault();
-                }
-              }
+          surface.onkeydown = (event) => {
+            if (event.key !== "Tab") return;
+            const current = document.activeElement;
+
+            if (event.shiftKey && current === first) {
+              event.preventDefault();
+              last.focus();
+            } else if (!event.shiftKey && current === last) {
+              event.preventDefault();
+              first.focus();
             }
           };
+
           first.focus();
         }
 
         function openModal(modalId) {
-          lastFocusedElement = document.activeElement;
-          const modal = document.getElementById(modalId);
-          modal.classList.add("open");
-          trapFocus(modal);
+          const surface = document.getElementById(modalId);
+          if (!surface) return;
+
+          focusReturnTargets.set(surface, document.activeElement);
+          surface.classList.add("open");
+          surface.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+          trapFocus(surface);
         }
 
-        window.closeModal = function(modalId) {
-          const modal = document.getElementById(modalId);
-          modal.classList.remove("open");
-          modal.onkeydown = null;
-          if (lastFocusedElement) lastFocusedElement.focus();
+        window.closeModal = function (modalId, restoreFocus = true) {
+          const surface = document.getElementById(modalId);
+          if (!surface) return;
+
+          surface.classList.remove("open");
+          surface.setAttribute("aria-hidden", "true");
+          surface.onkeydown = null;
+
+          if (!document.querySelector(".modal.open, .cmd-palette.open")) {
+            document.body.classList.remove("modal-open");
+          }
+
+          if (restoreFocus) {
+            const target = focusReturnTargets.get(surface);
+            if (target && target.isConnected && typeof target.focus === "function") {
+              target.focus();
+            }
+          }
         };
+
+        document.querySelectorAll(".modal, .cmd-palette").forEach((surface) => {
+          surface.setAttribute("aria-hidden", "true");
+          surface.addEventListener("click", (event) => {
+            if (event.target === surface) closeModal(surface.id);
+          });
+        });
 
         // تبديل المظهر Dark / Light
         function setTheme(theme) {
           currentTheme = theme;
           localStorage.setItem("site_theme", theme);
-          if (theme === "light") {
-            document.documentElement.classList.add("light");
-            document.getElementById("theme-toggle").textContent = "◐";
-          } else {
-            document.documentElement.classList.remove("light");
-            document.getElementById("theme-toggle").textContent = "☼";
-          }
+          const isLight = theme === "light";
+          document.documentElement.classList.toggle("light", isLight);
+          document.getElementById("theme-toggle").textContent = isLight ? "◐" : "☼";
+          document.getElementById("theme-color-meta").setAttribute("content", isLight ? "#f8f4ea" : "#0a0a0c");
         }
         document.getElementById("theme-toggle").addEventListener("click", () => {
           setTheme(currentTheme === "dark" ? "light" : "dark");
@@ -1339,6 +1623,17 @@
               el.innerHTML = translations[lang][key];
             }
           });
+
+          document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            if (translations[lang][key]) el.setAttribute("placeholder", translations[lang][key]);
+          });
+          document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-aria-label");
+            if (translations[lang][key]) el.setAttribute("aria-label", translations[lang][key]);
+          });
+          renderSkills();
+          renderProjects(document.querySelector("[data-filter].active")?.dataset.filter || "all");
           updateClock();
         }
         document.getElementById("lang-toggle").addEventListener("click", () => {
@@ -1349,6 +1644,13 @@
         // قائمة الهاتف المحمول
         const menuButton = document.getElementById("menu-toggle");
         const mobileNav = document.getElementById("mobile-nav");
+        function closeMobileNav(restoreFocus = true) {
+          mobileNav.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.textContent = "☰";
+          if (restoreFocus) menuButton.focus();
+        }
+
         menuButton.addEventListener("click", () => {
           const open = mobileNav.classList.toggle("open");
           menuButton.setAttribute("aria-expanded", String(open));
@@ -1358,6 +1660,26 @@
             if (firstLink) firstLink.focus();
           }
         });
+        mobileNav.addEventListener("click", (event) => {
+          if (event.target.closest("a")) {
+            closeMobileNav(false);
+          }
+        });
+
+        // يوضح القسم الحالي أثناء التمرير، مع مراقبة خفيفة بدل حسابات scroll مستمرة
+        const navigationLinks = document.querySelectorAll(".main-nav a, .mobile-nav a");
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navigationLinks.forEach((link) => {
+              const active = link.getAttribute("href") === `#${entry.target.id}`;
+              link.classList.toggle("active", active);
+              if (active) link.setAttribute("aria-current", "location");
+              else link.removeAttribute("aria-current");
+            });
+          });
+        }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+        document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
 
         // النسخ للحافظة
         document.querySelectorAll("[data-copy]").forEach((btn) => {
@@ -1371,7 +1693,7 @@
               }
               showToast((currentLang === "ar" ? "تم نسخ " : "Copied ") + (this.dataset.label || ""));
             } catch (_) {
-              showToast("تعذر النسخ تلقائياً");
+              showToast(translations[currentLang]["toast.copy_failed"]);
             }
           });
         });
@@ -1386,30 +1708,38 @@
             "TEL;TYPE=CELL:+201288840809",
             "ADR;TYPE=HOME:;;Alexandria;;;Egypt",
             "URL:https://eissa89.github.io/eissa-card/",
+            "URL;TYPE=LinkedIn:https://www.linkedin.com/in/eissa-dev",
             "END:VCARD"
           ].join("\n");
           const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
           const url = URL.createObjectURL(blob);
           const link = document.createElement("a");
-          link.href = url; link.download = "eissa-mohammed.vcf"; link.click();
-          URL.revokeObjectURL(url);
-          showToast("تم تنزيل جهة الاتصال vCard");
+          link.href = url;
+          link.download = "eissa-mohammed.vcf";
+          link.click();
+          window.setTimeout(() => URL.revokeObjectURL(url), 0);
+          showToast(translations[currentLang]["toast.vcard"]);
         });
 
         document.getElementById("print-button").addEventListener("click", () => window.print());
 
-        // مهارات ورسومات
+        // المهارات: سياق الاستخدام أوضح من نسب تقديرية غير قابلة للتحقق
         const skills = [
-          ["HTML5 / Modern CSS3", 95],
-          ["JavaScript (ES2024)", 90],
-          ["UI/UX Design Systems", 92],
-          ["Responsive & PWA Architecture", 94],
-          ["React / TypeScript", 85],
-          ["Performance & Accessibility", 91]
+          { title: "Frontend", items: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"] },
+          { title: "UI / UX", items: ["Interface systems", "Responsive flows", "Prototyping & interaction"] },
+          { title: "Performance", items: ["Accessibility", "Performance budgets", "Responsive & PWA architecture"] },
+          { title: "Tools", items: ["Git & GitHub", "Design tokens", "Testing-minded workflows"] },
+          { title: "Creative Development", items: ["Motion direction", "Immersive web", "Visual storytelling"] }
         ];
-        document.getElementById("skills-grid").innerHTML = skills
-          .map((s) => `<article class="panel skill-card"><div class="skill-name-row"><span>${s[0]}</span><span class="lime">${s[1]}%</span></div><div class="progress"><span style="width:${s[1]}%"></span></div></article>`)
-          .join("");
+        const skillTranslations = {
+          ar: { Frontend: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"], "UI / UX": ["أنظمة الواجهات", "تدفقات متجاوبة", "النمذجة والتفاعل"], Performance: ["سهولة الوصول", "ميزانيات الأداء", "بنية Responsive وPWA"], Tools: ["Git & GitHub", "Design tokens", "سير عمل يراعي الاختبار"], "Creative Development": ["توجيه الحركة", "ويب غامر", "السرد البصري"] },
+          en: { Frontend: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"], "UI / UX": ["Interface systems", "Responsive flows", "Prototyping & interaction"], Performance: ["Accessibility", "Performance budgets", "Responsive & PWA architecture"], Tools: ["Git & GitHub", "Design tokens", "Testing-minded workflows"], "Creative Development": ["Motion direction", "Immersive web", "Visual storytelling"] }
+        };
+        const skillTitles = { ar: { Frontend: "الواجهة الأمامية", "UI / UX": "UI / UX", Performance: "الأداء", Tools: "الأدوات", "Creative Development": "التطوير الإبداعي" }, en: { Frontend: "Frontend", "UI / UX": "UI / UX", Performance: "Performance", Tools: "Tools", "Creative Development": "Creative Development" } };
+        function renderSkills() {
+          document.getElementById("skills-grid").innerHTML = skills.map((skill) => { const items = skillTranslations[currentLang][skill.title]; return `<article class="panel skill-card"><h3>${skillTitles[currentLang][skill.title]}</h3><ul class="skill-items">${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>`; }).join("");
+        }
+        renderSkills();
 
         const tags = ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Git & GitHub", "PWA", "Accessibility", "UI/UX", "Tailwind CSS"];
         document.getElementById("tag-list").innerHTML = tags.map((t) => `<span class="tag">${t}</span>`).join("");
@@ -1419,35 +1749,113 @@
           {
             id: "p1", category: "web", number: "01", symbol: "▦",
             title: "Eissa Personal Card & PWA",
-            desc: "بطاقة شخصية تفاعلية فائقة السرعة مع تقنيات Glassmorphism وتطبيق ويب تقدمي PWA.",
+            desc: "بطاقة شخصية تفاعلية فائقة السرعة مع تقنيات Glassmorphism وتطبيق ويب تقدمي PWA.", enDesc: "A fast interactive personal card using Glassmorphism and Progressive Web App technology.",
             tags: ["HTML5", "CSS3", "PWA", "JS"], link: "https://eissa89.github.io/eissa-card/"
           },
           {
             id: "p2", category: "ui", number: "02", symbol: "✦",
             title: "Cyber Dark UI System",
-            desc: "نظام تصميم داكن فاخر يعتمد على المؤثرات الضوئية والتفاعلات الهادئة والواضحة.",
-            tags: ["UI/UX", "Design System", "a11y"], link: "#"
+            desc: "نظام تصميم داكن فاخر يعتمد على المؤثرات الضوئية والتفاعلات الهادئة والواضحة.", enDesc: "A premium dark design system built around restrained lighting effects and clear interactions.",
+            tags: ["UI/UX", "Design System", "a11y"]
           },
           {
             id: "p3", category: "web", number: "03", symbol: "◈",
             title: "High Performance App",
-            desc: "تجربة ويب خفيفة مبنية بعناية، تضع سرعة التحميل وسهولة الاستخدام في المقدمة.",
-            tags: ["Performance", "Vanilla JS", "React"], link: "#"
+            desc: "تجربة ويب خفيفة مبنية بعناية، تضع سرعة التحميل وسهولة الاستخدام في المقدمة.", enDesc: "A carefully built lightweight web experience focused on loading speed and usability.",
+            tags: ["Performance", "Vanilla JS", "React"]
           }
         ];
 
         function renderProjects(filter) {
-          document.getElementById("projects-grid").innerHTML = projects
-            .filter((p) => filter === "all" || p.category === filter)
-            .map((p) => `<article class="panel project-card"><div style="display:flex; justify-content:space-between;"><span class="coral" style="font-family:var(--font-mono)">${p.number}</span><span class="lime" style="font-size:24px;">${p.symbol}</span></div><h3 style="margin:20px 0 0; font-size:20px;">${p.title}</h3><p style="color:var(--muted); font-size:13px; margin-top:10px; line-height:1.7;">${p.desc}</p><div class="project-tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div><button class="small-button" style="margin-top:16px; width:100%; justify-content:center;" onclick="openProjectModal('${p.id}')">التفاصيل والمعاينة</button></article>`)
-            .join("");
+          const grid = document.getElementById("projects-grid");
+          const visibleProjects = projects.filter((p) => filter === "all" || p.category === filter);
+          const fragment = document.createDocumentFragment();
+
+          visibleProjects.forEach((p) => {
+            const card = document.createElement("article");
+            card.className = "panel project-card";
+
+            const top = document.createElement("div");
+            top.className = "project-topline";
+
+            const number = document.createElement("span");
+            number.className = "coral project-number";
+            number.textContent = p.number;
+
+            const category = document.createElement("span");
+            category.className = "project-category";
+            category.textContent = p.category === "web" ? "WEB" : "UI / UX";
+
+            const symbol = document.createElement("span");
+            symbol.className = "lime project-symbol";
+            symbol.setAttribute("aria-hidden", "true");
+            symbol.textContent = p.symbol;
+
+            const topMeta = document.createElement("div");
+            topMeta.className = "project-top-meta";
+            topMeta.append(category, symbol);
+
+            top.append(number, topMeta);
+
+            const title = document.createElement("h3");
+            title.className = "project-title";
+            title.textContent = p.title;
+
+            const desc = document.createElement("p");
+            desc.className = "project-description";
+            desc.textContent = currentLang === "en" ? p.enDesc : p.desc;
+
+            const tags = document.createElement("div");
+            tags.className = "project-tags";
+            p.tags.forEach((tagText) => {
+              const tag = document.createElement("span");
+              tag.textContent = tagText;
+              tags.appendChild(tag);
+            });
+
+            const actions = document.createElement("div");
+            actions.className = "project-actions";
+
+            const details = document.createElement("button");
+            details.type = "button";
+            details.className = "small-button project-details";
+            details.dataset.projectId = p.id;
+            details.textContent = translations[currentLang]["project.details"];
+            details.setAttribute("aria-label", `${translations[currentLang]["project.details_aria"]} ${p.title}`);
+            actions.appendChild(details);
+
+            if (p.link) {
+              const directLink = document.createElement("a");
+              directLink.className = "small-button";
+              directLink.href = p.link;
+              directLink.target = "_blank";
+              directLink.rel = "noopener noreferrer";
+              directLink.textContent = translations[currentLang]["project.open"];
+              actions.appendChild(directLink);
+            }
+
+            card.append(top, title, desc, tags, actions);
+            fragment.appendChild(card);
+          });
+
+          grid.replaceChildren(fragment);
         }
+
         renderProjects("all");
+        const projectsGrid = document.getElementById("projects-grid");
+        projectsGrid.addEventListener("click", (event) => {
+          const trigger = event.target.closest(".project-details");
+          if (trigger) openProjectModal(trigger.dataset.projectId);
+        });
 
         document.querySelectorAll("[data-filter]").forEach((btn) => {
           btn.addEventListener("click", function () {
-            document.querySelectorAll("[data-filter]").forEach((b) => b.classList.remove("active"));
+            document.querySelectorAll("[data-filter]").forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-pressed", "false");
+            });
             this.classList.add("active");
+            this.setAttribute("aria-pressed", "true");
             renderProjects(this.dataset.filter);
           });
         });
@@ -1455,22 +1863,60 @@
         window.openProjectModal = function (id) {
           const item = projects.find((p) => p.id === id);
           if (!item) return;
+
           document.getElementById("modal-project-title").textContent = item.title;
-          document.getElementById("modal-project-desc").textContent = item.desc;
-          document.getElementById("modal-project-tags").innerHTML = item.tags.map((t) => `<span>${t}</span>`).join("");
-          document.getElementById("modal-project-link").href = item.link;
+          document.getElementById("modal-project-desc").textContent = currentLang === "en" ? item.enDesc : item.desc;
+
+          const tags = document.getElementById("modal-project-tags");
+          tags.replaceChildren();
+          item.tags.forEach((tagText) => {
+            const tag = document.createElement("span");
+            tag.textContent = tagText;
+            tags.appendChild(tag);
+          });
+
+          const link = document.getElementById("modal-project-link");
+          if (item.link) {
+            link.href = item.link;
+            link.textContent = translations[currentLang]["project.preview"];
+            link.removeAttribute("aria-disabled");
+            link.style.display = "inline-flex";
+            link.tabIndex = 0;
+          } else {
+            link.removeAttribute("href");
+            link.textContent = translations[currentLang]["project.no_preview"];
+            link.setAttribute("aria-disabled", "true");
+            link.style.display = "inline-flex";
+            link.tabIndex = -1;
+          }
+
           openModal("project-modal");
         };
+
         document.getElementById("project-modal-close").addEventListener("click", () => closeModal("project-modal"));
+        document.getElementById("privacy-modal-close").addEventListener("click", () => closeModal("privacy-modal"));
 
         // نافذة السيرة الذاتية PDF
         document.getElementById("resume-open-btn").addEventListener("click", () => openModal("resume-modal"));
         document.getElementById("resume-modal-close").addEventListener("click", () => closeModal("resume-modal"));
+        document.getElementById("resume-print-btn").addEventListener("click", () => window.print());
 
-        document.getElementById("download-pdf-btn").addEventListener("click", () => {
+        document.getElementById("download-pdf-btn").addEventListener("click", async () => {
           const element = document.getElementById("resume-export-target");
-          showToast("جاري تنزيل ملف الـ PDF...");
-          if (typeof html2pdf !== 'undefined') {
+          showToast(translations[currentLang]["toast.pdf"]);
+           if (typeof html2pdf === "undefined") {
+             await new Promise((resolve, reject) => {
+               const script = document.createElement("script");
+               script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+               script.integrity = "sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==";
+               script.crossOrigin = "anonymous";
+               script.referrerPolicy = "no-referrer";
+               script.onload = resolve;
+               script.onerror = reject;
+               document.head.appendChild(script);
+             }).catch(() => {});
+           }
+           if (typeof html2pdf !== "undefined") {
             const opt = {
               margin: 0.5, filename: "Eissa-Mohammed-Resume.pdf",
               image: { type: "jpeg", quality: 0.98 }, html2canvas: { scale: 2 },
@@ -1482,27 +1928,32 @@
           }
         });
 
-        // جلب بيانات GitHub مع التخزين المؤقت Caching
+        // جلب بيانات GitHub مع التخزين المؤقت Caching عند اقتراب قسم الأرقام فقط
+        let githubStatsFetched = false;
         async function fetchGitHubStats() {
+          if (githubStatsFetched) return;
+          githubStatsFetched = true;
           const cachedRepos = localStorage.getItem("github_repos");
           const cachedTime = localStorage.getItem("github_repos_time");
           if (cachedRepos && cachedTime && (Date.now() - Number(cachedTime) < 3600000)) {
-            document.getElementById("stat-repos").setAttribute("data-target", cachedRepos);
+            const repoElement = document.getElementById("stat-repos");
+            repoElement.setAttribute("data-target", cachedRepos);
+            repoElement.textContent = cachedRepos;
             return;
           }
           try {
             const res = await fetch("https://api.github.com/users/Eissa89");
             if (res.ok) {
               const data = await res.json();
-              const repoCount = data.public_repos || 15;
-              document.getElementById("stat-repos").setAttribute("data-target", repoCount);
-              localStorage.setItem("github_repos", repoCount);
+              const repoCount = Number.isFinite(data.public_repos) ? data.public_repos : 0;
+              const repoElement = document.getElementById("stat-repos");
+              repoElement.setAttribute("data-target", String(repoCount));
+              repoElement.textContent = String(repoCount);
+              localStorage.setItem("github_repos", String(repoCount));
               localStorage.setItem("github_repos_time", Date.now().toString());
             }
           } catch (_) {}
         }
-        fetchGitHubStats();
-
         // لوحة الأوامر السريعة (Ctrl+K)
         const cmdPalette = document.getElementById("cmd-palette");
         const cmdInput = document.getElementById("cmd-input");
@@ -1512,32 +1963,45 @@
             if (cmdPalette.classList.contains("open")) {
               closeModal("cmd-palette");
             } else {
+              cmdInput.value = "";
+              commandItems.forEach((item) => item.closest("li").hidden = false);
               openModal("cmd-palette");
-              cmdInput.focus();
             }
           }
           if (e.key === "Escape") {
-            document.querySelectorAll(".modal").forEach((m) => {
-              if (m.classList.contains("open")) closeModal(m.id);
-            });
+            const openSurfaces = [...document.querySelectorAll(".modal.open, .cmd-palette.open")];
+            const topSurface = openSurfaces[openSurfaces.length - 1];
+            if (topSurface) closeModal(topSurface.id);
           }
         });
         document.getElementById("cmd-btn").addEventListener("click", () => {
-          openModal("cmd-palette"); cmdInput.focus();
+          cmdInput.value = "";
+          commandItems.forEach((item) => item.closest("li").hidden = false);
+          openModal("cmd-palette");
         });
+        const commandItems = [...document.querySelectorAll(".cmd-item")];
+        cmdInput.addEventListener("input", () => {
+          const query = cmdInput.value.trim().toLocaleLowerCase();
+          commandItems.forEach((item) => {
+            const visible = !query || item.textContent.toLocaleLowerCase().includes(query);
+            item.closest("li").hidden = !visible;
+          });
+        });
+
         document.querySelectorAll(".cmd-item").forEach((item) => {
           item.addEventListener("click", function () {
             const action = this.dataset.action;
             if (action === "nav") {
               document.querySelector(this.dataset.target).scrollIntoView({ behavior: "smooth" });
             } else if (action === "resume") {
+              closeModal("cmd-palette", false);
               openModal("resume-modal");
             } else if (action === "theme") {
               setTheme(currentTheme === "dark" ? "light" : "dark");
             } else if (action === "lang") {
               setLanguage(currentLang === "ar" ? "en" : "ar");
             }
-            closeModal("cmd-palette");
+            closeModal("cmd-palette", false);
           });
         });
 
@@ -1552,41 +2016,78 @@
           let valid = true;
           const inputs = contactForm.querySelectorAll("input[required], textarea[required]");
           inputs.forEach((input) => {
+            const error = document.getElementById(`${input.id}-error`);
+            let message = "";
             if (!input.value.trim()) {
+              message = translations[currentLang]["form.invalid_required"];
+            } else if (input.type === "email" && !input.validity.valid) {
+              message = translations[currentLang]["form.invalid_email"];
+            }
+            if (message) {
               input.setAttribute("aria-invalid", "true");
+              if (error) error.textContent = message;
               valid = false;
             } else {
               input.setAttribute("aria-invalid", "false");
+              if (error) error.textContent = "";
             }
           });
 
           if (!valid) {
             e.preventDefault();
-            showToast("يرجى ملء جميع الحقول المطلوب إدخالها");
+            showToast(currentLang === "ar" ? "يرجى مراجعة الحقول المطلوبة." : "Please review the required fields.");
+            contactForm.querySelector('[aria-invalid="true"]')?.focus();
           } else {
-            showToast("سيتم تحويل رسالتك الآن...");
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const subject = encodeURIComponent(formData.get("subject") || "Portfolio inquiry");
+            const body = encodeURIComponent(
+              `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`,
+            );
+            const recipient = contactForm.dataset.mailto;
+            showToast(translations[currentLang]["toast.email"]);
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
           }
         });
+        contactForm.addEventListener("input", (event) => {
+          const input = event.target;
+          if (!input.matches("input, textarea")) return;
+          input.setAttribute("aria-invalid", "false");
+          const error = document.getElementById(`${input.id}-error`);
+          if (error) error.textContent = "";
+        });
 
-        // عداد الإحصائيات
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.target.classList.contains("stat-card")) {
-              const numEl = entry.target.querySelector(".stat-num");
-              if (numEl && !numEl.dataset.done) {
-                numEl.dataset.done = "true";
-                let target = +numEl.dataset.target;
-                let count = 0; let step = Math.ceil(target / 25) || 1;
-                let timer = setInterval(() => {
-                  count += step;
-                  if (count >= target) { numEl.textContent = target; clearInterval(timer); }
-                  else { numEl.textContent = count; }
-                }, 40);
-              }
-            }
-          });
+        // إحصائية GitHub — تُحمّل عند الاقتراب من القسم وتُحفظ مؤقتاً.
+        const statsSection = document.getElementById("stats");
+        const statsObserver = new IntersectionObserver(async (entries, observer) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+
+          observer.disconnect();
+          const repoElement = document.getElementById("stat-repos");
+          await fetchGitHubStats();
+
+          const target = Number(repoElement.dataset.target);
+          if (!Number.isFinite(target)) return;
+
+          repoElement.textContent = "0";
+          let count = 0;
+          const step = Math.max(1, Math.ceil(target / 18));
+
+          const countFrame = () => {
+            count = Math.min(target, count + step);
+            repoElement.textContent = String(count);
+            if (count < target && !document.hidden) requestAnimationFrame(countFrame);
+            else if (count < target) repoElement.textContent = String(target);
+          };
+
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            repoElement.textContent = String(target);
+          } else {
+            requestAnimationFrame(countFrame);
+          }
         }, { threshold: 0.2 });
-        document.querySelectorAll(".stat-card").forEach((el) => observer.observe(el));
+
+        if (statsSection) statsObserver.observe(statsSection);
 
         // التهيئة
         setLanguage(currentLang);
