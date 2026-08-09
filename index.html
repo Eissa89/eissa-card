@@ -1203,23 +1203,23 @@
             <div class="form-grid">
               <label for="form-name">
                 <span data-i18n="form.name">الاسم</span>
-                <input id="form-name" name="name" required autocomplete="name" aria-required="true" aria-invalid="false" aria-describedby="form-name-error" placeholder="اكتب اسمك" data-i18n-placeholder="form.name_placeholder" />
+                <input id="form-name" name="name" required maxlength="100" autocomplete="name" aria-required="true" aria-invalid="false" aria-describedby="form-name-error" placeholder="اكتب اسمك" data-i18n-placeholder="form.name_placeholder" />
                 <small class="field-error" id="form-name-error" role="alert"></small>
               </label>
               <label for="form-email">
                 <span data-i18n="form.email">البريد الإلكتروني</span>
-                <input id="form-email" name="email" required type="email" autocomplete="email" aria-required="true" aria-invalid="false" aria-describedby="form-email-error" placeholder="name@example.com" data-i18n-placeholder="form.email_placeholder" />
+                <input id="form-email" name="email" required type="email" maxlength="100" autocomplete="email" aria-required="true" aria-invalid="false" aria-describedby="form-email-error" placeholder="name@example.com" data-i18n-placeholder="form.email_placeholder" />
                 <small class="field-error" id="form-email-error" role="alert"></small>
               </label>
             </div>
             <label for="form-subject">
               <span data-i18n="form.subject">الموضوع</span>
-              <input id="form-subject" name="subject" required autocomplete="off" aria-required="true" aria-invalid="false" aria-describedby="form-subject-error" placeholder="كيف يمكنني مساعدتك؟" data-i18n-placeholder="form.subject_placeholder" />
+              <input id="form-subject" name="subject" required maxlength="150" autocomplete="off" aria-required="true" aria-invalid="false" aria-describedby="form-subject-error" placeholder="كيف يمكنني مساعدتك؟" data-i18n-placeholder="form.subject_placeholder" />
               <small class="field-error" id="form-subject-error" role="alert"></small>
             </label>
             <label for="form-message">
               <span data-i18n="form.message">الرسالة</span>
-              <textarea id="form-message" name="message" required aria-required="true" aria-invalid="false" aria-describedby="form-message-error" placeholder="اكتب رسالتك هنا..." data-i18n-placeholder="form.message_placeholder"></textarea>
+              <textarea id="form-message" name="message" required maxlength="1000" aria-required="true" aria-invalid="false" aria-describedby="form-message-error" placeholder="اكتب رسالتك هنا..." data-i18n-placeholder="form.message_placeholder"></textarea>
               <small class="field-error" id="form-message-error" role="alert"></small>
             </label>
             <button class="submit-button" type="submit" data-i18n="form.submit">
@@ -1942,7 +1942,11 @@
             return;
           }
           try {
-            const res = await fetch("https://api.github.com/users/Eissa89");
+            // إضافة timeout لحماية الاتصال من التعليق اللا نهائي (Security Timeout Enhancement)
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000);
+            const res = await fetch("https://api.github.com/users/Eissa89", { signal: controller.signal });
+            clearTimeout(timeoutId);
             if (res.ok) {
               const data = await res.json();
               const repoCount = Number.isFinite(data.public_repos) ? data.public_repos : 0;
@@ -2018,10 +2022,14 @@
           inputs.forEach((input) => {
             const error = document.getElementById(`${input.id}-error`);
             let message = "";
-            if (!input.value.trim()) {
+            const val = input.value.trim();
+            const max = parseInt(input.getAttribute("maxlength"), 10);
+            if (!val) {
               message = translations[currentLang]["form.invalid_required"];
             } else if (input.type === "email" && !input.validity.valid) {
               message = translations[currentLang]["form.invalid_email"];
+            } else if (max && val.length > max) {
+              message = currentLang === "ar" ? `يتجاوز الحد الأقصى المسموح به (${max} حرفًا).` : `Exceeded maximum allowed limit (${max} characters).`;
             }
             if (message) {
               input.setAttribute("aria-invalid", "true");
