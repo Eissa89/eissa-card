@@ -1322,6 +1322,93 @@
       (function () {
         "use strict";
 
+        // Safe HTML Sanitizer for translations (only allows <br> and <span> with lime/coral classes)
+        function sanitizeHTML(htmlString) {
+          if (!htmlString) return document.createDocumentFragment();
+          try {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlString, 'text/html');
+
+            function clean(node) {
+              if (node.nodeType === Node.TEXT_NODE) {
+                return document.createTextNode(node.textContent);
+              }
+              if (node.nodeType === Node.ELEMENT_NODE) {
+                const tagName = node.tagName.toLowerCase();
+                if (tagName === 'br') {
+                  return document.createElement('br');
+                }
+                if (tagName === 'span') {
+                  const span = document.createElement('span');
+                  if (node.classList.contains('coral')) {
+                    span.classList.add('coral');
+                  }
+                  if (node.classList.contains('lime')) {
+                    span.classList.add('lime');
+                  }
+                  for (let i = 0; i < node.childNodes.length; i++) {
+                    span.appendChild(clean(node.childNodes[i]));
+                  }
+                  return span;
+                }
+              }
+              return document.createTextNode(node.textContent || "");
+            }
+
+            const fragment = document.createDocumentFragment();
+            const bodyNodes = doc.body.childNodes;
+            for (let i = 0; i < bodyNodes.length; i++) {
+              fragment.appendChild(clean(bodyNodes[i]));
+            }
+            return fragment;
+          } catch (e) {
+            const fallback = document.createDocumentFragment();
+            fallback.appendChild(document.createTextNode(htmlString));
+            return fallback;
+          }
+        }
+
+        // Safe URL protocol validator (only allows safe schemas: https, mailto, tel)
+        function isSafeUrl(url) {
+          if (!url) return false;
+          try {
+            const trimmed = url.trim().toLowerCase();
+            if (trimmed.startsWith('#') || trimmed.startsWith('/') || trimmed.startsWith('.')) {
+              if (trimmed.startsWith('//')) return false;
+              return true;
+            }
+            const parsed = new URL(url, window.location.href);
+            return ['https:', 'mailto:', 'tel:'].includes(parsed.protocol);
+          } catch (e) {
+            const trimmed = url.trim().toLowerCase();
+            if (trimmed.startsWith('mailto:') || trimmed.startsWith('tel:')) {
+              if (trimmed.includes('javascript:') || trimmed.includes('data:') || trimmed.includes('vbscript:')) {
+                return false;
+              }
+              return true;
+            }
+            return false;
+          }
+        }
+
+        // Fetch timeout utility to protect external requests from hanging
+        async function fetchWithTimeout(resource, options = {}) {
+          const { timeout = 8000 } = options;
+          const controller = new AbortController();
+          const id = setTimeout(() => controller.abort(), timeout);
+          try {
+            const response = await fetch(resource, {
+              ...options,
+              signal: controller.signal
+            });
+            clearTimeout(id);
+            return response;
+          } catch (error) {
+            clearTimeout(id);
+            throw error;
+          }
+        }
+
         // إضافة Web App Manifest خفيف عند توفر Service Worker API
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
@@ -1459,8 +1546,19 @@
           }
         };
 
-        let currentLang = localStorage.getItem("site_lang") || "ar";
-        let currentTheme = localStorage.getItem("site_theme") || "dark";
+        // Strict Validation and Schema definition for localStorage keys
+        function getValidatedLocalStorage(key, allowedValues, defaultValue) {
+          try {
+            const val = localStorage.getItem(key);
+            if (val && allowedValues.includes(val)) {
+              return val;
+            }
+          } catch (e) {}
+          return defaultValue;
+        }
+
+        let currentLang = getValidatedLocalStorage("site_lang", ["ar", "en"], "ar");
+        let currentTheme = getValidatedLocalStorage("site_theme", ["dark", "light"], "dark");
         let lastFocusedElement = null;
 
         const toast = document.getElementById("toast");
@@ -1598,8 +1696,11 @@
 
         // تبديل المظهر Dark / Light
         function setTheme(theme) {
+          if (!["dark", "light"].includes(theme)) theme = "dark";
           currentTheme = theme;
-          localStorage.setItem("site_theme", theme);
+          try {
+            localStorage.setItem("site_theme", theme);
+          } catch (e) {}
           const isLight = theme === "light";
           document.documentElement.classList.toggle("light", isLight);
           document.getElementById("theme-toggle").textContent = isLight ? "◐" : "☼";
@@ -1611,8 +1712,11 @@
 
         // تبديل اللغة (i18n)
         function setLanguage(lang) {
+          if (!["ar", "en"].includes(lang)) lang = "ar";
           currentLang = lang;
-          localStorage.setItem("site_lang", lang);
+          try {
+            localStorage.setItem("site_lang", lang);
+          } catch (e) {}
           document.documentElement.lang = lang;
           document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
           document.getElementById("lang-label").textContent = lang === "ar" ? "EN" : "عربي";
@@ -1620,7 +1724,8 @@
           document.querySelectorAll("[data-i18n]").forEach((el) => {
             const key = el.getAttribute("data-i18n");
             if (translations[lang][key]) {
-              el.innerHTML = translations[lang][key];
+              const sanitizedContent = sanitizeHTML(translations[lang][key]);
+              el.replaceChildren(sanitizedContent);
             }
           });
 
@@ -1736,13 +1841,50 @@
           en: { Frontend: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"], "UI / UX": ["Interface systems", "Responsive flows", "Prototyping & interaction"], Performance: ["Accessibility", "Performance budgets", "Responsive & PWA architecture"], Tools: ["Git & GitHub", "Design tokens", "Testing-minded workflows"], "Creative Development": ["Motion direction", "Immersive web", "Visual storytelling"] }
         };
         const skillTitles = { ar: { Frontend: "الواجهة الأمامية", "UI / UX": "UI / UX", Performance: "الأداء", Tools: "الأدوات", "Creative Development": "التطوير الإبداعي" }, en: { Frontend: "Frontend", "UI / UX": "UI / UX", Performance: "Performance", Tools: "Tools", "Creative Development": "Creative Development" } };
+
         function renderSkills() {
-          document.getElementById("skills-grid").innerHTML = skills.map((skill) => { const items = skillTranslations[currentLang][skill.title]; return `<article class="panel skill-card"><h3>${skillTitles[currentLang][skill.title]}</h3><ul class="skill-items">${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>`; }).join("");
+          const skillsGrid = document.getElementById("skills-grid");
+          if (!skillsGrid) return;
+
+          const fragment = document.createDocumentFragment();
+          skills.forEach((skill) => {
+            const items = skillTranslations[currentLang][skill.title] || [];
+
+            const article = document.createElement("article");
+            article.className = "panel skill-card";
+
+            const h3 = document.createElement("h3");
+            h3.textContent = skillTitles[currentLang][skill.title] || "";
+
+            const ul = document.createElement("ul");
+            ul.className = "skill-items";
+
+            items.forEach((itemText) => {
+              const li = document.createElement("li");
+              li.textContent = itemText;
+              ul.appendChild(li);
+            });
+
+            article.append(h3, ul);
+            fragment.appendChild(article);
+          });
+
+          skillsGrid.replaceChildren(fragment);
         }
         renderSkills();
 
         const tags = ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Git & GitHub", "PWA", "Accessibility", "UI/UX", "Tailwind CSS"];
-        document.getElementById("tag-list").innerHTML = tags.map((t) => `<span class="tag">${t}</span>`).join("");
+        const tagList = document.getElementById("tag-list");
+        if (tagList) {
+          const tagFragment = document.createDocumentFragment();
+          tags.forEach((t) => {
+            const span = document.createElement("span");
+            span.className = "tag";
+            span.textContent = t;
+            tagFragment.appendChild(span);
+          });
+          tagList.replaceChildren(tagFragment);
+        }
 
         // قائمة المشاريع
         const projects = [
@@ -1824,7 +1966,7 @@
             details.setAttribute("aria-label", `${translations[currentLang]["project.details_aria"]} ${p.title}`);
             actions.appendChild(details);
 
-            if (p.link) {
+            if (p.link && isSafeUrl(p.link)) {
               const directLink = document.createElement("a");
               directLink.className = "small-button";
               directLink.href = p.link;
@@ -1876,7 +2018,7 @@
           });
 
           const link = document.getElementById("modal-project-link");
-          if (item.link) {
+          if (item.link && isSafeUrl(item.link)) {
             link.href = item.link;
             link.textContent = translations[currentLang]["project.preview"];
             link.removeAttribute("aria-disabled");
@@ -1933,24 +2075,40 @@
         async function fetchGitHubStats() {
           if (githubStatsFetched) return;
           githubStatsFetched = true;
-          const cachedRepos = localStorage.getItem("github_repos");
-          const cachedTime = localStorage.getItem("github_repos_time");
-          if (cachedRepos && cachedTime && (Date.now() - Number(cachedTime) < 3600000)) {
+
+          let cachedRepos = null;
+          let cachedTime = null;
+          try {
+            cachedRepos = localStorage.getItem("github_repos");
+            cachedTime = localStorage.getItem("github_repos_time");
+          } catch (e) {}
+
+          if (cachedRepos && cachedTime && !isNaN(Number(cachedTime)) && (Date.now() - Number(cachedTime) < 3600000)) {
+            const sanitizedCachedRepos = String(Number(cachedRepos) || 0);
             const repoElement = document.getElementById("stat-repos");
-            repoElement.setAttribute("data-target", cachedRepos);
-            repoElement.textContent = cachedRepos;
+            if (repoElement) {
+              repoElement.setAttribute("data-target", sanitizedCachedRepos);
+              repoElement.textContent = sanitizedCachedRepos;
+            }
             return;
           }
           try {
-            const res = await fetch("https://api.github.com/users/Eissa89");
+            // Using a safe, resilient fetch call with an 8-second timeout & HTTPS strictly
+            const res = await fetchWithTimeout("https://api.github.com/users/Eissa89", { timeout: 8000 });
             if (res.ok) {
               const data = await res.json();
-              const repoCount = Number.isFinite(data.public_repos) ? data.public_repos : 0;
-              const repoElement = document.getElementById("stat-repos");
-              repoElement.setAttribute("data-target", String(repoCount));
-              repoElement.textContent = String(repoCount);
-              localStorage.setItem("github_repos", String(repoCount));
-              localStorage.setItem("github_repos_time", Date.now().toString());
+              if (data && typeof data === "object") {
+                const repoCount = Number.isFinite(data.public_repos) ? data.public_repos : 0;
+                const repoElement = document.getElementById("stat-repos");
+                if (repoElement) {
+                  repoElement.setAttribute("data-target", String(repoCount));
+                  repoElement.textContent = String(repoCount);
+                }
+                try {
+                  localStorage.setItem("github_repos", String(repoCount));
+                  localStorage.setItem("github_repos_time", Date.now().toString());
+                } catch (e) {}
+              }
             }
           } catch (_) {}
         }
@@ -2040,13 +2198,31 @@
           } else {
             e.preventDefault();
             const formData = new FormData(contactForm);
-            const subject = encodeURIComponent(formData.get("subject") || "Portfolio inquiry");
+
+            // Limit characters & sanitize field values to prevent excessive input or header injection
+            const rawName = (formData.get("name") || "").toString().slice(0, 100);
+            const rawEmail = (formData.get("email") || "").toString().slice(0, 100);
+            const rawSubject = (formData.get("subject") || "").toString().slice(0, 150);
+            const rawMessage = (formData.get("message") || "").toString().slice(0, 2000);
+
+            // Strip carriage returns and newlines from the subject to prevent header injection
+            const cleanSubject = rawSubject.replace(/[\r\n]/g, " ").trim();
+
+            const subject = encodeURIComponent(cleanSubject || "Portfolio inquiry");
             const body = encodeURIComponent(
-              `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`,
+              `Name: ${rawName}\nEmail: ${rawEmail}\n\n${rawMessage}`
             );
-            const recipient = contactForm.dataset.mailto;
-            showToast(translations[currentLang]["toast.email"]);
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            const recipient = (contactForm.dataset.mailto || "ysym7003@gmail.com").toString().slice(0, 100);
+            // Protocol validate the recipient address to ensure it is a safe mailto endpoint
+            const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            if (isSafeUrl(mailtoUrl)) {
+              showToast(translations[currentLang]["toast.email"]);
+              window.location.href = mailtoUrl;
+            } else {
+              showToast(currentLang === "ar" ? "رابط البريد الإلكتروني غير صالح." : "Invalid mailto URL.");
+            }
           }
         });
         contactForm.addEventListener("input", (event) => {
