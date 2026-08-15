@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl" class="dark">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eissa89.github.io/eissa-card/" />
     <meta property="og:title" content="عيسى محمد — مطور واجهات ومصمم تجربة المستخدم" />
-    <meta property="og:description" content="أبني تجارب ويب حديثة ومبتكرة تجمع بين الأداء العالي والجمال البصري." />
+    <meta property="og:description" content="أبني تجارب ويب حديثة متجاوبة تجمع بين التقنية البرمجية والتصميم." />
     <meta property="og:image" content="https://eissa89.github.io/eissa-card/1000081078.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1500" />
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://eissa89.github.io/eissa-card/" />
     <meta name="twitter:title" content="عيسى محمد — مطور واجهات ومصمم تجربة المستخدم" />
-    <meta name="twitter:description" content="أبني تجارب ويب حديثة ومبتكرة تجمع بين الأداء العالي والجمال البصري." />
+    <meta name="twitter:description" content="أبني تجارب ويب حديثة متجاوبة تجمع بين التقنية البرمجية والتصميم." />
     <meta name="twitter:image" content="https://eissa89.github.io/eissa-card/1000081078.png" />
 
     <!-- أيقونة الموقع -->
@@ -38,7 +38,7 @@
     <!-- Preconnect للخطوط لتحسين الأداء -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- بيانات هيكلية JSON-LD Schema -->
     <script type="application/ld+json">
@@ -74,44 +74,50 @@
 
     <style>
       :root {
-        --bg: #0a0a0c;
-        --bg-soft: #141317;
-        --panel: #17161a;
-        --panel-glass: rgba(20, 19, 23, 0.88);
-        --ink: #f4f0e8;
-        --muted: #9d968b;
-        --line: rgba(244, 240, 232, 0.11);
-        --lime: #f0b429;
-        --lime-glow: rgba(240, 180, 41, 0.2);
-        --coral: #d97a5c;
-        --navy: #171008;
-        --surface-strong: #141019;
-        --contact-bg: #f0b429;
-        --contact-ink: #1c1408;
-        --radius-lg: 1.75rem;
-        --radius-md: 1.05rem;
-        --radius-sm: 0.6rem;
-        --shadow: 0 34px 70px -32px rgba(0, 0, 0, 0.6);
-        --shadow-soft: 0 16px 36px -20px rgba(0, 0, 0, 0.5);
-        --font-sans: 'Cairo', Tahoma, Arial, sans-serif;
-        --font-serif: 'Amiri', Georgia, 'Times New Roman', serif;
-        --font-mono: 'JetBrains Mono', monospace;
+        /* Cream Theme (Light - Default Visual Direction) */
+        --bg: #FAF7F2;               /* Warm ivory / cream background */
+        --bg-soft: #F3EFE7;          /* Soft warm grey-cream background */
+        --panel: #FFFFFF;            /* Pure white contrast cards */
+        --panel-glass: rgba(255, 255, 255, 0.88);
+        --ink: #121110;              /* Near-black deep ink typography */
+        --muted: #706A5F;            /* Muted warm grey */
+        --line: rgba(18, 17, 16, 0.09); /* Minimalist subtle borders */
+        --accent: #C85A32;           /* Editorial Burnt Orange / Rust */
+        --accent-glow: rgba(200, 90, 50, 0.1);
+        --secondary: #B59A57;        /* Muted Editorial Gold */
+        --navy: #121110;
+        --surface-strong: #121110;
+        --contact-bg: #F3EFE7;
+        --contact-ink: #121110;
+        --radius-lg: 12px;           /* Subtle rounded editorial feel */
+        --radius-md: 8px;
+        --radius-sm: 4px;
+        --shadow: 0 24px 48px -18px rgba(18, 17, 16, 0.08);
+        --shadow-soft: 0 12px 24px -12px rgba(18, 17, 16, 0.05);
+        --font-sans: "Cairo", system-ui, -apple-system, sans-serif;
+        --font-serif: "Amiri", Georgia, "Times New Roman", serif;
+        --font-display-en: "Playfair Display", Georgia, "Times New Roman", serif;
+        --font-mono: "JetBrains Mono", monospace;
       }
 
-      html.light {
-        --bg: #f8f4ea;
-        --bg-soft: #efe7d6;
-        --panel: #fffdf9;
-        --panel-glass: rgba(255, 253, 248, 0.92);
-        --ink: #1a170f;
-        --muted: #6d6459;
-        --line: rgba(26, 23, 15, 0.13);
-        --lime: #8a5710;
-        --lime-glow: rgba(138, 87, 16, 0.12);
-        --coral: #a8482a;
-        --navy: #f0b429;
-        --shadow: 0 22px 48px -26px rgba(26, 23, 15, 0.24);
-        --shadow-soft: 0 12px 28px -18px rgba(26, 23, 15, 0.16);
+      html.dark {
+        /* Espresso Theme (Dark - Switcher Preserved) */
+        --bg: #11100F;               /* Dark ink / rich espresso */
+        --bg-soft: #1A1817;          /* Warm dark grey panel backing */
+        --panel: #161514;            /* Dark matte card background */
+        --panel-glass: rgba(22, 21, 20, 0.88);
+        --ink: #F5F2EB;              /* Light warm cream typography */
+        --muted: #8E8679;            /* Warm muted grey */
+        --line: rgba(245, 242, 235, 0.08);
+        --accent: #E26D43;           /* Vivid rust for contrast on dark background */
+        --accent-glow: rgba(226, 109, 67, 0.15);
+        --secondary: #C8A261;        /* Refined light gold */
+        --navy: #F5F2EB;
+        --surface-strong: #1C1A19;
+        --contact-bg: #1A1817;
+        --contact-ink: #F5F2EB;
+        --shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.5);
+        --shadow-soft: 0 12px 24px -12px rgba(0, 0, 0, 0.3);
       }
 
       *, *::before, *::after { box-sizing: border-box; }
@@ -119,15 +125,13 @@
       body {
         margin: 0;
         background: var(--bg);
-        background-image: radial-gradient(1200px 620px at 88% -8%, color-mix(in srgb, var(--lime) 10%, transparent), transparent 60%);
-        background-repeat: no-repeat;
         color: var(--ink);
         font-family: var(--font-sans);
-        line-height: 1.6;
+        line-height: 1.75;
         transition: background-color 0.3s ease, color 0.3s ease;
         overflow-x: hidden;
-         text-rendering: optimizeLegibility;
-         -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
       }
 
       a { color: inherit; text-decoration: none; }
@@ -137,19 +141,19 @@
       button, a, input, textarea { min-height: 44px; }
       input, textarea { min-width: 0; }
 
-      ::selection { background: var(--lime); color: var(--navy); }
+      ::selection { background: var(--accent); color: var(--bg); }
       ::-webkit-scrollbar { width: 11px; height: 11px; }
       ::-webkit-scrollbar-track { background: var(--bg); }
-      ::-webkit-scrollbar-thumb { background: var(--bg-soft); border-radius: 99px; border: 2px solid var(--bg); }
+      ::-webkit-scrollbar-thumb { background: var(--bg-soft); border-radius: 99px; border: 3px solid var(--bg); }
       ::-webkit-scrollbar-thumb:hover { background: var(--line); }
 
       :focus-visible {
-        outline: 3px solid var(--coral);
+        outline: 3px solid var(--accent);
         outline-offset: 4px;
         border-radius: 4px;
       }
 
-      /* إتاحة الوصول Skip Link */
+      /* Skip Link */
       .sr-only {
         position: absolute;
         width: 1px;
@@ -172,18 +176,18 @@
         top: 16px;
         z-index: 1000;
         border-radius: 999px;
-        background: var(--lime);
-        color: var(--navy);
+        background: var(--accent);
+        color: var(--bg);
         font-weight: 800;
       }
 
-      /* مؤشر الفأرة المخصص */
+      /* Custom Cursor */
       @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
         .custom-cursor {
           position: fixed;
-          width: 16px;
-          height: 16px;
-          border: 1.5px solid var(--lime);
+          width: 12px;
+          height: 12px;
+          border: 1.5px solid var(--accent);
           border-radius: 50%;
           pointer-events: none;
           transform: translate3d(-50%, -50%, 0);
@@ -191,10 +195,10 @@
           transition: width 0.18s ease, height 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
         }
         .custom-cursor.hovered {
-          width: 42px;
-          height: 42px;
-          background: var(--lime-glow);
-          border-color: transparent;
+          width: 32px;
+          height: 32px;
+          background: var(--accent-glow);
+          border-color: var(--accent);
         }
       }
 
@@ -203,21 +207,19 @@
         margin: auto;
       }
 
-      /* الشريط العلوي */
+      /* Header */
       .site-header {
         position: sticky;
         top: 0;
         z-index: 100;
         border-bottom: 1px solid var(--line);
-        background: rgba(10, 10, 12, 0.78);
+        background: var(--panel-glass);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
-      }
-      html.light .site-header {
-        background: rgba(248, 244, 234, 0.82);
+        transition: background 0.3s, border-color 0.3s;
       }
       .header-inner {
-        min-height: 72px;
+        min-height: 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -226,17 +228,17 @@
       .brand {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
         text-decoration: none;
       }
       .brand-mark {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         display: grid;
         place-items: center;
         border-radius: 50%;
-        background: var(--lime);
-        color: var(--navy);
+        background: var(--accent);
+        color: var(--bg);
         font-weight: 900;
         overflow: hidden;
         aspect-ratio: 1 / 1;
@@ -247,22 +249,23 @@
         object-fit: cover;
       }
       .brand-name {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 800;
         letter-spacing: 0.18em;
         direction: ltr;
-        color: var(--muted);
+        color: var(--ink);
+        font-family: var(--font-mono);
       }
       .main-nav {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: 32px;
       }
       .main-nav a, .mobile-nav a {
         position: relative;
         color: var(--muted);
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 700;
         transition: color 0.2s ease;
       }
@@ -273,7 +276,7 @@
         bottom: -6px;
         height: 2px;
         border-radius: 2px;
-        background: var(--lime);
+        background: var(--accent);
         transform: scaleX(0);
         transition: transform 0.25s ease;
       }
@@ -282,28 +285,28 @@
       }
       .main-nav a.active::after, .main-nav a:hover::after { transform: scaleX(1); }
       .main-nav a.active, .mobile-nav a.active {
-        color: var(--lime);
+        color: var(--accent);
       }
       .header-actions {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
       }
       .icon-button, .menu-button {
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
         display: grid;
         place-items: center;
         border-radius: 50%;
         color: inherit;
         border: 1px solid var(--line);
         background: transparent;
-        font-size: 15px;
+        font-size: 16px;
         transition: 0.2s ease;
       }
       .icon-button:hover, .menu-button:hover {
-        color: var(--lime);
-        border-color: var(--lime);
+        color: var(--accent);
+        border-color: var(--accent);
         transform: translateY(-1px);
       }
       .outline-button, .primary-button {
@@ -311,10 +314,10 @@
         align-items: center;
         justify-content: center;
         gap: 9px;
-        border-radius: 999px;
-        padding: 10px 20px;
+        border-radius: var(--radius-sm);
+        padding: 12px 24px;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 800;
         transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
       }
@@ -323,20 +326,20 @@
         background: transparent;
       }
       .outline-button:hover {
-        border-color: var(--lime);
-        background: var(--lime);
-        color: var(--navy);
+        border-color: var(--accent);
+        background: var(--accent);
+        color: var(--bg);
         transform: translateY(-2px);
         box-shadow: var(--shadow-soft);
       }
       .primary-button {
         border: 0;
-        background: var(--lime);
-        color: var(--navy);
+        background: var(--accent);
+        color: var(--bg);
       }
       .primary-button:hover {
-        background: var(--coral);
-        color: white;
+        background: var(--ink);
+        color: var(--bg);
         transform: translateY(-2px);
         box-shadow: var(--shadow-soft);
       }
@@ -347,89 +350,71 @@
         padding: 16px 0 20px;
       }
       .mobile-nav.open { display: block; }
-      .mobile-nav a { display: block; padding: 10px 0; }
+      .mobile-nav a { display: block; padding: 12px 0; }
 
-      /* Performance / interaction refinements */
-      .site-header,
-      .modal {
-        isolation: isolate;
-      }
-
-      .project-card {
-        content-visibility: auto;
-        contain-intrinsic-size: 280px;
-      }
-
-      .cmd-item {
-        width: 100%;
-        min-height: 44px;
-        border: 0;
-        background: transparent;
-        color: inherit;
-        text-align: inherit;
-      }
-
+      .site-header, .modal { isolation: isolate; }
+      .project-card { content-visibility: auto; contain-intrinsic-size: 280px; }
+      .cmd-item { width: 100%; min-height: 44px; border: 0; background: transparent; color: inherit; text-align: inherit; }
       .cmd-item + .cmd-item { margin-top: 2px; }
+      [aria-disabled="true"] { cursor: not-allowed; opacity: 0.55; }
 
-      [aria-disabled="true"] {
-        cursor: not-allowed;
-        opacity: 0.55;
-      }
-
-      .mobile-nav.open {
-        animation: menuIn 0.18s ease-out;
-      }
-
+      .mobile-nav.open { animation: menuIn 0.18s ease-out; }
       @keyframes menuIn {
         from { opacity: 0; transform: translateY(-4px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* قسم الرئيسية Hero */
+      /* Hero */
       .hero {
         display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
+        grid-template-columns: 1.15fr 0.85fr;
         align-items: center;
-        gap: 56px;
-        min-height: calc(100svh - 72px);
-        padding-top: 80px;
-        padding-bottom: 110px;
+        gap: 64px;
+        min-height: calc(100svh - 80px);
+        padding-top: 60px;
+        padding-bottom: 90px;
       }
       .hero-name {
         margin: 0 0 14px;
-        color: var(--muted);
-        font: 700 clamp(1.1rem, 2vw, 1.4rem)/1.2 var(--font-sans);
-        letter-spacing: 0.01em;
+        color: var(--accent);
+        font: 800 clamp(1.1rem, 2vw, 1.3rem)/1.2 var(--font-sans);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
       }
       .availability {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 12px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         color: var(--muted);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.1em;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        border: 1px solid var(--line);
+        padding: 6px 14px;
+        border-radius: 99px;
+        background: var(--panel);
       }
       .pulse-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: var(--coral);
+        background: var(--accent);
         animation: pulse 2s infinite;
       }
       .eyebrow {
-        color: var(--lime);
-        font: 700 12px/1.2 var(--font-mono);
-        letter-spacing: 0.18em;
+        color: var(--secondary);
+        font: 700 13px/1.2 var(--font-mono);
+        letter-spacing: 0.15em;
+        margin-bottom: 12px;
       }
       .location-line {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        margin: 0 0 22px;
+        margin: 0 0 24px;
         color: var(--muted);
-        font: 12px var(--font-mono);
+        font: 13px var(--font-mono);
       }
       .hero h1, .section-title {
         margin: 0;
@@ -437,18 +422,20 @@
         font-weight: 700;
         letter-spacing: -0.01em;
       }
+      html[lang="en"] .hero h1 { font-family: var(--font-display-en); }
       .hero h1 {
-        max-width: 720px;
-        font-size: clamp(3.2rem, 8vw, 7rem);
-        line-height: 1.05;
+        max-width: 780px;
+        font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+        line-height: 1.08;
+        color: var(--ink);
       }
-      .coral { color: var(--coral); }
-      .lime { color: var(--lime); }
+      .coral { color: var(--accent); }
+      .lime { color: var(--secondary); }
       .hero-lede {
-        max-width: 560px;
+        max-width: 580px;
         margin: 28px 0 0;
         color: var(--muted);
-        font-size: 18px;
+        font-size: 19px;
         line-height: 1.8;
       }
       .hero-actions {
@@ -456,23 +443,27 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 12px;
-        margin-top: 32px;
+        margin-top: 36px;
       }
 
-      /* صورة الـ Hero البصرية */
+      /* Hero Art Portrait */
       .hero-art {
         position: relative;
-        min-height: 520px;
+        min-height: 540px;
         aspect-ratio: 4 / 5;
         contain: layout paint;
       }
       .art-back {
         position: absolute;
-        inset: 26px 26px 0 0;
+        inset: 24px 24px 0 0;
         border-radius: var(--radius-lg);
-        background: linear-gradient(155deg, color-mix(in srgb, var(--lime) 16%, var(--bg-soft)), var(--bg-soft));
-        transform: rotate(2.5deg);
+        background: var(--bg-soft);
+        transform: rotate(1.5deg);
         border: 1px solid var(--line);
+      }
+      html[dir="rtl"] .art-back {
+        inset: 24px 0 0 24px;
+        transform: rotate(-1.5deg);
       }
       .art-card {
         position: absolute;
@@ -493,40 +484,46 @@
         height: 100%;
         object-fit: cover;
         object-position: center top;
-        filter: contrast(1.05) brightness(0.95) saturate(0.96);
-        transition: transform 0.5s ease;
+        filter: grayscale(1) contrast(1.05) brightness(0.95);
+        transition: transform 0.5s ease, filter 0.5s ease;
       }
       .art-card:hover .hero-portrait-img {
-        transform: scale(1.03);
+        transform: scale(1.02);
+        filter: grayscale(0) contrast(1.02);
       }
       .hero-portrait-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(10, 9, 8, 0.08) 0%, rgba(10, 9, 8, 0.82) 84%, rgba(10, 9, 8, 0.94) 100%);
+        background: linear-gradient(180deg, rgba(18, 17, 16, 0.02) 0%, rgba(18, 17, 16, 0.72) 80%, rgba(18, 17, 16, 0.9) 100%);
       }
       .art-topline {
         position: absolute;
         top: 24px;
         right: 24px;
-        color: var(--lime);
+        color: var(--accent);
         font: 11px var(--font-mono);
         letter-spacing: 0.16em;
         direction: ltr;
         z-index: 2;
-        background: rgba(10, 9, 8, 0.55);
-        padding: 4px 12px;
+        background: var(--panel-glass);
+        padding: 6px 14px;
         border-radius: 99px;
         backdrop-filter: blur(8px);
-        border: 1px solid rgba(244, 240, 232, 0.16);
+        border: 1px solid var(--line);
+      }
+      html[dir="rtl"] .art-topline {
+        right: auto;
+        left: 24px;
       }
       .art-message {
         position: relative;
         z-index: 2;
-        padding: 32px;
+        padding: 36px;
+        color: #FFFFFF;
       }
       .art-message small {
-        color: rgba(244, 240, 232, 0.6);
-        font: 10px var(--font-mono);
+        color: rgba(255, 255, 255, 0.6);
+        font: 11px var(--font-mono);
         letter-spacing: 0.2em;
         direction: ltr;
         display: block;
@@ -534,82 +531,86 @@
       .art-message strong {
         display: block;
         margin-top: 8px;
-        color: #f4f0e8;
-        font: 400 clamp(2rem, 4.6vw, 3.4rem) / 1.05 var(--font-serif);
+        font: 400 clamp(2rem, 4.2vw, 3rem) / 1.1 var(--font-serif);
         letter-spacing: -0.01em;
         direction: ltr;
       }
-      .art-message em { color: var(--lime); font-style: normal; }
+      .art-message em { color: var(--accent); font-style: normal; }
       .floating-note {
         position: absolute;
         right: -14px;
         bottom: -18px;
         z-index: 3;
-        padding: 14px 18px;
+        padding: 16px 20px;
         border: 1px solid var(--line);
         border-radius: var(--radius-md);
         background: var(--panel);
-        box-shadow: var(--shadow-soft), 0 0 0 1px var(--lime-glow);
-        animation: float 5s ease-in-out infinite;
+        box-shadow: var(--shadow-soft);
+        display: inline-flex;
+        flex-direction: column;
       }
-      .floating-note small { display: block; color: var(--muted); font: 10px var(--font-mono); }
-      .floating-note strong { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 13px; }
+      html[dir="rtl"] .floating-note {
+        right: auto;
+        left: -14px;
+      }
+      .floating-note small { display: block; color: var(--muted); font: 10px var(--font-mono); text-transform: uppercase; }
+      .floating-note strong { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 14px; color: var(--ink); }
 
-      /* الأقسام */
-      .section { padding: 104px 0; }
+      /* Sections General */
+      .section { padding: 110px 0; border-bottom: 1px solid var(--line); }
       .band {
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
         background: var(--bg-soft);
       }
       .section-kicker {
-        color: var(--coral);
-        font: 700 12px var(--font-mono);
+        color: var(--accent);
+        font: 700 13px var(--font-mono);
         letter-spacing: 0.2em;
         text-transform: uppercase;
       }
       .section-title {
         margin-top: 16px;
-        font-size: clamp(2.6rem, 4.6vw, 4.4rem);
-        line-height: 1.08;
+        font-size: clamp(2.4rem, 4.5vw, 4rem);
+        line-height: 1.12;
+        color: var(--ink);
       }
       .panel {
         border: 1px solid var(--line);
         border-radius: var(--radius-lg);
         background: var(--panel);
+        box-shadow: var(--shadow-soft);
         transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
       }
       .panel:focus-within, .panel:hover {
-        border-color: color-mix(in srgb, var(--lime) 45%, var(--line));
-        box-shadow: var(--shadow-soft);
+        border-color: var(--accent);
+        box-shadow: var(--shadow);
       }
 
-      /* بطاقة التعريف Profile */
+      /* Profile Hub Grid */
       .profile-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 24px;
-        margin-top: 40px;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 32px;
+        margin-top: 48px;
       }
-      .profile-card { padding: 32px; }
+      .profile-card { padding: 40px; }
       .profile-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
       }
-      .identity { display: flex; align-items: center; gap: 16px; }
+      .identity { display: flex; align-items: center; gap: 20px; }
       .avatar {
         width: 80px;
         height: 80px;
         display: grid;
         place-items: center;
         border-radius: var(--radius-md);
-        background: var(--lime);
-        color: var(--navy);
+        background: var(--accent);
+        color: var(--bg);
         font: 700 28px var(--font-serif);
         overflow: hidden;
-        border: 2px solid var(--lime);
+        border: 2px solid var(--accent);
         aspect-ratio: 1 / 1;
       }
       .avatar img {
@@ -617,231 +618,245 @@
         height: 100%;
         object-fit: cover;
       }
-      .identity h3 { margin: 0; font-size: 22px; font-family: var(--font-serif); font-weight: 700; }
-      .identity p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+      .identity h3 { margin: 0; font-size: 24px; font-family: var(--font-serif); font-weight: 700; color: var(--ink); }
+      .identity p { margin: 6px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
       .available-label {
         display: flex;
         align-items: center;
-        gap: 7px;
-        color: var(--lime);
-        font-size: 12px;
+        gap: 8px;
+        color: var(--accent);
+        font-size: 13px;
         font-weight: 800;
+        border: 1px solid var(--line);
+        padding: 4px 12px;
+        border-radius: 99px;
       }
-      .available-label i { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
-      .divider { height: 1px; margin: 24px 0; background: var(--line); }
-      .info-list { display: grid; gap: 16px; }
-      .info-row { display: flex; align-items: center; gap: 12px; }
+      .available-label i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+      .divider { height: 1px; margin: 32px 0; background: var(--line); }
+      .info-list { display: grid; gap: 20px; }
+      .info-row { display: flex; align-items: center; gap: 16px; }
       .info-icon {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
         display: grid;
         place-items: center;
         border-radius: var(--radius-sm);
-        background: color-mix(in srgb, var(--coral) 16%, transparent);
-        color: var(--coral);
+        background: var(--bg-soft);
+        color: var(--accent);
         font-size: 16px;
+        border: 1px solid var(--line);
       }
       .info-main { flex: 1; min-width: 0; }
-      .info-main small { display: block; color: var(--muted); font-size: 11px; }
-      .info-main a, .info-main span { display: block; font-size: 14px; font-weight: 700; }
+      .info-main small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+      .info-main a, .info-main span { display: block; font-size: 15px; font-weight: 700; color: var(--ink); }
       .copy-button {
-        border: 0; border-radius: 8px; padding: 6px; color: inherit; background: transparent; font-size: 16px;
+        border: 0; border-radius: var(--radius-sm); padding: 8px; color: var(--muted); background: transparent; font-size: 18px; transition: 0.2s;
       }
-      .copy-button:hover { background: var(--lime); color: var(--navy); }
+      .copy-button:hover { background: var(--accent); color: var(--bg); }
 
-      .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+      .card-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
       .small-button {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 9px 15px;
-        color: inherit;
+        border-radius: var(--radius-sm);
+        padding: 10px 20px;
+        color: var(--ink);
         background: transparent;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 800;
         transition: 0.2s ease;
       }
-      .small-button:hover { border-color: var(--lime); color: var(--lime); }
-      .small-button.primary { border-color: var(--lime); background: var(--lime); color: var(--navy); }
-      .small-button.primary:hover { border-color: var(--coral); background: var(--coral); color: white; }
+      .small-button:hover { border-color: var(--accent); color: var(--accent); }
+      .small-button.primary { border-color: var(--accent); background: var(--accent); color: var(--bg); }
+      .small-button.primary:hover { border-color: var(--ink); background: var(--ink); color: var(--bg); }
 
-      /* شاشة المشاركة الـ QR */
-      .side-stack { display: grid; gap: 24px; }
-      .side-panel { padding: 24px; }
+      /* QR and Share cards */
+      .side-stack { display: grid; gap: 32px; }
+      .side-panel { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
       .qr-box {
-        width: 140px;
-        height: 140px;
-        margin: 20px auto;
-        padding: 8px;
+        width: 150px;
+        height: 150px;
+        margin: 24px auto;
+        padding: 10px;
         border-radius: var(--radius-sm);
         background: white;
         display: grid;
         place-items: center;
+        border: 1px solid var(--line);
       }
       .qr-box img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
-      .socials { display: flex; gap: 10px; margin-top: 18px; }
+      .socials { display: flex; gap: 12px; margin-top: 20px; }
       .social-button {
-        width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; color: white; transition: transform 0.2s; font-weight: 700;
+        width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; color: white; transition: transform 0.2s, filter 0.2s; font-weight: 700;
       }
-      .social-button:hover { transform: translateY(-3px); }
+      .social-button:hover { transform: translateY(-3px); filter: brightness(1.1); }
       .whatsapp { background: #25d366; }
       .facebook { background: #1877f2; }
       .linkedin { background: #0a66c2; }
 
-      /* المهارات والتصنيفات */
-      .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
-      .skill-card { padding: 22px; }
-      .skill-card h3 { margin: 0; color: var(--lime); font: 700 12px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; }
-      .skill-items { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
-      .skill-items li { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px; }
-      .skill-items li::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px var(--lime-glow); }
-      .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-      .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; color: var(--muted); }
+      /* Capabilities Section */
+      .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+      .skill-card { padding: 32px; }
+      .skill-card h3 { margin: 0; color: var(--accent); font: 800 13px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+      .skill-items { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+      .skill-items li { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 15px; font-weight: 700; }
+      .skill-items li::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--secondary); }
+      .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+      .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 700; color: var(--muted); background: var(--panel); }
 
-      /* الخبرات */
-      .timeline { position: relative; display: grid; gap: 20px; margin-top: 40px; }
+      /* Journey timeline */
+      .timeline { position: relative; display: grid; gap: 32px; margin-top: 48px; }
       .timeline::before {
-        content: ""; position: absolute; right: 11px; top: 12px; bottom: 12px; width: 1px; background: color-mix(in srgb, var(--coral) 45%, transparent);
+        content: ""; position: absolute; right: 15px; top: 12px; bottom: 12px; width: 1px; background: var(--line);
       }
-      .timeline-item { position: relative; padding-right: 40px; }
+      html[dir="ltr"] .timeline::before {
+        right: auto;
+        left: 15px;
+      }
+      .timeline-item { position: relative; padding-right: 48px; }
+      html[dir="ltr"] .timeline-item {
+        padding-right: 0;
+        padding-left: 48px;
+      }
       .timeline-dot {
-        position: absolute; right: 0; top: 10px; width: 22px; height: 22px; border: 4px solid var(--coral); border-radius: 50%; background: var(--bg);
+        position: absolute; right: 4px; top: 14px; width: 24px; height: 24px; border: 4px solid var(--bg); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent);
       }
-      .timeline-card { padding: 22px; }
-      .timeline-date { color: var(--lime); font: 12px var(--font-mono); }
+      html[dir="ltr"] .timeline-dot {
+        right: auto;
+        left: 4px;
+      }
+      .timeline-card { padding: 32px; }
+      .timeline-date { color: var(--accent); font: 700 13px var(--font-mono); margin-bottom: 10px; display: block; }
 
-      /* الإحصائيات */
-      .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
-      .stat-card { padding: 26px 20px; text-align: center; }
-      .stat-card-wide { max-width: 360px; }
-      .stat-num { font-size: 2.6rem; font-weight: 700; font-family: var(--font-serif); color: var(--lime); line-height: 1; }
+      /* Statistics Grid */
+      .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+      .stat-card { padding: 36px 24px; text-align: center; }
+      .stat-card-wide { max-width: 420px; margin: auto; }
+      .stat-num { font-size: 3.2rem; font-weight: 700; font-family: var(--font-serif); color: var(--accent); line-height: 1; margin-bottom: 8px; }
 
-      /* المشاريع */
-      .projects-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; }
-      .filter-buttons { display: flex; gap: 8px; }
+      /* Selected Work */
+      .projects-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+      .filter-buttons { display: flex; gap: 10px; }
       .filter-button {
-        border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 12px; font-weight: 800; transition: 0.2s ease;
+        border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 10px 20px; font-size: 13px; font-weight: 800; transition: 0.2s ease; background: var(--panel); color: var(--ink);
       }
-      .filter-button.active { border-color: var(--lime); background: var(--lime); color: var(--navy); }
-      .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
-      .project-card { padding: 26px; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
-      .project-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--lime) 45%, var(--line)); box-shadow: var(--shadow-soft); }
+      .filter-button.active { border-color: var(--accent); background: var(--accent); color: var(--bg); }
+      .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+      .project-card { padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; }
+      .project-card:hover { transform: translateY(-4px); }
       .project-topline { display: flex; justify-content: space-between; align-items: center; }
-      .project-number { font-family: var(--font-mono); }
+      .project-number { font-family: var(--font-mono); font-weight: 700; font-size: 14px; }
       .project-top-meta { display: flex; align-items: center; gap: 12px; }
       .project-category {
         border: 1px solid var(--line);
         border-radius: 999px;
-        padding: 4px 8px;
+        padding: 4px 10px;
         color: var(--muted);
-        font: 700 9px var(--font-mono);
+        font: 700 10px var(--font-mono);
         letter-spacing: 0.08em;
       }
-      .project-symbol { font-size: 24px; }
-      .project-title { margin: 20px 0 0; font-size: 20px; }
-      .project-description { color: var(--muted); font-size: 13px; margin-top: 10px; line-height: 1.7; }
-      .project-actions { display: flex; gap: 8px; margin-top: 16px; }
+      .project-symbol { font-size: 26px; }
+      .project-title { margin: 24px 0 0; font-size: 22px; font-family: var(--font-serif); color: var(--ink); }
+      .project-description { color: var(--muted); font-size: 14px; margin-top: 12px; line-height: 1.7; flex-grow: 1; }
+      .project-actions { display: flex; gap: 10px; margin-top: 24px; }
       .project-actions > * { flex: 1; justify-content: center; }
-      .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
-      .project-tags span { border-radius: 999px; padding: 4px 8px; background: color-mix(in srgb, var(--ink) 6%, transparent); font-size: 11px; color: var(--muted); }
+      .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+      .project-tags span { border-radius: 4px; padding: 4px 10px; background: var(--bg-soft); font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
 
-      /* نموذج التواصل */
-      .contact-band { background: var(--contact-bg); color: var(--contact-ink); }
-      .contact-band .section-kicker { color: var(--contact-ink); opacity: 0.65; }
-      .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
-      .contact-title { margin: 18px 0 0; font: 700 clamp(3rem, 6.4vw, 5.6rem)/1.02 var(--font-serif); }
-      .contact-form { padding: 30px; border: 1px solid rgba(28, 20, 8, 0.16); border-radius: var(--radius-lg); background: rgba(255, 255, 255, 0.3); }
-      .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .contact-form label { display: block; margin-top: 14px; font-size: 13px; font-weight: 800; }
+      /* Contact Section */
+      .contact-band { background: var(--contact-bg); color: var(--contact-ink); border-top: 1px solid var(--line); }
+      .contact-band .section-kicker { color: var(--accent); }
+      .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 64px; align-items: start; }
+      .contact-title { margin: 18px 0 0; font: 700 clamp(2.8rem, 6vw, 4.8rem)/1.05 var(--font-serif); color: var(--ink); }
+      .contact-form { padding: 40px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--panel); box-shadow: var(--shadow); }
+      .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .contact-form label { display: block; margin-top: 18px; font-size: 14px; font-weight: 800; color: var(--ink); }
       .form-grid label { margin-top: 0; }
       .contact-form input, .contact-form textarea {
-        display: block; width: 100%; margin-top: 6px; border: 1px solid rgba(28, 20, 8, 0.18); border-radius: var(--radius-sm); padding: 12px 14px; color: var(--contact-ink); background: rgba(255, 255, 255, 0.55); outline: 0;
+        display: block; width: 100%; margin-top: 8px; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--ink); background: var(--bg-soft); outline: 0; transition: border-color 0.2s, background-color 0.2s;
+      }
+      .contact-form input:focus, .contact-form textarea:focus {
+        border-color: var(--accent);
+        background: var(--panel);
       }
       .contact-form input[aria-invalid="true"], .contact-form textarea[aria-invalid="true"] {
-        border-color: #9a2e20;
+        border-color: #C83232;
       }
       .submit-button {
-        display: flex; align-items: center; justify-content: center; width: 100%; gap: 9px; margin-top: 20px; border: 0; border-radius: var(--radius-sm); padding: 13px; background: var(--surface-strong); color: white; font-size: 13px; font-weight: 800; transition: 0.2s ease;
+        display: flex; align-items: center; justify-content: center; width: 100%; gap: 9px; margin-top: 24px; border: 0; border-radius: var(--radius-sm); padding: 14px; background: var(--accent); color: var(--bg); font-size: 14px; font-weight: 800; transition: 0.2s ease;
       }
-      .submit-button:hover { background: var(--coral); }
+      .submit-button:hover { background: var(--ink); color: var(--bg); }
 
-      /* Modals & Toasts */
+      /* Modals */
       .modal {
-        position: fixed; inset: 0; z-index: 2000; display: none; place-items: center; padding: 20px; background: rgba(6, 5, 4, 0.82); backdrop-filter: blur(14px); overflow-y: auto;
+        position: fixed; inset: 0; z-index: 2000; display: none; place-items: center; padding: 20px; background: rgba(18, 17, 16, 0.6); backdrop-filter: blur(14px); overflow-y: auto;
       }
       .modal.open { display: grid; }
-      .modal-card { position: relative; width: min(540px, 100%); max-height: min(720px, calc(100dvh - 40px)); overflow-y: auto; padding: 40px 32px 32px; text-align: center; box-shadow: var(--shadow); }
+      .modal-card { position: relative; width: min(600px, 100%); max-height: min(800px, calc(100dvh - 40px)); overflow-y: auto; padding: 48px 40px 40px; text-align: right; box-shadow: var(--shadow); }
+      html[dir="ltr"] .modal-card { text-align: left; }
       .modal-card .close {
-        position: absolute; left: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; border: 1px solid var(--line);
+        position: absolute; left: 24px; top: 24px; width: 36px; height: 36px; border-radius: 50%; font-size: 22px; border: 1px solid var(--line); display: grid; place-items: center; transition: 0.2s;
       }
-      .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 22px 0; text-align: right; }
-      .case-study-grid > div { padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--ink) 3.5%, transparent); }
-      .case-study-grid dt { color: var(--coral); font: 700 10px var(--font-mono); letter-spacing: 0.08em; }
-      .case-study-grid dd { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
-      .field-error { display: block; min-height: 0; margin-top: 5px; color: #d9694f; font-size: 11px; font-weight: 700; }
+      html[dir="ltr"] .modal-card .close {
+        left: auto;
+        right: 24px;
+      }
+      .modal-card .close:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .case-study-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0; text-align: right; }
+      html[dir="ltr"] .case-study-grid { text-align: left; }
+      .case-study-grid > div { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg-soft); }
+      .case-study-grid dt { color: var(--accent); font: 800 12px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+      .case-study-grid dd { margin: 0; color: var(--ink); font-size: 14px; line-height: 1.6; }
+      .field-error { display: block; min-height: 0; margin-top: 6px; color: #C83232; font-size: 12px; font-weight: 700; }
       .field-error:empty { display: none; }
       .modal-open { overflow: hidden; }
       .toast {
-        position: fixed; bottom: 24px; left: 50%; z-index: 3000; transform: translateX(-50%); border-radius: 999px; padding: 12px 24px; background: var(--surface-strong); color: white; box-shadow: var(--shadow-soft); font-size: 13px; font-weight: 800; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s;
+        position: fixed; bottom: 24px; left: 50%; z-index: 3000; transform: translateX(-50%); border-radius: var(--radius-sm); padding: 14px 28px; background: var(--surface-strong); color: var(--bg); box-shadow: var(--shadow); font-size: 14px; font-weight: 800; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s;
       }
       .toast.show { opacity: 1; transform: translate(-50%, -6px); }
 
       /* Command Palette */
       .cmd-palette {
-        position: fixed; top: 20%; left: 50%; transform: translate(-50%, 0); width: min(480px, calc(100% - 30px)); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-md); z-index: 2500; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+        position: fixed; top: 20%; left: 50%; transform: translate(-50%, 0); width: min(500px, calc(100% - 30px)); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-md); z-index: 2500; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
       }
       .cmd-palette.open { opacity: 1; pointer-events: auto; }
-      .cmd-input { width: 100%; padding: 16px; background: transparent; border: 0; border-bottom: 1px solid var(--line); outline: none; font-size: 14px; }
-      .cmd-list { list-style: none; margin: 0; padding: 8px; max-height: 240px; overflow-y: auto; }
-      .cmd-item { padding: 10px 14px; border-radius: 8px; display: flex; justify-content: space-between; cursor: pointer; font-size: 13px; }
-      .cmd-item:hover { background: var(--lime); color: var(--navy); }
-      .cmd-item:focus-visible { background: var(--lime); color: var(--navy); outline: 0; }
+      .cmd-input { width: 100%; padding: 18px; background: transparent; border: 0; border-bottom: 1px solid var(--line); outline: none; font-size: 15px; color: var(--ink); }
+      .cmd-list { list-style: none; margin: 0; padding: 10px; max-height: 260px; overflow-y: auto; }
+      .cmd-item { padding: 12px 16px; border-radius: var(--radius-sm); display: flex; justify-content: space-between; cursor: pointer; font-size: 14px; color: var(--ink); }
+      .cmd-item:hover, .cmd-item:focus-visible { background: var(--accent); color: var(--bg); outline: 0; }
 
-      /* الفوتر */
-      .footer { background: var(--surface-strong); color: #b4ac9f; }
+      /* Footer */
+      .footer { background: var(--surface-strong); color: var(--muted); border-top: 1px solid var(--line); }
       .footer-link {
         min-height: 44px;
         padding: 0;
         color: var(--muted);
-        font-size: 12px;
+        font-size: 13px;
+        transition: color 0.2s;
       }
-      .footer-link:hover { color: var(--ink); }
-      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 34px 0; }
+      .footer-link:hover { color: var(--accent); }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 48px 0; }
 
-      /* إيقاف الحركة عند طلب المستخدم (Prefers Reduced Motion) */
+      /* Print and Responsive Falls */
       @media print {
         .site-header, .custom-cursor, .toast, .modal, .cmd-palette,
         .hero-actions, .card-actions, .socials, .filter-buttons,
         .floating-note, .submit-button {
           display: none !important;
         }
-
-        body {
-          background: #fff !important;
-          color: #111 !important;
-          overflow: visible !important;
-        }
-
-        .section, .hero {
-          padding: 32px 0 !important;
-          min-height: auto !important;
-        }
-
-        .panel {
-          box-shadow: none !important;
-          break-inside: avoid;
-        }
-
-        .contact-band {
-          background: #fff !important;
-          color: #111 !important;
-        }
+        body { background: #FFFFFF !important; color: #121110 !important; overflow: visible !important; }
+        .section, .hero { padding: 32px 0 !important; min-height: auto !important; }
+        .panel { box-shadow: none !important; break-inside: avoid; }
+        .contact-band { background: #FFFFFF !important; color: #121110 !important; }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -850,69 +865,46 @@
           transition: none !important;
           scroll-behavior: auto !important;
         }
-
-        .site-header,
-        .modal {
-          backdrop-filter: none;
-          -webkit-backdrop-filter: none;
-        }
+        .site-header, .modal { backdrop-filter: none; -webkit-backdrop-filter: none; }
       }
-
-      @media (max-width: 700px) {
-        .site-header {
-          backdrop-filter: none;
-          -webkit-backdrop-filter: none;
-          background: color-mix(in srgb, var(--bg) 96%, transparent);
-        }
-
-        .modal {
-          backdrop-filter: none;
-          -webkit-backdrop-filter: none;
-        }
-
-        .hero-portrait-img {
-          transition-duration: 0.25s;
-        }
-      }
-
-      @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--coral) 40%, transparent); } 50% { box-shadow: 0 0 0 8px transparent; } }
-      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
       @media (max-width: 900px) {
         .main-nav, .header-actions > .outline-button { display: none; }
         .menu-button { display: grid; }
         .hero, .profile-grid, .contact-grid, .stats-grid { grid-template-columns: 1fr; }
-        .hero-art { min-height: 420px; order: -1; }
+        .hero-art { min-height: 460px; order: -1; }
         .projects-grid { grid-template-columns: 1fr; }
         .skills-grid { grid-template-columns: 1fr; }
-        .hero { min-height: auto; padding-top: 54px; padding-bottom: 80px; }
+        .hero { min-height: auto; padding-top: 40px; padding-bottom: 60px; gap: 40px; }
         .hero-copy { order: 2; }
         .hero-art { order: 1; }
       }
 
       @media (max-width: 560px) {
-        .container { width: min(100% - 28px, 1200px); }
-        .header-inner { min-height: 64px; }
-        .hero h1 { font-size: clamp(2.8rem, 16vw, 5rem); line-height: 1.06; }
-        .hero-lede { font-size: 16px; line-height: 1.75; }
+        .container { width: min(100% - 24px, 1200px); }
+        .header-inner { min-height: 72px; }
+        .hero h1 { font-size: clamp(2.4rem, 12vw, 4.2rem); line-height: 1.1; }
+        .hero-lede { font-size: 17px; line-height: 1.75; }
         .hero-actions { align-items: stretch; }
         .hero-actions > * { width: 100%; }
-        .hero-art { min-height: 360px; }
-        .art-message { padding: 22px; }
+        .hero-art { min-height: 380px; }
+        .art-message { padding: 24px; }
         .floating-note { right: 8px; bottom: -10px; max-width: calc(100% - 16px); }
-        .profile-card, .side-panel, .timeline-card, .project-card, .contact-form { padding: 20px; }
-        .profile-top { align-items: flex-start; flex-direction: column; }
-        .stats-grid { grid-template-columns: 1fr; gap: 10px; }
-        .stat-card { padding: 18px 10px; }
+        html[dir="rtl"] .floating-note { right: auto; left: 8px; }
+        .profile-card, .side-panel, .timeline-card, .project-card, .contact-form { padding: 24px; }
+        .profile-top { align-items: flex-start; flex-direction: column; gap: 16px; }
+        .stats-grid { grid-template-columns: 1fr; gap: 12px; }
+        .stat-card { padding: 24px 16px; }
         .stat-card-wide { max-width: none; }
-        .stat-num { font-size: 1.9rem; }
+        .stat-num { font-size: 2.2rem; }
         .form-grid, .case-study-grid { grid-template-columns: 1fr; }
         .modal { padding: 12px; }
-        .modal-card { padding: 42px 20px 22px; max-height: calc(100dvh - 24px); }
-        .footer-inner { align-items: flex-start; flex-direction: column; padding: 26px 0; }
+        .modal-card { padding: 48px 24px 24px; max-height: calc(100dvh - 24px); }
+        .footer-inner { align-items: flex-start; flex-direction: column; padding: 36px 0; }
       }
 
-    </style>
+      @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.4); } 50% { box-shadow: 0 0 0 8px transparent; } }
+</style>
   </head>
   <body>
     <!-- Skip Link -->
@@ -987,7 +979,7 @@
           </div>
           <div class="eyebrow" data-i18n="hero.eyebrow">FRONT-END / UI / UX / DEVELOPER</div>
           <h1 data-i18n="hero.title">
-            اصنع<br /><span class="coral">تجربة،</span><br />تترك أثراً.
+            أصنع<br /><span class="coral">تجارب</span><br />تدوم.
           </h1>
           <p class="hero-lede" data-i18n="hero.lede">
             أبني تجارب ويب حديثة، سريعة، متجاوبة وأنيقة تجمع بين التقنية البرمجية واللمسة الإنسانية.
@@ -1021,10 +1013,6 @@
               <small>THE POINT OF VIEW — 01</small>
               <strong>Make it<br /><em>matter.</em></strong>
             </div>
-          </div>
-          <div class="floating-note">
-            <small data-i18n="hero.learning">حالياً أتعلم</small>
-            <strong><span class="coral">◈</span> Next.js & Edge Tech</strong>
           </div>
         </div>
       </section>
@@ -1283,7 +1271,7 @@
           <hr style="border:0; border-top:1px solid var(--line); margin:16px 0;" />
           <h4 style="margin:0 0 8px;" data-i18n="resume.summary_title">الملخص المهني:</h4>
           <p style="font-size:13px; color:var(--muted); line-height:1.7;">
-            مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية وعالية الأداء باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول وتحسين محركات البحث.
+            مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية بأسلوب منظّم باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول.
           </p>
         </div>
         <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
@@ -1443,11 +1431,10 @@
             "hero.available": "متاح للتواصل والتعلم والعمل الحر",
             "hero.location": "الإسكندرية، مصر",
             "hero.eyebrow": "FRONT-END / UI / UX / DEVELOPER",
-            "hero.title": 'اصنع<br /><span class="coral">تجربة،</span><br />تترك أثراً.',
+            "hero.title": 'أصنع<br /><span class="coral">تجارب</span><br />تدوم.',
             "hero.lede": "أبني تجارب ويب حديثة، سريعة، متجاوبة وأنيقة تجمع بين التقنية البرمجية واللمسة الإنسانية.",
             "hero.explore": "استكشف الملف ↓",
             "hero.resume": "📄 السيرة الذاتية (PDF)",
-            "hero.learning": "حالياً أتعلم",
             "profile.name": "عيسى محمد",
             "profile.role": "Front-End Web Developer<br />UI/UX Designer • Student",
             "profile.status": "متاح",
@@ -1486,7 +1473,7 @@
             "footer.privacy": "الخصوصية",
             "footer.top": "للأعلى ↗",
             "skip": "تجاوز إلى المحتوى الرئيسي",
-            "profile.kicker": "01 / بطاقة التعريف", "profile.title": "بياناتي،<br /><span class=\"lime\">بوضوح.</span>", "about.kicker": "02 / عني", "about.title": "مطور<br />يفكر<br /><span class=\"coral\">بعين مصمم.</span>", "skills.kicker": "03 / المهارات والقدرات", "skills.title": "الأدوات التي<br /><span class=\"lime\">أصل بها للفكرة.</span>", "experience.kicker": "04 / المسار والخبرات", "experience.title": "رحلة تعلم<br /><span class=\"coral\">مستمرة.</span>", "experience.current": "2024 — الحالي", "experience.previous": "2023 — 2024", "stats.kicker": "05 / الأرقام والإحصائيات", "stats.title": "مؤشرات الأداء<br /><span class=\"lime\">المباشرة.</span>", "projects.kicker": "06 / المشاريع", "projects.title": "أعمال تصنع<br /><span class=\"lime\">فرقاً.</span>", "projects.filter_label": "تصفية المشاريع", "contact.kicker": "07 / تواصل معي", "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>", "project.details": "التفاصيل", "project.details_aria": "فتح تفاصيل", "project.open": "فتح المشروع ↗", "project.preview": "معاينة مباشرة ↗", "project.no_preview": "لا توجد معاينة منشورة", "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية وعالية الأداء باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول وتحسين محركات البحث.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "cmd.title": "لوحة الأوامر", "cmd.search_label": "البحث", "cmd.home": "الرئيسية", "cmd.projects": "المشاريع", "cmd.resume": "السيرة الذاتية", "cmd.theme": "تبديل المظهر", "cmd.lang": "تبديل اللغة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
+            "profile.kicker": "01 / بطاقة التعريف", "profile.title": "بياناتي،<br /><span class=\"lime\">بوضوح.</span>", "about.kicker": "02 / عني", "about.title": "مطور<br />يفكر<br /><span class=\"coral\">بعين مصمم.</span>", "skills.kicker": "03 / المهارات والقدرات", "skills.title": "الأدوات التي<br /><span class=\"lime\">أصل بها للفكرة.</span>", "experience.kicker": "04 / المسار والخبرات", "experience.title": "رحلة تعلم<br /><span class=\"coral\">مستمرة.</span>", "experience.current": "2024 — الحالي", "experience.previous": "2023 — 2024", "stats.kicker": "05 / الأرقام والإحصائيات", "stats.title": "مؤشرات الأداء<br /><span class=\"lime\">المباشرة.</span>", "projects.kicker": "06 / المشاريع", "projects.title": "أعمال تصنع<br /><span class=\"lime\">فرقاً.</span>", "projects.filter_label": "تصفية المشاريع", "contact.kicker": "07 / تواصل معي", "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>", "project.details": "التفاصيل", "project.details_aria": "فتح تفاصيل", "project.open": "فتح المشروع ↗", "project.preview": "معاينة مباشرة ↗", "project.no_preview": "لا توجد معاينة منشورة", "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية بأسلوب منظّم باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "cmd.title": "لوحة الأوامر", "cmd.search_label": "البحث", "cmd.home": "الرئيسية", "cmd.projects": "المشاريع", "cmd.resume": "السيرة الذاتية", "cmd.theme": "تبديل المظهر", "cmd.lang": "تبديل اللغة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
           },
           en: {
             "nav.home": "Home",
@@ -1499,11 +1486,10 @@
             "hero.available": "Available for Freelance & Projects",
             "hero.location": "Alexandria, Egypt",
             "hero.eyebrow": "FRONT-END / UI / UX / DEVELOPER",
-            "hero.title": 'Craft an<br /><span class="coral">experience</span><br />that lasts.',
+            "hero.title": 'Craft<br /><span class="coral">experiences</span><br />that last.',
             "hero.lede": "I build modern, fast, responsive and sleek web experiences uniting engineering with human design.",
             "hero.explore": "Explore Profile ↓",
             "hero.resume": "📄 Resume (PDF)",
-            "hero.learning": "Currently Learning",
             "profile.name": "Eissa Mohammed",
             "profile.role": "Front-End Web Developer<br />UI/UX Designer • Student",
             "profile.status": "Available",
@@ -1542,7 +1528,7 @@
             "footer.privacy": "Privacy",
             "footer.top": "Back to Top ↗",
             "skip": "Skip to main content",
-            "profile.kicker": "01 / Profile", "profile.title": "My details,<br /><span class=\"lime\">clearly.</span>", "about.kicker": "02 / About", "about.title": "A developer<br />who thinks<br /><span class=\"coral\">like a designer.</span>", "skills.kicker": "03 / Skills & Capabilities", "skills.title": "The tools I<br /><span class=\"lime\">use to shape ideas.</span>", "experience.kicker": "04 / Journey & Experience", "experience.title": "A continuous<br /><span class=\"coral\">learning journey.</span>", "experience.current": "2024 — Present", "experience.previous": "2023 — 2024", "stats.kicker": "05 / Metrics & Statistics", "stats.title": "Live performance<br /><span class=\"lime\">indicators.</span>", "projects.kicker": "06 / Projects", "projects.title": "Work that makes<br /><span class=\"lime\">a difference.</span>", "projects.filter_label": "Project filters", "contact.kicker": "07 / Contact", "contact.title": "Have an<br /><span class=\"coral\">idea?</span>", "project.details": "Details", "project.details_aria": "Open details for", "project.open": "Open project ↗", "project.preview": "Live preview ↗", "project.no_preview": "No published preview", "privacy.title": "Privacy Policy", "privacy.body": "This website respects your privacy and does not collect personal data without your permission. The contact form is used only to send direct inquiries.", "resume.summary_title": "Professional Summary", "resume.summary": "Front-end developer focused on building interactive, high-performance web applications using React, TypeScript, HTML5, and CSS3, with attention to accessibility and search engine optimization.", "resume.download": "Download PDF ⇩", "resume.print": "Print", "cmd.title": "Command Palette", "cmd.search_label": "Search", "cmd.home": "Home", "cmd.projects": "Projects", "cmd.resume": "Resume", "cmd.theme": "Toggle Theme", "cmd.lang": "Switch Language", "aria.close": "Close window", "form.invalid_required": "This field is required.", "form.invalid_email": "Enter a valid email address.", "form.invalid_summary": "Please complete all required fields.", "toast.email": "Opening your email app...", "toast.vcard": "Contact vCard downloaded", "toast.copy_failed": "Automatic copy failed", "toast.pdf": "Preparing the PDF...", "modal.problem": "Problem", "modal.solution": "Solution", "modal.role": "Role", "modal.preview": "Preview", "modal.available_later": "Details will be added when a case study is available.", "modal.link_available": "The link is available below when published."
+            "profile.kicker": "01 / Profile", "profile.title": "My details,<br /><span class=\"lime\">clearly.</span>", "about.kicker": "02 / About", "about.title": "A developer<br />who thinks<br /><span class=\"coral\">like a designer.</span>", "skills.kicker": "03 / Skills & Capabilities", "skills.title": "The tools I<br /><span class=\"lime\">use to shape ideas.</span>", "experience.kicker": "04 / Journey & Experience", "experience.title": "A continuous<br /><span class=\"coral\">learning journey.</span>", "experience.current": "2024 — Present", "experience.previous": "2023 — 2024", "stats.kicker": "05 / Metrics & Statistics", "stats.title": "Live performance<br /><span class=\"lime\">indicators.</span>", "projects.kicker": "06 / Projects", "projects.title": "Work that makes<br /><span class=\"lime\">a difference.</span>", "projects.filter_label": "Project filters", "contact.kicker": "07 / Contact", "contact.title": "Have an<br /><span class=\"coral\">idea?</span>", "project.details": "Details", "project.details_aria": "Open details for", "project.open": "Open project ↗", "project.preview": "Live preview ↗", "project.no_preview": "No published preview", "privacy.title": "Privacy Policy", "privacy.body": "This website respects your privacy and does not collect personal data without your permission. The contact form is used only to send direct inquiries.", "resume.summary_title": "Professional Summary", "resume.summary": "Front-end developer focused on building interactive web applications using React, TypeScript, HTML5, and CSS3, with attention to accessibility.", "resume.download": "Download PDF ⇩", "resume.print": "Print", "cmd.title": "Command Palette", "cmd.search_label": "Search", "cmd.home": "Home", "cmd.projects": "Projects", "cmd.resume": "Resume", "cmd.theme": "Toggle Theme", "cmd.lang": "Switch Language", "aria.close": "Close window", "form.invalid_required": "This field is required.", "form.invalid_email": "Enter a valid email address.", "form.invalid_summary": "Please complete all required fields.", "toast.email": "Opening your email app...", "toast.vcard": "Contact vCard downloaded", "toast.copy_failed": "Automatic copy failed", "toast.pdf": "Preparing the PDF...", "modal.problem": "Problem", "modal.solution": "Solution", "modal.role": "Role", "modal.preview": "Preview", "modal.available_later": "Details will be added when a case study is available.", "modal.link_available": "The link is available below when published."
           }
         };
 
@@ -1558,7 +1544,7 @@
         }
 
         let currentLang = getValidatedLocalStorage("site_lang", ["ar", "en"], "ar");
-        let currentTheme = getValidatedLocalStorage("site_theme", ["dark", "light"], "dark");
+        let currentTheme = getValidatedLocalStorage("site_theme", ["dark", "light"], "light");
         let lastFocusedElement = null;
 
         const toast = document.getElementById("toast");
@@ -1696,15 +1682,15 @@
 
         // تبديل المظهر Dark / Light
         function setTheme(theme) {
-          if (!["dark", "light"].includes(theme)) theme = "dark";
+          if (!["dark", "light"].includes(theme)) theme = "light";
           currentTheme = theme;
           try {
             localStorage.setItem("site_theme", theme);
           } catch (e) {}
-          const isLight = theme === "light";
-          document.documentElement.classList.toggle("light", isLight);
-          document.getElementById("theme-toggle").textContent = isLight ? "◐" : "☼";
-          document.getElementById("theme-color-meta").setAttribute("content", isLight ? "#f8f4ea" : "#0a0a0c");
+          const isDark = theme === "dark";
+          document.documentElement.classList.toggle("dark", isDark);
+          document.getElementById("theme-toggle").textContent = isDark ? "☼" : "◐";
+          document.getElementById("theme-color-meta").setAttribute("content", isDark ? "#11100F" : "#FAF7F2");
         }
         document.getElementById("theme-toggle").addEventListener("click", () => {
           setTheme(currentTheme === "dark" ? "light" : "dark");
@@ -1889,22 +1875,52 @@
         // قائمة المشاريع
         const projects = [
           {
-            id: "p1", category: "web", number: "01", symbol: "▦",
-            title: "Eissa Personal Card & PWA",
-            desc: "بطاقة شخصية تفاعلية فائقة السرعة مع تقنيات Glassmorphism وتطبيق ويب تقدمي PWA.", enDesc: "A fast interactive personal card using Glassmorphism and Progressive Web App technology.",
-            tags: ["HTML5", "CSS3", "PWA", "JS"], link: "https://eissa89.github.io/eissa-card/"
+            id: "p1", category: "ui", number: "01", symbol: "✦",
+            title: "THE RED STILLNESS",
+            desc: "واجهة تطبيق انضباط ذاتي تحتوي على 33 استراتيجية مبوبة، مع حفظ الحالة في LocalStorage وعمل أوفلاين عبر Service Worker.",
+            enDesc: "A self-discipline web interface featuring 33 strategy cards, client-side state in LocalStorage, and offline Service Worker support.",
+            tags: ["PWA", "Vanilla JS", "LocalStorage", "SVG"],
+            link: "https://github.com/Eissa89/THE-RED-STILLNESS",
+            problem: "الحاجة لواجهة تفاعلية لعرض الاستراتيجيات وتتبع حالة إكمال الأيام بدون الحاجة لقاعدة بيانات خارجية.",
+            enProblem: "The requirement for an interactive interface to view strategies and track day completion without an external database server.",
+            goal: "بناء واجهة تعمل أوفلاين وحفظ التقدم والملاحظات محلياً على جهاز المستخدم.",
+            enGoal: "Build an offline-capable interface that retains user progress and notes client-side.",
+            approach: "تصميم واجهة متجاوبة بأيقونات SVG ومخطط تقدم بصري مبوب حسب الأيام والمهام.",
+            enApproach: "A responsive layout featuring integrated SVG icons and day-by-day visual progress indicators.",
+            engineering: "يتم حفظ حالة البيانات محلياً باستخدام LocalStorage، وتعتمد إمكانية العمل أوفلاين على تخزين الملفات عبر Service Worker.",
+            enEngineering: "Client-side state is stored using LocalStorage, with offline behavior provided by the Service Worker."
           },
           {
-            id: "p2", category: "ui", number: "02", symbol: "✦",
-            title: "Cyber Dark UI System",
-            desc: "نظام تصميم داكن فاخر يعتمد على المؤثرات الضوئية والتفاعلات الهادئة والواضحة.", enDesc: "A premium dark design system built around restrained lighting effects and clear interactions.",
-            tags: ["UI/UX", "Design System", "a11y"]
+            id: "p2", category: "web", number: "02", symbol: "▦",
+            title: "EISSA CARD",
+            desc: "البورتفوليو والبطاقة الشخصية التفاعلية مع دعم كامل للغات، وتصدير السيرة الذاتية، وتحميل جهات الاتصال vCard.",
+            enDesc: "Interactive personal portfolio & contact hub featuring multi-language switcher, PDF resume export, and programmatic vCard download.",
+            tags: ["HTML5", "CSS3", "i18n", "PWA"],
+            link: "https://eissa89.github.io/eissa-card/",
+            problem: "تقديم البيانات الشخصية والمشاريع والسيرة الذاتية في واجهة ويب واحدة منظمة وتفاعلية.",
+            enProblem: "Presenting personal information, projects, and resume data within a single organized interactive web interface.",
+            goal: "بناء بورتفوليو ثنائي اللغة (عربي/إنجليزي) يتكيف مع اتجاهات الصفحة (RTL/LTR) وأدوات تصدير سريعة.",
+            enGoal: "Build a dual-language (AR/EN) portfolio adjusting to RTL/LTR directions with export tools.",
+            approach: "تصميم تحريفي متجاوب مع تباين طبوغرافي وخطوط Playfair و Amiri ومساحات بيضاء متوازنة.",
+            enApproach: "Responsive editorial layout with strong typographic contrast, serif headings, and structured grids.",
+            engineering: "تطوير تطبيق صفحة واحدة بدون مجمعات حزم خفيفة، مع حفظ الإعدادات في LocalStorage وتوليد ملف vCard برمجيًا وتنزيل السيرة الذاتية.",
+            enEngineering: "Developed as a dependency-light SPA, saving preferences in LocalStorage, generating vCard programmatically, and printing PDF resume via CDN."
           },
           {
             id: "p3", category: "web", number: "03", symbol: "◈",
-            title: "High Performance App",
-            desc: "تجربة ويب خفيفة مبنية بعناية، تضع سرعة التحميل وسهولة الاستخدام في المقدمة.", enDesc: "A carefully built lightweight web experience focused on loading speed and usability.",
-            tags: ["Performance", "Vanilla JS", "React"]
+            title: "My Biology Experience",
+            desc: "واجهة تعليمية تفاعلية لدرس الدعامة في النبات، تجمع بين البحث عن المصطلحات، البطاقات التعليمية، والاختبارات.",
+            enDesc: "An interactive learning interface for plant-support biology content, combining term search, flashcards, quizzes, and study-oriented sections.",
+            tags: ["HTML5", "CSS3", "JavaScript", "Quiz"],
+            link: "https://eissa89.github.io/biology-3sec/",
+            problem: "تنظيم وعرض المادة العلمية ومصطلحات الأحياء في واجهة تفاعلية واحدة سهلة التصفح.",
+            enProblem: "Organizing and presenting biology study topics and term definitions within a single searchable digital layout.",
+            goal: "توفير تصميم تعليمي تفاعلي يجمع بين البحث، البطاقات التعليمية، والاختبارات الذاتية مع التقييم الفوري.",
+            enGoal: "Provide an interactive study layout featuring search, flashcard flips, and self-assessment quizzes with score calculation.",
+            approach: "واجهة تحتوي على قائمة جانبية للتنقل بين الأقسام، مع بطاقات تفاعلية للعرض والاختبارات.",
+            enApproach: "Sidebar-navigated web layout with interactive card flip elements and quiz sections.",
+            engineering: "تطوير محرك بحث لحظي في المصطلحات ومحرك اختبارات برمجي يحسب النتيجة بناءً على مدخلات المستخدم.",
+            enEngineering: "Implemented client-side real-time term filtering and a JavaScript quiz engine computing scores dynamically."
           }
         ];
 
@@ -2016,6 +2032,22 @@
             tag.textContent = tagText;
             tags.appendChild(tag);
           });
+
+          // Populate Case Study sections factually
+          const metaSection = document.getElementById("modal-project-meta");
+          if (metaSection) {
+            metaSection.removeAttribute("hidden");
+
+            const problemEl = document.getElementById("modal-project-problem");
+            const solutionEl = document.getElementById("modal-project-solution");
+            const roleEl = document.getElementById("modal-project-role");
+            const previewEl = document.getElementById("modal-project-preview");
+
+            if (problemEl) problemEl.textContent = currentLang === "en" ? (item.enProblem || item.problem) : item.problem;
+            if (solutionEl) solutionEl.textContent = currentLang === "en" ? (item.enGoal || item.goal) : item.goal;
+            if (roleEl) roleEl.textContent = currentLang === "en" ? (item.enApproach || item.approach) : item.approach;
+            if (previewEl) previewEl.textContent = currentLang === "en" ? (item.enEngineering || item.engineering) : item.engineering;
+          }
 
           const link = document.getElementById("modal-project-link");
           if (item.link && isSafeUrl(item.link)) {
