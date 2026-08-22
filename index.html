@@ -10,26 +10,26 @@
     <link rel="canonical" href="https://eissa89.github.io/eissa-card/" />
 
     <!-- SEO & البيانات الوصفية المحسنة -->
-    <meta name="description" content="الملف المهني والبطاقة الشخصية التفاعلية لعيسى محمد — مطور واجهات أمامية ومصمم تجارب المستخدم (UI/UX) بالإسكندرية." />
-    <meta name="keywords" content="Frontend Developer, UI/UX Designer, Eissa Mohammed, Web Developer Alexandria, React, JavaScript, HTML5, CSS3, Accessibility, Performance" />
+    <meta name="description" content="عيسى محمد — مطور واجهات أمامية (Frontend Developer). أفكار واقعية، بناء محكم، وتبسيط يضع النتيجة أولاً." />
+    <meta name="keywords" content="Frontend Developer, Eissa Mohammed, EISSA 89, مطور واجهات أمامية, Web Developer Alexandria, JavaScript, HTML5, CSS3, React, Accessibility, Performance" />
     <meta name="author" content="Eissa Mohammed" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / شبكات التواصل الاجتماعي -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eissa89.github.io/eissa-card/" />
-    <meta property="og:title" content="عيسى محمد — مطور واجهات ومصمم تجربة المستخدم" />
-    <meta property="og:description" content="أبني تجارب ويب حديثة متجاوبة تجمع بين التقنية البرمجية والتصميم." />
+    <meta property="og:title" content="EISSA 89 — FRONTEND DEVELOPER" />
+    <meta property="og:description" content="أبني الأفكار إلى تجارب واقعية. أبدأ من فكرة، أبنيها، أختبرها، وأغيرها عندما يثبت التنفيذ أنها تحتاج إلى ذلك." />
     <meta property="og:image" content="https://eissa89.github.io/eissa-card/1000081078.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1500" />
-    <meta property="og:image:alt" content="عيسى محمد — Eissa Mohammed" />
+    <meta property="og:image:alt" content="EISSA 89 — Eissa Mohammed" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://eissa89.github.io/eissa-card/" />
-    <meta name="twitter:title" content="عيسى محمد — مطور واجهات ومصمم تجربة المستخدم" />
-    <meta name="twitter:description" content="أبني تجارب ويب حديثة متجاوبة تجمع بين التقنية البرمجية والتصميم." />
+    <meta name="twitter:title" content="EISSA 89 — FRONTEND DEVELOPER" />
+    <meta name="twitter:description" content="أبني الأفكار إلى تجارب واقعية. أبدأ من فكرة، أبنيها، أختبرها، وأغيرها عندما يثبت التنفيذ أنها تحتاج إلى ذلك." />
     <meta name="twitter:image" content="https://eissa89.github.io/eissa-card/1000081078.png" />
 
     <!-- أيقونة الموقع -->
@@ -49,8 +49,8 @@
             "@type": "Person",
             "@id": "https://eissa89.github.io/eissa-card/#person",
             "name": "عيسى محمد",
-            "alternateName": "Eissa Mohammed",
-            "jobTitle": "Front-End Developer & UI/UX Designer",
+            "alternateName": "Eissa Mohammed (EISSA 89)",
+            "jobTitle": "Frontend Developer",
             "image": "https://eissa89.github.io/eissa-card/1000081078.png",
             "address": {
               "@type": "PostalAddress",
@@ -70,7 +70,7 @@
       }
     </script>
 
-    <title id="site-title">عيسى محمد — البورتفوليو والبطاقة الشخصية</title>
+    <title id="site-title">EISSA 89 — FRONTEND DEVELOPER</title>
 
     <style>
       :root {
@@ -354,8 +354,6 @@
 
       .site-header, .modal { isolation: isolate; }
       .project-card { content-visibility: auto; contain-intrinsic-size: 280px; }
-      .cmd-item { width: 100%; min-height: 44px; border: 0; background: transparent; color: inherit; text-align: inherit; }
-      .cmd-item + .cmd-item { margin-top: 2px; }
       [aria-disabled="true"] { cursor: not-allowed; opacity: 0.55; }
 
       .mobile-nav.open { animation: menuIn 0.18s ease-out; }
@@ -824,16 +822,6 @@
       }
       .toast.show { opacity: 1; transform: translate(-50%, -6px); }
 
-      /* Command Palette */
-      .cmd-palette {
-        position: fixed; top: 20%; left: 50%; transform: translate(-50%, 0); width: min(500px, calc(100% - 30px)); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-md); z-index: 2500; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
-      }
-      .cmd-palette.open { opacity: 1; pointer-events: auto; }
-      .cmd-input { width: 100%; padding: 18px; background: transparent; border: 0; border-bottom: 1px solid var(--line); outline: none; font-size: 15px; color: var(--ink); }
-      .cmd-list { list-style: none; margin: 0; padding: 10px; max-height: 260px; overflow-y: auto; }
-      .cmd-item { padding: 12px 16px; border-radius: var(--radius-sm); display: flex; justify-content: space-between; cursor: pointer; font-size: 14px; color: var(--ink); }
-      .cmd-item:hover, .cmd-item:focus-visible { background: var(--accent); color: var(--bg); outline: 0; }
-
       /* Footer */
       .footer { background: var(--surface-strong); color: var(--muted); border-top: 1px solid var(--line); }
       .footer-link {
@@ -848,7 +836,7 @@
 
       /* Print and Responsive Falls */
       @media print {
-        .site-header, .custom-cursor, .toast, .modal, .cmd-palette,
+        .site-header, .custom-cursor, .toast, .modal,
         .hero-actions, .card-actions, .socials, .filter-buttons,
         .floating-note, .submit-button {
           display: none !important;
@@ -928,18 +916,16 @@
 
         <nav class="main-nav" aria-label="التنقل الرئيسي">
           <a href="#hero" data-i18n="nav.home">الرئيسية</a>
-          <a href="#profile" data-i18n="nav.profile">الملف</a>
-          <a href="#thinking" data-i18n="nav.thinking">التفكير</a>
-            <a href="#process" data-i18n="nav.process">المنهجية</a>
-            <a href="#about" data-i18n="nav.about">عني</a>
-          <a href="#skills" data-i18n="nav.skills">المهارات</a>
-          <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+          <a href="#red-stillness" data-i18n="nav.red_stillness">THE RED STILLNESS</a>
+          <a href="#how-i-build" data-i18n="nav.how_i_build">كيف أبني</a>
+          <a href="#things-i-changed" data-i18n="nav.things_i_changed">ما غيرته</a>
+          <a href="#eissa-card" data-i18n="nav.eissa_card">EISSA CARD</a>
+          <a href="#biology-experience" data-i18n="nav.biology">BIOLOGY</a>
+          <a href="#about" data-i18n="nav.about">عني</a>
           <a href="#contact" data-i18n="nav.contact">تواصل</a>
         </nav>
 
         <div class="header-actions">
-          <button type="button" class="icon-button" id="cmd-btn" title="لوحة الأوامر (Ctrl+K)" aria-label="فتح لوحة الأوامر">⌘</button>
-
           <button type="button" class="icon-button" id="lang-toggle" title="Switch Language" aria-label="تغيير اللغة">
             <span id="lang-label" style="font-size:11px; font-weight:800; font-family:var(--font-mono);">EN</span>
           </button>
@@ -956,12 +942,12 @@
 
       <nav class="container mobile-nav" id="mobile-nav" aria-label="قائمة الهاتف">
         <a href="#hero" data-i18n="nav.home">الرئيسية</a>
-        <a href="#profile" data-i18n="nav.profile">الملف</a>
-        <a href="#thinking" data-i18n="nav.thinking">التفكير</a>
-            <a href="#process" data-i18n="nav.process">المنهجية</a>
-            <a href="#about" data-i18n="nav.about">عني</a>
-        <a href="#skills" data-i18n="nav.skills">المهارات</a>
-        <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+        <a href="#red-stillness" data-i18n="nav.red_stillness">THE RED STILLNESS</a>
+        <a href="#how-i-build" data-i18n="nav.how_i_build">كيف أبني</a>
+        <a href="#things-i-changed" data-i18n="nav.things_i_changed">ما غيرته</a>
+        <a href="#eissa-card" data-i18n="nav.eissa_card">EISSA CARD</a>
+        <a href="#biology-experience" data-i18n="nav.biology">BIOLOGY</a>
+        <a href="#about" data-i18n="nav.about">عني</a>
         <a href="#contact" data-i18n="nav.contact">تواصل</a>
       </nav>
     </header>
@@ -972,34 +958,34 @@
       <!-- قسم الرئيسية Hero -->
       <section class="container hero" id="hero">
         <div class="hero-copy">
-          <p class="hero-name">عيسى محمد</p>
+          <p class="hero-name">EISSA 89</p>
           <div class="availability">
-            <span class="pulse-dot"></span> <span data-i18n="hero.available">متاح للتواصل والتعلم والعمل الحر</span>
+            <span class="pulse-dot"></span> <span data-i18n="hero.available">FRONTEND DEVELOPER</span>
           </div>
           <div class="location-line">
             <span>⌖ <span data-i18n="hero.location">الإسكندرية، مصر</span></span>
             <span>•</span>
             <span id="clock">--:--:--</span>
           </div>
-          <div class="eyebrow" data-i18n="hero.eyebrow">FRONTEND DEVELOPER</div>
+          <div class="eyebrow" data-i18n="hero.eyebrow">A PORTFOLIO OF DECISIONS</div>
           <h1 data-i18n="hero.title">
-            أصنع<br /><span class="coral">تجارب</span><br />تدوم.
+            أبني<br /><span class="coral">الأفكار</span><br />إلى تجارب.
           </h1>
           <p class="hero-lede" data-i18n="hero.lede">
-            أبني تجارب ويب حديثة، سريعة، متجاوبة وأنيقة تجمع بين التقنية البرمجية واللمسة الإنسانية.
+            أبدأ من فكرة، أبنيها، أختبرها، وأغيّرها عندما يثبت التنفيذ أنها تحتاج إلى ذلك.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="#profile" data-i18n="hero.explore">
-              استكشف الملف ↓
+            <a class="primary-button" href="#red-stillness" data-i18n="hero.explore">
+              استكشف الأعمال ↓
             </a>
             <button type="button" class="outline-button" id="resume-open-btn" data-i18n="hero.resume">
               📄 السيرة الذاتية (PDF)
             </button>
+            <a class="outline-button" href="#contact" data-i18n="hero.contact">
+              تواصل معي ↖
+            </a>
             <a class="outline-button" href="https://github.com/Eissa89" target="_blank" rel="noopener noreferrer">
               GitHub ↗
-            </a>
-            <a class="outline-button" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer">
-              LinkedIn ↗
             </a>
           </div>
         </div>
@@ -1009,255 +995,368 @@
           <div class="art-card">
             <picture>
               <source srcset="1000081078.png" type="image/png" />
-              <img src="1000081078.png" alt="عيسى محمد — Eissa Mohammed" class="hero-portrait-img" width="1200" height="1500" loading="eager" fetchpriority="high" />
+              <img src="1000081078.png" alt="عيسى محمد — EISSA 89" class="hero-portrait-img" width="1200" height="1500" loading="eager" fetchpriority="high" />
             </picture>
             <div class="hero-portrait-overlay"></div>
             <div class="art-topline">EISSA 89</div>
             <div class="art-message">
-              <small>THE POINT OF VIEW — 01</small>
-              <strong>Make it<br /><em>matter.</em></strong>
+              <small>DECISION MAKING — 01</small>
+              <strong>Build.<br />Test.<br /><em>Rethink.</em></strong>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- قسم بطاقة التعريف Profile -->
-
-      <!-- قسم كيف أفكر / ما غيرت رأيي بشأنه (Thinking Section) -->
-      <section class="band section" id="thinking">
+      <!-- FEATURED PROJECT #1 — THE RED STILLNESS (FLAGSHIP CASE STUDY) -->
+      <section class="band section" id="red-stillness">
         <div class="container">
-          <p class="section-kicker" data-i18n="thinking.kicker">فلسفة التصميم والتنفيذ</p>
-          <h2 class="section-title" data-i18n="thinking.title">كيف أفكر</h2>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px;">
-            <div class="panel" style="padding: 32px;">
-              <h3 style="margin: 0 0 12px; font-size: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="thinking.step1_title">01 — البدء بالفكرة</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7;" data-i18n="thinking.step1_desc">الانطلاق من الهدف وتجربة المستخدم قبل التعقيد التقني.</p>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <p class="section-kicker" data-i18n="rs.kicker">FLAGSHIP CASE STUDY — 01</p>
+              <h2 class="section-title" data-i18n="rs.title">THE RED STILLNESS</h2>
+              <p style="color: var(--accent); font: 700 16px var(--font-mono); margin-top: 8px;" data-i18n="rs.subtitle">الهدوء القرمزي — Dangerous Calm Before A Storm</p>
             </div>
-            <div class="panel" style="padding: 32px;">
-              <h3 style="margin: 0 0 12px; font-size: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="thinking.step2_title">02 — اختبار البناء</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7;" data-i18n="thinking.step2_desc">مواجهة قيود التنفيذ والأداء أثناء البناء الفعلي.</p>
-            </div>
-            <div class="panel" style="padding: 32px;">
-              <h3 style="margin: 0 0 12px; font-size: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="thinking.step3_title">03 — الاحتفاظ بالضروري</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7;" data-i18n="thinking.step3_desc">تبسيط الواجهة وحذف الزوائد لتقديم تجربة حقيقية متماسكة.</p>
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <a class="primary-button" href="https://github.com/Eissa89/THE-RED-STILLNESS" target="_blank" rel="noopener noreferrer">
+                GitHub Repository ↗
+              </a>
             </div>
           </div>
 
-          <div style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line);">
-            <p class="section-kicker" data-i18n="thinking.mind_kicker">خبرات عملية وتصميمية</p>
-            <h3 class="section-title" style="font-size: clamp(2rem, 3.5vw, 2.8rem);" data-i18n="thinking.mind_title">ما غيرت رأيي بشأنه</h3>
-            <div class="panel" style="padding: 36px; margin-top: 24px; background: var(--panel);">
-              <p style="margin: 0; font-size: 18px; line-height: 1.8; color: var(--ink);">
-                «التعقيد البصري والتقني ليس معياراً لجودة الواجهة. تبسيط الكود وإزالة العناصر الزائفة يصنع تجربة أسرع وأقوى وأكثر استدامة.»
+          <div style="margin-top: 32px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--panel);">
+            <p style="font-size: 18px; line-height: 1.8; color: var(--ink); margin: 0;" data-i18n="rs.overview">
+              تناقض الهدوء القرمزي: الحرب والدم والتضحية مقابل الحرية والعدل. واجهة انضباط ذاتي تحتوي على 33 استراتيجية مبوبة، حفظ التقدم محلياً، ودعم أوفلاين كـ PWA.
+            </p>
+            <div class="tag-list" style="margin-top: 20px;">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">PWA</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Testing</span>
+            </div>
+          </div>
+
+          <!-- DECISION MOMENT SYSTEM (6 STEPS) -->
+          <div style="margin-top: 48px;">
+            <p class="section-kicker" data-i18n="rs.dm_kicker">SIGNATURE DECISION MOMENT</p>
+            <h3 style="font-family: var(--font-serif); font-size: 28px; margin-top: 8px;" data-i18n="rs.dm_title">قصة القرار الهندسي</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 28px;">
+              <div class="panel" style="padding: 28px;">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="rs.s1_num">01 — THE IDEA</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s1_title">الفكرة والجو البصري</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s1_desc">صناعة جو درامي يعبر عن الهدوء القاتل الذي يسبق العاصفة، بتباين بصري بين الحرب والحرية.</p>
+              </div>
+
+              <div class="panel" style="padding: 28px;">
+                <span style="color: var(--secondary); font: 700 12px var(--font-mono);" data-i18n="rs.s2_num">02 — THE DIRECTION</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s2_title">المسار البصري الثقيل</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s2_desc">بدء تنفيذ اتجاه بصري مكثف وتأثيرات سينمائية ثقيلة لبناء الشعور بالغموض والخوف.</p>
+              </div>
+
+              <div class="panel" style="padding: 28px; border-color: var(--accent);">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="rs.s3_num">03 — WHAT FAILED</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s3_title">أين كانت الفجوة؟</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s3_desc">التصميم الثقيل استهلك وقتاً طويلاً، زاد تكلفة الأداء، ولم يصل للمستوى المطلوب المرجو منه.</p>
+              </div>
+
+              <div class="panel" style="padding: 28px; background: var(--bg-soft);">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="rs.s4_num">04 — THE DECISION</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s4_title">القرار الحاسم</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s4_desc">التخلي الكامل عن الجو البصري المعقد لصالح التبسيط، السرعة، وزيادة جودة المحتوى.</p>
+              </div>
+
+              <div class="panel" style="padding: 28px;">
+                <span style="color: var(--secondary); font: 700 12px var(--font-mono);" data-i18n="rs.s5_num">05 — WHAT REMAINED</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s5_title">ما تم الاحتفاظ به</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s5_desc">واجهة انسيابية سريعة، 33 استراتيجية مبوبة، حفظ تقدم أوفلاين وتصميم متجاوب تماماً.</p>
+              </div>
+
+              <div class="panel" style="padding: 28px;">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="rs.s6_num">06 — THE RESULT</span>
+                <h4 style="margin: 8px 0; font-size: 18px;" data-i18n="rs.s6_title">النتيجة النهائية</h4>
+                <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="rs.s6_desc">تجربة مستخدم أسرع، استجابة عالية بدون احتكاك، وتطبيق PWA متماسك يضع الفكرة والمحتوى أولاً.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03 — HOW I BUILD -->
+      <section class="container section" id="how-i-build">
+        <p class="section-kicker" data-i18n="hib.kicker">CENTRAL PHILOSOPHY — 03</p>
+        <h2 class="section-title" data-i18n="hib.title">HOW I BUILD</h2>
+        <p style="color: var(--muted); font-size: 18px; max-width: 680px; margin-top: 12px;" data-i18n="hib.lede">
+          التفكير الهندسي لا يبدأ من اختيار التقنيات، بل من فهم الفكرة وتقليص الفجوة بين التصميم والتنفيذ.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px;">
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--accent); font: 700 13px var(--font-mono);" data-i18n="hib.p1_num">01 — IDEA</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p1_title">ما الذي أحاول إنشائه حقاً؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p1_desc">تحديد الهدف الجوهري والتجربة المستهدفة قبل الانشغال بالأدوات والتعقيد البصري.</p>
+          </div>
+
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--secondary); font: 700 13px var(--font-mono);" data-i18n="hib.p2_num">02 — BUILD</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p2_title">ما أبسط طريقة لتجسيد الفكرة؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p2_desc">بناء نموذج أولي حي باستخدام تقنيات الويب الأساسية لاختبار الفكرة في الواقع.</p>
+          </div>
+
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--accent); font: 700 13px var(--font-mono);" data-i18n="hib.p3_num">03 — REALITY</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p3_title">ماذا يحدث عند الاصطدام بالتنفيذ؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p3_desc">اكتشاف القيود الحقيقية، البطء، التعقيد، والفجوة بين المفهوم وتجربة الاستخدام.</p>
+          </div>
+
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--secondary); font: 700 13px var(--font-mono);" data-i18n="hib.p4_num">04 — RETHINK</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p4_title">ما الذي يحتاج إلى تغيير؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p4_desc">إعادة النظر بشجاعة والتخلي عن القرارات التي لا تخدم المستخدم بغض النظر عن الجهد المبذول.</p>
+          </div>
+
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--accent); font: 700 13px var(--font-mono);" data-i18n="hib.p5_num">05 — REFINE</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p5_title">ما الذي يستحق البقاء؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p5_desc">صقل المكونات الأساسية، تحسين الأداء والوصولية، وإلغاء كل ما هو زائف.</p>
+          </div>
+
+          <div class="panel" style="padding: 28px;">
+            <span style="color: var(--secondary); font: 700 13px var(--font-mono);" data-i18n="hib.p6_num">06 — SHIP</span>
+            <h3 style="margin: 8px 0; font-size: 20px;" data-i18n="hib.p6_title">ما الذي يحتاجه المستخدم فعلياً؟</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7;" data-i18n="hib.p6_desc">إطلاق منتج خفيف، متجاوب، وموثوق يعمل بأعلى كفاءة في ظروف التشغيل الحقيقية.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 04 — THINGS I CHANGED -->
+      <section class="band section" id="things-i-changed">
+        <div class="container">
+          <p class="section-kicker" data-i18n="tic.kicker">PIVOT STORIES & ABANDONED DIRECTIONS — 04</p>
+          <h2 class="section-title" data-i18n="tic.title">THINGS I CHANGED</h2>
+          <p style="color: var(--muted); font-size: 18px; max-width: 680px; margin-top: 12px;" data-i18n="tic.lede">
+            القدرة على التراجع والتعديل دليل على الوعي بالفارق بين إظهار المهارة وحل المشكلة الحقيقية.
+          </p>
+
+          <div style="display: grid; gap: 24px; margin-top: 40px;">
+            <article class="panel" style="padding: 32px;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="tic.c1_tag">THE RED STILLNESS — VISUAL PIVOT</span>
+                <span style="color: var(--muted); font: 12px var(--font-mono);" data-i18n="tic.c1_decision">DECISION: SIMPLIFICATION OVER COMPLEXITY</span>
+              </div>
+              <h3 style="margin: 12px 0 8px; font-size: 22px;" data-i18n="tic.c1_title">"تخليت عن الاتجاه البصري الذي أردته في البداية."</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8;" data-i18n="tic.c1_desc">
+                في بداية مشروع THE RED STILLNESS، أردت بناء جو بصري درامي ثقيل جداً. عند التنفيذ اكتشفت أنه أضاف عبئاً في الأداء وأبطأ بناء المحتوى، فتراجعت عنه واستبدلته بواجهة أنيقة وسريعة تعطي الأولوية للمحتوى.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band section" id="profile">
-        <div class="container">
-          <div class="section-kicker" data-i18n="profile.kicker">01 / بطاقة التعريف</div>
-          <h2 class="section-title" data-i18n="profile.title">بياناتي،<br /><span class="lime">بوضوح.</span></h2>
-
-          <div class="profile-grid">
-            <article class="panel profile-card">
-              <div class="profile-top">
-                <div class="identity">
-                  <div class="avatar">
-                    <img src="1000081078.png" alt="عيسى محمد" width="80" height="80" loading="lazy" />
-                  </div>
-                  <div>
-                    <h3 data-i18n="profile.name">عيسى محمد</h3>
-                    <p data-i18n="profile.role">Front-End Web Developer<br />UI/UX Designer • Student</p>
-                  </div>
-                </div>
-                <div class="available-label"><i></i> <span data-i18n="profile.status">متاح</span></div>
-              </div>
-              <div class="divider"></div>
-
-              <div class="info-list">
-                <div class="info-row">
-                  <span class="info-icon">✉</span>
-                  <div class="info-main">
-                    <small data-i18n="profile.email_lbl">البريد الإلكتروني</small>
-                    <a href="mailto:ysym7003@gmail.com">ysym7003@gmail.com</a>
-                  </div>
-                  <button class="copy-button" type="button" data-copy="ysym7003@gmail.com" data-label="البريد" aria-label="نسخ البريد الإلكتروني">⧉</button>
-                </div>
-                <div class="info-row">
-                  <span class="info-icon">☎</span>
-                  <div class="info-main">
-                    <small data-i18n="profile.phone_lbl">رقم الهاتف</small>
-                    <a href="tel:+201288840809" dir="ltr">01288840809</a>
-                  </div>
-                  <button class="copy-button" type="button" data-copy="01288840809" data-label="الهاتف" aria-label="نسخ رقم الهاتف">⧉</button>
-                </div>
-                <div class="info-row">
-                  <span class="info-icon">⌖</span>
-                  <div class="info-main">
-                    <small data-i18n="profile.location_lbl">الموقع</small>
-                    <span data-i18n="profile.location_val">وادي القمر، الإسكندرية، مصر</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-actions">
-                <button class="small-button primary" type="button" id="vcard-button" data-i18n="profile.vcard">
-                  ⇩ حفظ جهة الاتصال (.vcf)
-                </button>
-                <button class="small-button" type="button" id="print-button" data-i18n="profile.print">
-                  ▣ طباعة
-                </button>
-              </div>
             </article>
 
-            <div class="side-stack">
-              <article class="panel side-panel">
-                <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
-                  <span style="color:var(--lime)">▦</span> <span data-i18n="profile.share">شارك بياناتي</span>
-                </div>
-                <!-- كود QR حقيقي مشفر ببيانات vCard -->
-                <div class="qr-box" id="qr-container">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Feissa-dev%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
-                </div>
-                <p style="margin:0; color:var(--muted); text-align:center; font-size:12px;" data-i18n="profile.qr_desc">
-                  امسح الكود بواسطة كاميرا الهاتف لمشاركة جهة الاتصال
-                </p>
-              </article>
+            <article class="panel" style="padding: 32px;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="tic.c2_tag">RPG TASK / ACHIEVEMENT SYSTEM</span>
+                <span style="color: var(--muted); font: 12px var(--font-mono);" data-i18n="tic.c2_decision">DECISION: STOP OVER-ENGINEERING</span>
+              </div>
+              <h3 style="margin: 12px 0 8px; font-size: 22px;" data-i18n="tic.c2_title">"توقفت عن بناء النظام عندما أصبح النظام هو المشكلة."</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8;" data-i18n="tic.c2_desc">
+                بدأت في تصميم نظام مهام بطابع RPG مع مستويات ونقاط خبرة. تبيّن لاحقاً أن تعقيد إدارة النظام أصبح يعطل عن تنفيذ المهام نفسها، أوقفت العمل عليه وفضّلت المنهجية المباشرة البسيطة.
+              </p>
+            </article>
 
-              <article class="panel side-panel">
-                <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
-                  <span style="color:var(--lime)">⌯</span> <span data-i18n="profile.social">روابط التواصل</span>
+            <article class="panel" style="padding: 32px;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+                <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="tic.c3_tag">INTERACTIVE BOOK STRUCTURE</span>
+                <span style="color: var(--muted); font: 12px var(--font-mono);" data-i18n="tic.c3_decision">DECISION: HYPERTEXT SIMPLICITY</span>
+              </div>
+              <h3 style="margin: 12px 0 8px; font-size: 22px;" data-i18n="tic.c3_title">"روابط HTML البسيطة كانت كافية للفكرة."</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8;" data-i18n="tic.c3_desc">
+                تخليت عن الاعتماد على مكتبات جافاسكريبت المعقدة لبناء كتاب تفاعلي، واستخدمت هيكلية عناصر HTML وروابط التشعب المباشرة لبناء تجربة تصفح متفرعة خفيفة جداً وسريعة.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05 — EISSA CARD CASE STUDY -->
+      <section class="container section" id="eissa-card">
+        <p class="section-kicker" data-i18n="ec.kicker">CASE STUDY — 05</p>
+        <h2 class="section-title" data-i18n="ec.title">EISSA CARD</h2>
+        <p style="color: var(--accent); font: 700 16px var(--font-mono); margin-top: 8px;" data-i18n="ec.subtitle">حل مشكلة تواصل عملية — A Practical Problem I Needed To Solve</p>
+
+        <div style="margin-top: 24px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--panel);">
+          <p style="font-size: 18px; line-height: 1.8; color: var(--ink); margin: 0;" data-i18n="ec.overview">
+            بدأ المشروع من حاجة شخصية عملية: تسهيل مشاركة بيانات التواصل، الفهم السريع، والحفظ المباشر. ثم تطور من مجرد بطاقة شخصية بسيطة إلى هويّة رقمية متكاملة وبورتفوليو قرارات.
+          </p>
+          <div class="tag-list" style="margin-top: 20px;">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Vanilla JS</span>
+            <span class="tag">i18n (AR/EN)</span>
+            <span class="tag">vCard Generator</span>
+            <span class="tag">PWA</span>
+          </div>
+        </div>
+
+        <!-- Live Eissa Card Interactive Panel -->
+        <div class="profile-grid" style="margin-top: 36px;">
+          <article class="panel profile-card">
+            <div class="profile-top">
+              <div class="identity">
+                <div class="avatar">
+                  <img src="1000081078.png" alt="عيسى محمد — EISSA 89" width="80" height="80" loading="lazy" />
                 </div>
-                <div class="socials">
-                  <a class="social-button linkedin" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على LinkedIn">in</a>
-                  <a class="social-button whatsapp" href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر WhatsApp">◔</a>
-                  <a class="social-button facebook" href="https://www.facebook.com/share/16uQ1C3d2y/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على Facebook">f</a>
-                  <button class="social-button" style="border:1px solid var(--line);" type="button" data-copy="https://eissa89.github.io/eissa-card/" data-label="رابط الموقع" aria-label="نسخ رابط الموقع">◎</button>
+                <div>
+                  <h3 data-i18n="profile.name">عيسى محمد</h3>
+                  <p data-i18n="profile.role">Frontend Developer • Student</p>
                 </div>
-              </article>
+              </div>
+              <div class="available-label"><i></i> <span data-i18n="profile.status">متاح</span></div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon">✉</span>
+                <div class="info-main">
+                  <small data-i18n="profile.email_lbl">البريد الإلكتروني</small>
+                  <a href="mailto:ysym7003@gmail.com">ysym7003@gmail.com</a>
+                </div>
+                <button class="copy-button" type="button" data-copy="ysym7003@gmail.com" data-label="البريد" aria-label="نسخ البريد الإلكتروني">⧉</button>
+              </div>
+              <div class="info-row">
+                <span class="info-icon">☎</span>
+                <div class="info-main">
+                  <small data-i18n="profile.phone_lbl">رقم الهاتف</small>
+                  <a href="tel:+201288840809" dir="ltr">01288840809</a>
+                </div>
+                <button class="copy-button" type="button" data-copy="01288840809" data-label="الهاتف" aria-label="نسخ رقم الهاتف">⧉</button>
+              </div>
+              <div class="info-row">
+                <span class="info-icon">⌖</span>
+                <div class="info-main">
+                  <small data-i18n="profile.location_lbl">الموقع</small>
+                  <span data-i18n="profile.location_val">وادي القمر، الإسكندرية، مصر</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-actions">
+              <button class="small-button primary" type="button" id="vcard-button" data-i18n="profile.vcard">
+                ⇩ حفظ جهة الاتصال (.vcf)
+              </button>
+              <button class="small-button" type="button" id="print-button" data-i18n="profile.print">
+                ▣ طباعة
+              </button>
+            </div>
+          </article>
+
+          <div class="side-stack">
+            <article class="panel side-panel">
+              <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
+                <span style="color:var(--lime)">▦</span> <span data-i18n="profile.share">شارك بياناتي</span>
+              </div>
+              <div class="qr-box" id="qr-container">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Feissa-dev%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
+              </div>
+              <p style="margin:0; color:var(--muted); text-align:center; font-size:12px;" data-i18n="profile.qr_desc">
+                امسح الكود بواسطة كاميرا الهاتف لمشاركة جهة الاتصال
+              </p>
+            </article>
+
+            <article class="panel side-panel">
+              <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
+                <span style="color:var(--lime)">⌯</span> <span data-i18n="profile.social">روابط التواصل</span>
+              </div>
+              <div class="socials">
+                <a class="social-button linkedin" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على LinkedIn">in</a>
+                <a class="social-button whatsapp" href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر WhatsApp">◔</a>
+                <a class="social-button facebook" href="https://www.facebook.com/share/16uQ1C3d2y/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على Facebook">f</a>
+                <button class="social-button" style="border:1px solid var(--line);" type="button" data-copy="https://eissa89.github.io/eissa-card/" data-label="رابط الموقع" aria-label="نسخ رابط الموقع">◎</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 06 — MY BIOLOGY EXPERIENCE CASE STUDY -->
+      <section class="band section" id="biology-experience">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <p class="section-kicker" data-i18n="bio.kicker">CASE STUDY — 06</p>
+              <h2 class="section-title" data-i18n="bio.title">MY BIOLOGY EXPERIENCE</h2>
+              <p style="color: var(--accent); font: 700 16px var(--font-mono); margin-top: 8px;" data-i18n="bio.subtitle">بناء طريقة للتعلم — Building A Way To Learn</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <a class="primary-button" href="https://eissa89.github.io/biology-3sec/" target="_blank" rel="noopener noreferrer">
+                Live Experience ↗
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--panel);">
+            <p style="font-size: 18px; line-height: 1.8; color: var(--ink); margin: 0;" data-i18n="bio.overview">
+              لم تبدأ الفكرة مجرد عرض لمادة الأحياء، بل رغبة في الفهم العميق عبر بناء مسار تفاعلي للتعلم. واجهة لدرس الدعامة في النبات تجمع بين تصفية المصطلحات لحظياً، البطاقات التعليمية، والاختبارات التفاعلية.
+            </p>
+            <div class="tag-list" style="margin-top: 20px;">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS Grid/Flexbox</span>
+              <span class="tag">JavaScript (Quiz Engine)</span>
+              <span class="tag">Real-Time Search</span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px;">
+            <div class="panel" style="padding: 24px;">
+              <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="bio.s1_num">01 — IDEA</span>
+              <h3 style="margin: 8px 0; font-size: 18px;" data-i18n="bio.s1_title">الفكرة</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6;" data-i18n="bio.s1_desc">تحويل المحتوى التعليمي الجاف إلى رحلة استكشاف تفاعلية مبسطة.</p>
+            </div>
+
+            <div class="panel" style="padding: 24px;">
+              <span style="color: var(--secondary); font: 700 12px var(--font-mono);" data-i18n="bio.s2_num">02 — LEARNING EXPERIENCE</span>
+              <h3 style="margin: 8px 0; font-size: 18px;" data-i18n="bio.s2_title">تجربة التعلم</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6;" data-i18n="bio.s2_desc">الجمع بين البحث السريع عن المصطلحات، قلّاب البطاقات، واختبارات قياس الفهم اللحظي.</p>
+            </div>
+
+            <div class="panel" style="padding: 24px;">
+              <span style="color: var(--accent); font: 700 12px var(--font-mono);" data-i18n="bio.s3_num">03 — IMPLEMENTATION</span>
+              <h3 style="margin: 8px 0; font-size: 18px;" data-i18n="bio.s3_title">التنفيذ البرمجي</h3>
+              <p style="margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6;" data-i18n="bio.s3_desc">بناء محرك فلترة لحظي بدون مكتبات خارجية ومحرك اختبارات يحسب التقييم فورياً.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- قسم عني About -->
+      <!-- SECTION 07 — ABOUT & PHILOSOPHY -->
       <section class="container section" id="about">
-        <div class="section-kicker" data-i18n="about.kicker">02 / عني</div>
-        <h2 class="section-title" data-i18n="about.title">مطور<br />يفكر<br /><span class="coral">بعين مصمم.</span></h2>
-        <p style="max-width: 680px; margin-top:20px; font-size:18px; color:var(--muted); line-height:1.8;" data-i18n="about.body">
-          أنا عيسى محمد، طالب ومطور واجهات أمامية من الإسكندرية. أهتم بتجربة المستخدم، تحسين الأداء، سهولة الوصول (Accessibility)، والكود النظيف. أحول الأفكار المعقدة إلى تجارب واضحة تشعر بأنها جيدة بقدر ما تعمل.
+        <p class="section-kicker" data-i18n="about.kicker">ABOUT EISSA 89 — 07</p>
+        <h2 class="section-title" data-i18n="about.title">مطور واجهات أمامية<br /><span class="coral">يضع النتيجة قبل التعقيد.</span></h2>
+        <p style="max-width: 720px; margin-top:20px; font-size:18px; color:var(--muted); line-height:1.8;" data-i18n="about.body">
+          أنا عيسى محمد (EISSA 89)، طالب ومطور واجهات أمامية من الإسكندرية. لا أتعامل مع الفكرة والتصميم والكود كأشياء منفصلة؛ أبدأ من فكرة، أبنيها، ثم أسمح للتنفيذ الفعلي واختبار الواقع أن يختبر الفكرة ويجبرني على التبسيط أو التغيير.
         </p>
-      </section>
 
-      <!-- قسم المهارات Skills -->
-      <section class="band section" id="skills">
-        <div class="container">
-          <div class="section-kicker" data-i18n="skills.kicker">03 / المهارات والقدرات</div>
-          <h2 class="section-title" data-i18n="skills.title">الأدوات التي<br /><span class="lime">أصل بها للفكرة.</span></h2>
-          <div class="skills-grid" id="skills-grid"></div>
-          <div class="tag-list" id="tag-list"></div>
-        </div>
-      </section>
-
-      <!-- قسم الخبرات Timeline -->
-
-      <!-- قسم منهجية العمل (How I Build) -->
-      <section class="band section" id="process">
-        <div class="container">
-          <p class="section-kicker" data-i18n="process.kicker">05 / منهجية العمل</p>
-          <h2 class="section-title" data-i18n="process.title">كيف أبني</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-top: 40px;">
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s1">01 اكتشاف</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s1_desc">فهم المشكلة والهدف الرئيسي.</p>
-            </div>
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s2">02 تحديد</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s2_desc">صياغة المكونات والمتطلبات.</p>
-            </div>
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s3">03 تصميم</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s3_desc">تخطيط النواحي البصرية والتفاعلية.</p>
-            </div>
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s4">04 بناء</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s4_desc">كتابة كود نظيف، سريع ومتجاوب.</p>
-            </div>
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s5">05 اختبار</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s5_desc">التحقق من الوصولية والأداء.</p>
-            </div>
-            <div class="panel" style="padding: 24px;">
-              <h3 style="margin: 0 0 8px; font-size: 16px; font-family: var(--font-mono); color: var(--accent);" data-i18n="process.s6">06 مراجعة</h3>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;" data-i18n="process.s6_desc">التبسيط والتحسين بناءً على الواقع.</p>
-            </div>
+        <div style="margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line);">
+          <p style="font: 700 13px var(--font-mono); color: var(--secondary);" data-i18n="about.tools_title">CONTEXTUAL CAPABILITIES & TOOLS</p>
+          <div class="tag-list" style="margin-top: 12px;">
+            <span class="tag">HTML5 / Semantic DOM</span>
+            <span class="tag">Modern CSS3 / Layout Systems</span>
+            <span class="tag">JavaScript (ES2024)</span>
+            <span class="tag">React / TypeScript</span>
+            <span class="tag">PWA & Offline First</span>
+            <span class="tag">Accessibility (WCAG 2.2 AA)</span>
+            <span class="tag">Performance & Testing</span>
+            <span class="tag">Git & GitHub</span>
           </div>
         </div>
       </section>
 
-      <section class="container section" id="experience">
-        <div class="section-kicker" data-i18n="experience.kicker">04 / المسار والخبرات</div>
-        <h2 class="section-title" data-i18n="experience.title">رحلة تعلم<br /><span class="coral">مستمرة.</span></h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="panel timeline-card">
-              <span class="timeline-date" data-i18n="experience.current">2024 — الحالي</span>
-              <h3 data-i18n="exp.e1_title">مطور مشاريع الويب والتطبيقات</h3>
-              <p data-i18n="exp.e1_desc">العمل على مشاريع ويب تفاعلية وتطبيقات شخصية قائمة على أحدث الممارسات البرمجية.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="panel timeline-card">
-              <span class="timeline-date" data-i18n="experience.previous">2023 — 2024</span>
-              <h3 data-i18n="exp.e2_title">دراسة البرمجيات والتقنيات الحديثة</h3>
-              <p data-i18n="exp.e2_desc">التركيز على بناء الواجهات والأداء وتجارب المستخدم مع مراعاة كاملة للوصولية الشاملة.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- قسم الإحصائيات الحية Stats -->
-      <section class="band section" id="stats">
-        <div class="container">
-          <div class="section-kicker" data-i18n="stats.kicker">05 / الأرقام والإحصائيات</div>
-          <h2 class="section-title" data-i18n="stats.title">مؤشرات الأداء<br /><span class="lime">المباشرة.</span></h2>
-          <div class="stats-grid">
-            <div class="panel stat-card stat-card-wide">
-              <div class="stat-num" id="stat-repos" data-target="0">—</div>
-              <small style="color:var(--muted)" data-i18n="stats.repos">مستودعات GitHub العامة</small>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- قسم المشاريع Projects -->
-      <section class="container section" id="projects">
-        <div class="projects-header">
-          <div>
-            <div class="section-kicker" data-i18n="projects.kicker">06 / المشاريع</div>
-            <h2 class="section-title" data-i18n="projects.title">أعمال تصنع<br /><span class="lime">فرقاً.</span></h2>
-          </div>
-          <div class="filter-buttons" role="group" aria-label="تصفية المشاريع">
-            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="proj.all">الكل</button>
-            <button class="filter-button" type="button" data-filter="web" aria-pressed="false" data-i18n="proj.web">الويب</button>
-            <button class="filter-button" type="button" data-filter="ui" aria-pressed="false" data-i18n="proj.ui">الواجهات</button>
-          </div>
-        </div>
-        <div class="projects-grid" id="projects-grid"></div>
-      </section>
-
-      <!-- قسم التواصل Contact مع تحسينات الوصول والتحقق -->
+      <!-- SECTION 08 — CONTACT -->
       <section class="contact-band section" id="contact">
         <div class="container contact-grid">
           <div>
-            <div class="section-kicker" data-i18n="contact.kicker">07 / تواصل معي</div>
+            <p class="section-kicker" data-i18n="contact.kicker">GET IN TOUCH — 08</p>
             <h2 class="contact-title" data-i18n="contact.title">لديك<br /><span class="coral">فكرة؟</span></h2>
-            <p style="margin-top:20px; font-size:18px;" data-i18n="contact.lede">لنجعلها مفيدة، جميلة، ومختلفة عن المعتاد.</p>
+            <p style="margin-top:20px; font-size:18px;" data-i18n="contact.lede">لنجعلها مفيدة، حقيقية، ومبسطة تعمل بكفاءة عالية.</p>
           </div>
 
           <form class="contact-form" id="contact-form" data-mailto="ysym7003@gmail.com" novalidate>
@@ -1365,18 +1464,6 @@
       </div>
     </div>
 
-    <!-- Command Palette -->
-    <div class="cmd-palette" id="cmd-palette" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cmd-title">
-        <h2 id="cmd-title" class="sr-only" data-i18n="cmd.title">لوحة الأوامر</h2>
-        <input type="text" class="cmd-input" id="cmd-input" placeholder="اكتب أمراً أو ابحث..." data-i18n-placeholder="cmd.placeholder" aria-label="البحث" aria-labelledby="cmd-title" />
-      <ul class="cmd-list">
-        <li><button type="button" class="cmd-item" data-action="nav" data-target="#hero"><span data-i18n="cmd.home">الرئيسية</span> <small>Home</small></button></li>
-        <li><button type="button" class="cmd-item" data-action="nav" data-target="#projects"><span data-i18n="cmd.projects">المشاريع</span> <small>Projects</small></button></li>
-        <li><button type="button" class="cmd-item" data-action="resume"><span data-i18n="cmd.resume">السيرة الذاتية</span> <small>Resume</small></button></li>
-        <li><button type="button" class="cmd-item" data-action="theme"><span data-i18n="cmd.theme">تبديل المظهر</span> <small>Theme</small></button></li>
-        <li><button type="button" class="cmd-item" data-action="lang"><span data-i18n="cmd.lang">تبديل اللغة</span> <small>Language</small></button></li>
-      </ul>
-    </div>
 
     <!-- المنطق البرمجي السلوكي الموحد -->
     <script>
@@ -1495,34 +1582,108 @@
         const translations = {
           ar: {
             "nav.home": "الرئيسية",
-            "nav.profile": "الملف",
+            "nav.red_stillness": "THE RED STILLNESS",
+            "nav.how_i_build": "كيف أبني",
+            "nav.things_i_changed": "ما غيرته",
+            "nav.eissa_card": "EISSA CARD",
+            "nav.biology": "BIOLOGY",
             "nav.about": "عني",
-            "nav.thinking": "التفكير",
-            "nav.process": "المنهجية",
-            "nav.skills": "المهارات",
-            "nav.projects": "المشاريع",
             "nav.contact": "تواصل",
             "nav.cta": "تواصل معي ↖",
-            "hero.available": "متاح للتواصل والتعلم والعمل الحر",
+            "hero.available": "FRONTEND DEVELOPER",
             "hero.location": "الإسكندرية، مصر",
-            "hero.eyebrow": "FRONTEND DEVELOPER",
-            "hero.title": 'أصنع<br /><span class="coral">تجارب</span><br />تدوم.',
-            "hero.lede": "أبني تجارب ويب حديثة، سريعة، متجاوبة وأنيقة تجمع بين التقنية البرمجية واللمسة الإنسانية.",
-
-            "thinking.kicker": "فلسفة التصميم والتنفيذ",
-            "thinking.title": "كيف أفكر",
-            "thinking.mind_kicker": "خبرات عملية وتصميمية",
-            "thinking.mind_title": "ما غيرت رأيي بشأنه",
-            "thinking.step1_title": "01 — البدء بالفكرة",
-            "thinking.step1_desc": "الانطلاق من الهدف وتجربة المستخدم قبل التعقيد التقني.",
-            "thinking.step2_title": "02 — اختبار البناء",
-            "thinking.step2_desc": "مواجهة قيود التنفيذ والأداء أثناء البناء الفعلي.",
-            "thinking.step3_title": "03 — الاحتفاظ بالضروري",
-            "thinking.step3_desc": "تبسيط الواجهة وحذف الزوائد لتقديم تجربة حقيقية متماسكة.",
-            "hero.explore": "استكشف الملف ↓",
+            "hero.eyebrow": "A PORTFOLIO OF DECISIONS",
+            "hero.title": 'أبني<br /><span class="coral">الأفكار</span><br />إلى تجارب.',
+            "hero.lede": "أبدأ من فكرة، أبنيها، أختبرها، وأغيّرها عندما يثبت التنفيذ أنها تحتاج إلى ذلك.",
+            "hero.explore": "استكشف الأعمال ↓",
             "hero.resume": "📄 السيرة الذاتية (PDF)",
+            "hero.contact": "تواصل معي ↖",
+            "rs.kicker": "FLAGSHIP CASE STUDY — 01",
+            "rs.title": "THE RED STILLNESS",
+            "rs.subtitle": "الهدوء القرمزي — Dangerous Calm Before A Storm",
+            "rs.overview": "تناقض الهدوء القرمزي: الحرب والدم والتضحية مقابل الحرية والعدل. واجهة انضباط ذاتي تحتوي على 33 استراتيجية مبوبة، حفظ التقدم محلياً، ودعم أوفلاين كـ PWA.",
+            "rs.dm_kicker": "SIGNATURE DECISION MOMENT",
+            "rs.dm_title": "قصة القرار الهندسي",
+            "rs.s1_num": "01 — THE IDEA",
+            "rs.s1_title": "الفكرة والجو البصري",
+            "rs.s1_desc": "صناعة جو درامي يعبر عن الهدوء القاتل الذي يسبق العاصفة، بتباين بصري بين الحرب والحرية.",
+            "rs.s2_num": "02 — THE DIRECTION",
+            "rs.s2_title": "المسار البصري الثقيل",
+            "rs.s2_desc": "بدء تنفيذ اتجاه بصري مكثف وتأثيرات سينمائية ثقيلة لبناء الشعور بالغموض والخوف.",
+            "rs.s3_num": "03 — WHAT FAILED",
+            "rs.s3_title": "أين كانت الفجوة؟",
+            "rs.s3_desc": "التصميم الثقيل استهلك وقتاً طويلاً، زاد تكلفة الأداء، ولم يصل للمستوى المطلوب المرجو منه.",
+            "rs.s4_num": "04 — THE DECISION",
+            "rs.s4_title": "القرار الحاسم",
+            "rs.s4_desc": "التخلي الكامل عن الجو البصري المعقد لصالح التبسيط، السرعة، وزيادة جودة المحتوى.",
+            "rs.s5_num": "05 — WHAT REMAINED",
+            "rs.s5_title": "ما تم الاحتفاظ به",
+            "rs.s5_desc": "واجهة انسيابية سريعة، 33 استراتيجية مبوبة، حفظ تقدم أوفلاين وتصميم متجاوب تماماً.",
+            "rs.s6_num": "06 — THE RESULT",
+            "rs.s6_title": "النتيجة النهائية",
+            "rs.s6_desc": "تجربة مستخدم أسرع، استجابة عالية بدون احتكاك، وتطبيق PWA متماسك يضع الفكرة والمحتوى أولاً.",
+            "hib.kicker": "CENTRAL PHILOSOPHY — 03",
+            "hib.title": "HOW I BUILD",
+            "hib.lede": "التفكير الهندسي لا يبدأ من اختيار التقنيات، بل من فهم الفكرة وتقليص الفجوة بين التصميم والتنفيذ.",
+            "hib.p1_num": "01 — IDEA",
+            "hib.p1_title": "ما الذي أحاول إنشائه حقاً؟",
+            "hib.p1_desc": "تحديد الهدف الجوهري والتجربة المستهدفة قبل الانشغال بالأدوات والتعقيد البصري.",
+            "hib.p2_num": "02 — BUILD",
+            "hib.p2_title": "ما أبسط طريقة لتجسيد الفكرة؟",
+            "hib.p2_desc": "بناء نموذج أولي حي باستخدام تقنيات الويب الأساسية لاختبار الفكرة في الواقع.",
+            "hib.p3_num": "03 — REALITY",
+            "hib.p3_title": "ماذا يحدث عند الاصطدام بالتنفيذ؟",
+            "hib.p3_desc": "اكتشاف القيود الحقيقية، البطء، التعقيد، والفجوة بين المفهوم وتجربة الاستخدام.",
+            "hib.p4_num": "04 — RETHINK",
+            "hib.p4_title": "ما الذي يحتاج إلى تغيير؟",
+            "hib.p4_desc": "إعادة النظر بشجاعة والتخلي عن القرارات التي لا تخدم المستخدم بغض النظر عن الجهد المبذول.",
+            "hib.p5_num": "05 — REFINE",
+            "hib.p5_title": "ما الذي يستحق البقاء؟",
+            "hib.p5_desc": "صقل المكونات الأساسية، تحسين الأداء والوصولية، وإلغاء كل ما هو زائف.",
+            "hib.p6_num": "06 — SHIP",
+            "hib.p6_title": "ما الذي يحتاجه المستخدم فعلياً؟",
+            "hib.p6_desc": "إطلاق منتج خفيف، متجاوب، وموثوق يعمل بأعلى كفاءة في ظروف التشغيل الحقيقية.",
+            "tic.kicker": "PIVOT STORIES & ABANDONED DIRECTIONS — 04",
+            "tic.title": "THINGS I CHANGED",
+            "tic.lede": "القدرة على التراجع والتعديل دليل على الوعي بالفارق بين إظهار المهارة وحل المشكلة الحقيقية.",
+            "tic.c1_tag": "THE RED STILLNESS — VISUAL PIVOT",
+            "tic.c1_decision": "DECISION: SIMPLIFICATION OVER COMPLEXITY",
+            "tic.c1_title": "«تخليت عن الاتجاه البصري الذي أردته في البداية.»",
+            "tic.c1_desc": "في بداية مشروع THE RED STILLNESS، أردت بناء جو بصري درامي ثقيل جداً. عند التنفيذ اكتشفت أنه أضاف عبئاً في الأداء وأبطأ بناء المحتوى، فتراجعت عنه واستبدلته بواجهة أنيقة وسريعة تعطي الأولوية للمحتوى.",
+            "tic.c2_tag": "RPG TASK / ACHIEVEMENT SYSTEM",
+            "tic.c2_decision": "DECISION: STOP OVER-ENGINEERING",
+            "tic.c2_title": "«توقفت عن بناء النظام عندما أصبح النظام هو المشكلة.»",
+            "tic.c2_desc": "بدأت في تصميم نظام مهام بطابع RPG مع مستويات ونقاط خبرة. تبيّن لاحقاً أن تعقيد إدارة النظام أصبح يعطل عن تنفيذ المهام نفسها، أوقفت العمل عليه وفضّلت المنهجية المباشرة البسيطة.",
+            "tic.c3_tag": "INTERACTIVE BOOK STRUCTURE",
+            "tic.c3_decision": "DECISION: HYPERTEXT SIMPLICITY",
+            "tic.c3_title": "«روابط HTML البسيطة كانت كافية للفكرة.»",
+            "tic.c3_desc": "تخليت عن الاعتماد على مكتبات جافاسكريبت المعقدة لبناء كتاب تفاعلي، واستخدمت هيكلية عناصر HTML وروابط التشعب المباشرة لبناء تجربة تصفح متفرعة خفيفة جداً وسريعة.",
+            "ec.kicker": "CASE STUDY — 05",
+            "ec.title": "EISSA CARD",
+            "ec.subtitle": "حل مشكلة تواصل عملية — A Practical Problem I Needed To Solve",
+            "ec.overview": "بدأ المشروع من حاجة شخصية عملية: تسهيل مشاركة بيانات التواصل، الفهم السريع، والحفظ المباشر. ثم تطور من مجرد بطاقة شخصية بسيطة إلى هويّة رقمية متكاملة وبورتفوليو قرارات.",
+            "bio.kicker": "CASE STUDY — 06",
+            "bio.title": "MY BIOLOGY EXPERIENCE",
+            "bio.subtitle": "بناء طريقة للتعلم — Building A Way To Learn",
+            "bio.overview": "لم تبدأ الفكرة مجرد عرض لمادة الأحياء، بل رغبة في الفهم العميق عبر بناء مسار تفاعلي للتعلم. واجهة لدرس الدعامة في النبات تجمع بين تصفية المصطلحات لحظياً، البطاقات التعليمية، والاختبارات التفاعلية.",
+            "bio.s1_num": "01 — IDEA",
+            "bio.s1_title": "الفكرة",
+            "bio.s1_desc": "تحويل المحتوى التعليمي الجاف إلى رحلة استكشاف تفاعلية مبسطة.",
+            "bio.s2_num": "02 — LEARNING EXPERIENCE",
+            "bio.s2_title": "تجربة التعلم",
+            "bio.s2_desc": "الجمع بين البحث السريع عن المصطلحات، قلّاب البطاقات، واختبارات قياس الفهم اللحظي.",
+            "bio.s3_num": "03 — IMPLEMENTATION",
+            "bio.s3_title": "التنفيذ البرمجي",
+            "bio.s3_desc": "بناء محرك فلترة لحظي بدون مكتبات خارجية ومحرك اختبارات يحسب التقييم فورياً.",
+            "about.kicker": "ABOUT EISSA 89 — 07",
+            "about.title": "مطور واجهات أمامية<br /><span class=\"coral\">يضع النتيجة قبل التعقيد.</span>",
+            "about.body": "أنا عيسى محمد (EISSA 89)، طالب ومطور واجهات أمامية من الإسكندرية. لا أتعامل مع الفكرة والتصميم والكود كأشياء منفصلة؛ أبدأ من فكرة، أبنيها، ثم أسمح للتنفيذ الفعلي واختبار الواقع أن يختبر الفكرة ويجبرني على التبسيط أو التغيير.",
+            "about.tools_title": "القدرات والأدوات الأساسية",
+            "contact.kicker": "GET IN TOUCH — 08",
+            "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>",
+            "contact.lede": "لنجعلها مفيدة، حقيقية، ومبسطة تعمل بكفاءة عالية.",
             "profile.name": "عيسى محمد",
-            "profile.role": "Front-End Web Developer<br />UI/UX Designer • Student",
+            "profile.role": "Frontend Developer • Student",
             "profile.status": "متاح",
             "profile.email_lbl": "البريد الإلكتروني",
             "profile.phone_lbl": "رقم الهاتف",
@@ -1533,7 +1694,6 @@
             "profile.share": "شارك بياناتي",
             "profile.qr_desc": "امسح الكود بواسطة كاميرا الهاتف لمشاركة جهة الاتصال",
             "profile.social": "روابط التواصل",
-            "about.body": "أنا عيسى محمد، طالب ومطور واجهات أمامية من الإسكندرية. أهتم بتجربة المستخدم، تحسين الأداء، سهولة الوصول (Accessibility)، والكود النظيف. أحول الأفكار المعقدة إلى تجارب واضحة تشعر بأنها جيدة بقدر ما تعمل.",
             "exp.e1_title": "مطور مشاريع الويب والتطبيقات",
             "exp.e1_desc": "العمل على مشاريع ويب تفاعلية وتطبيقات شخصية قائمة على أحدث الممارسات البرمجية.",
             "exp.e2_title": "دراسة البرمجيات والتقنيات الحديثة",
@@ -1577,35 +1737,109 @@
             "experience.kicker": "04 / المسار والخبرات", "experience.title": "رحلة تعلم<br /><span class=\"coral\">مستمرة.</span>", "experience.current": "2024 — الحالي", "experience.previous": "2023 — 2024", "stats.kicker": "05 / الأرقام والإحصائيات", "stats.title": "مؤشرات الأداء<br /><span class=\"lime\">المباشرة.</span>", "projects.kicker": "06 / المشاريع", "projects.title": "أعمال تصنع<br /><span class=\"lime\">فرقاً.</span>", "projects.filter_label": "تصفية المشاريع", "contact.kicker": "07 / تواصل معي", "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>", "project.details": "التفاصيل", "project.details_aria": "فتح تفاصيل", "project.open": "فتح المشروع ↗", "project.preview": "معاينة مباشرة ↗", "project.no_preview": "لا توجد معاينة منشورة", "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية بأسلوب منظّم باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "cmd.title": "لوحة الأوامر", "cmd.search_label": "البحث", "cmd.home": "الرئيسية", "cmd.projects": "المشاريع", "cmd.resume": "السيرة الذاتية", "cmd.theme": "تبديل المظهر", "cmd.lang": "تبديل اللغة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
           },
           en: {
-            "nav.home": "Home",
-            "nav.profile": "Profile",
-            "nav.about": "About",
-            "nav.thinking": "THINKING",
-            "nav.process": "PROCESS",
-            "nav.skills": "Skills",
-            "nav.projects": "Projects",
-            "nav.contact": "Contact",
+            "nav.home": "HOME",
+            "nav.red_stillness": "RED STILLNESS",
+            "nav.how_i_build": "HOW I BUILD",
+            "nav.things_i_changed": "THINGS I CHANGED",
+            "nav.eissa_card": "EISSA CARD",
+            "nav.biology": "BIOLOGY",
+            "nav.about": "ABOUT",
+            "nav.contact": "CONTACT",
             "nav.cta": "Contact Me ↖",
-            "hero.available": "Available for Freelance & Projects",
+            "hero.available": "FRONTEND DEVELOPER",
             "hero.location": "Alexandria, Egypt",
-            "hero.eyebrow": "FRONTEND DEVELOPER",
-            "hero.title": 'Craft<br /><span class="coral">experiences</span><br />that last.',
-            "hero.lede": "I build modern, fast, responsive and sleek web experiences uniting engineering with human design.",
-
-            "thinking.kicker": "DESIGN & ENGINEERING PHILOSOPHY",
-            "thinking.title": "HOW I THINK",
-            "thinking.mind_kicker": "PRACTICAL DECISIONS",
-            "thinking.mind_title": "WHAT I CHANGED MY MIND ABOUT",
-            "thinking.step1_title": "01 — START WITH THE IDEA",
-            "thinking.step1_desc": "Focus on user experience and clarity before technical complexity.",
-            "thinking.step2_title": "02 — LET THE BUILD TEST IT",
-            "thinking.step2_desc": "Confront real implementation constraints, friction, and performance limits.",
-            "thinking.step3_title": "03 — KEEP WHAT EARNS ITS PLACE",
-            "thinking.step3_desc": "Simplify the UI and strip decorative excess to build a refined experience.",
-            "hero.explore": "Explore Profile ↓",
+            "hero.eyebrow": "A PORTFOLIO OF DECISIONS",
+            "hero.title": 'I BUILD<br /><span class="coral">IDEAS</span><br />INTO EXPERIENCES.',
+            "hero.lede": "I start from an idea, build it, test it, and rethink it when reality proves it needs to change.",
+            "hero.explore": "EXPLORE WORK ↓",
             "hero.resume": "📄 Resume (PDF)",
+            "hero.contact": "CONTACT ME ↖",
+            "rs.kicker": "FLAGSHIP CASE STUDY — 01",
+            "rs.title": "THE RED STILLNESS",
+            "rs.subtitle": "Crimson Calm — Dangerous Calm Before A Storm",
+            "rs.overview": "The crimson contrast: war, blood, and sacrifice vs. freedom and justice. A self-discipline interface featuring 33 categorized strategies, LocalStorage persistence, and PWA offline capability.",
+            "rs.dm_kicker": "SIGNATURE DECISION MOMENT",
+            "rs.dm_title": "ENGINEERING DECISION STORY",
+            "rs.s1_num": "01 — THE IDEA",
+            "rs.s1_title": "Idea & Visual Concept",
+            "rs.s1_desc": "Creating a dramatic atmosphere communicating the dangerous calm before a storm, contrasting war with freedom.",
+            "rs.s2_num": "02 — THE DIRECTION",
+            "rs.s2_title": "Heavy Visual Direction",
+            "rs.s2_desc": "Initiating an intensive visual direction with cinematic effects to evoke mystery and tension.",
+            "rs.s3_num": "03 — WHAT FAILED",
+            "rs.s3_title": "Where Was The Gap?",
+            "rs.s3_desc": "The heavy styling demanded excessive build time, added performance overhead, and failed to hit the intended target level.",
+            "rs.s4_num": "04 — THE DECISION",
+            "rs.s4_title": "The Pivotal Decision",
+            "rs.s4_desc": "Completely abandoning the heavy visual direction in favor of radical simplification, speed, and richer content.",
+            "rs.s5_num": "05 — WHAT REMAINED",
+            "rs.s5_title": "What Earned Its Place",
+            "rs.s5_desc": "Streamlined interface, 33 categorized strategies, offline LocalStorage state, and full responsive accessibility.",
+            "rs.s6_num": "06 — THE RESULT",
+            "rs.s6_title": "The Outcome",
+            "rs.s6_desc": "Faster user performance, friction-free interaction, and a reliable PWA putting content and user purpose first.",
+            "hib.kicker": "CENTRAL PHILOSOPHY — 03",
+            "hib.title": "HOW I BUILD",
+            "hib.lede": "Engineering thinking doesn't start from picking tools, but from understanding the core idea and closing the gap between design and implementation.",
+            "hib.p1_num": "01 — IDEA",
+            "hib.p1_title": "What am I actually trying to create?",
+            "hib.p1_desc": "Defining the essential purpose and user experience before getting lost in tools or visual complexity.",
+            "hib.p2_num": "02 — BUILD",
+            "hib.p2_title": "What is the simplest way to make it real?",
+            "hib.p2_desc": "Building a working prototype using core web standards to test the idea against reality.",
+            "hib.p3_num": "03 — REALITY",
+            "hib.p3_title": "What happens when the idea meets implementation?",
+            "hib.p3_desc": "Confronting real constraints, performance costs, friction, and gaps between concept and practice.",
+            "hib.p4_num": "04 — RETHINK",
+            "hib.p4_title": "What needs to change?",
+            "hib.p4_desc": "Courageously re-evaluating and abandoning choices that don't serve the user, regardless of effort invested.",
+            "hib.p5_num": "05 — REFINE",
+            "hib.p5_title": "What deserves to remain?",
+            "hib.p5_desc": "Polishing essential components, maximizing speed and accessibility, and eliminating decorative bloat.",
+            "hib.p6_num": "06 — SHIP",
+            "hib.p6_title": "What does the user actually need?",
+            "hib.p6_desc": "Delivering a responsive, lightweight, reliable product performing at peak standard under real conditions.",
+            "tic.kicker": "PIVOT STORIES & ABANDONED DIRECTIONS — 04",
+            "tic.title": "THINGS I CHANGED",
+            "tic.lede": "The ability to step back and adapt is proof of knowing the difference between showing off tools and solving real problems.",
+            "tic.c1_tag": "THE RED STILLNESS — VISUAL PIVOT",
+            "tic.c1_decision": "DECISION: SIMPLIFICATION OVER COMPLEXITY",
+            "tic.c1_title": '“I removed the visual direction I originally wanted.”',
+            "tic.c1_desc": "In early development of THE RED STILLNESS, I wanted heavy dramatic visual effects. In real execution, it slowed performance and content creation. I pivoted to a clean, fast interface prioritizing content.",
+            "tic.c2_tag": "RPG TASK / ACHIEVEMENT SYSTEM",
+            "tic.c2_decision": "DECISION: STOP OVER-ENGINEERING",
+            "tic.c2_title": '“I stopped building the system when the system became the problem.”',
+            "tic.c2_desc": "I started an RPG-style gamified task system with levels and XP. Managing the gamification bloat distracted from getting tasks done. I halted development and adopted direct simplicity.",
+            "tic.c3_tag": "INTERACTIVE BOOK STRUCTURE",
+            "tic.c3_decision": "DECISION: HYPERTEXT SIMPLICITY",
+            "tic.c3_title": '“Simple HTML links were enough for the idea.”',
+            "tic.c3_desc": "I dropped heavy JS libraries for an interactive book project, opting instead for clean semantic HTML structures and direct hyperlinks to create a fast, distraction-free branching reading path.",
+            "ec.kicker": "CASE STUDY — 05",
+            "ec.title": "EISSA CARD",
+            "ec.subtitle": "A Practical Problem I Needed To Solve",
+            "ec.overview": "The project started from a personal practical need: making contact sharing, quick understanding, and saving effortless. It evolved from a personal digital card into a full digital identity and portfolio of decisions.",
+            "bio.kicker": "CASE STUDY — 06",
+            "bio.title": "MY BIOLOGY EXPERIENCE",
+            "bio.subtitle": "Building A Way To Learn",
+            "bio.overview": "The project did not start merely as a presentation of biology coursework, but out of a desire for deep learning by building an interactive study path. A plant support lesson interface featuring real-time term filtering, flashcard flips, and interactive self-quizzes.",
+            "bio.s1_num": "01 — IDEA",
+            "bio.s1_title": "Idea",
+            "bio.s1_desc": "Transforming static study material into an intuitive, interactive exploration journey.",
+            "bio.s2_num": "02 — LEARNING EXPERIENCE",
+            "bio.s2_title": "Learning Experience",
+            "bio.s2_desc": "Combining instant term search, card flips, and self-assessment quizzes for real-time retention.",
+            "bio.s3_num": "03 — IMPLEMENTATION",
+            "bio.s3_title": "Implementation",
+            "bio.s3_desc": "Building dependency-free instant search filtering and a JS quiz engine calculating scores dynamically.",
+            "about.kicker": "ABOUT EISSA 89 — 07",
+            "about.title": "Frontend Developer<br /><span class=\"coral\">putting results before complexity.</span>",
+            "about.body": "I'm Eissa Mohammed (EISSA 89), a student and frontend developer based in Alexandria. I don't treat ideas, design, and code as separate siloes; I start from an idea, build it, and let real execution test the concept and force simplification when needed.",
+            "about.tools_title": "CORE CAPABILITIES & TOOLS",
+            "contact.kicker": "GET IN TOUCH — 08",
+            "contact.title": "Have an<br /><span class=\"coral\">idea?</span>",
+            "contact.lede": "Let's make it real, useful, and simplified to perform at peak standards.",
             "profile.name": "Eissa Mohammed",
-            "profile.role": "Front-End Web Developer<br />UI/UX Designer • Student",
+            "profile.role": "Frontend Developer • Student",
             "profile.status": "Available",
             "profile.email_lbl": "Email Address",
             "profile.phone_lbl": "Phone Number",
@@ -1616,7 +1850,6 @@
             "profile.share": "Share Contact",
             "profile.qr_desc": "Scan QR code with mobile camera to share contact",
             "profile.social": "Social Links",
-            "about.body": "I'm Eissa Mohammed, a student and front-end developer based in Alexandria. Focused on UX, performance optimization, accessibility, and clean code.",
             "exp.e1_title": "Web Projects & Apps Developer",
             "exp.e1_desc": "Building interactive web applications adhering to modern industry standards.",
             "exp.e2_title": "Software Engineering Student",
@@ -1775,7 +2008,7 @@
           surface.setAttribute("aria-hidden", "true");
           surface.onkeydown = null;
 
-          if (!document.querySelector(".modal.open, .cmd-palette.open")) {
+          if (!document.querySelector(".modal.open")) {
             document.body.classList.remove("modal-open");
           }
 
@@ -1787,7 +2020,7 @@
           }
         };
 
-        document.querySelectorAll(".modal, .cmd-palette").forEach((surface) => {
+        document.querySelectorAll(".modal").forEach((surface) => {
           surface.setAttribute("aria-hidden", "true");
           surface.addEventListener("click", (event) => {
             if (event.target === surface) closeModal(surface.id);
@@ -2040,6 +2273,7 @@
 
         function renderProjects(filter) {
           const grid = document.getElementById("projects-grid");
+          if (!grid) return;
           const visibleProjects = projects.filter((p) => filter === "all" || p.category === filter);
           const fragment = document.createDocumentFragment();
 
@@ -2115,10 +2349,12 @@
 
         renderProjects("all");
         const projectsGrid = document.getElementById("projects-grid");
-        projectsGrid.addEventListener("click", (event) => {
-          const trigger = event.target.closest(".project-details");
-          if (trigger) openProjectModal(trigger.dataset.projectId);
-        });
+        if (projectsGrid) {
+          projectsGrid.addEventListener("click", (event) => {
+            const trigger = event.target.closest(".project-details");
+            if (trigger) openProjectModal(trigger.dataset.projectId);
+          });
+        }
 
         document.querySelectorAll("[data-filter]").forEach((btn) => {
           btn.addEventListener("click", function () {
@@ -2216,97 +2452,13 @@
           }
         });
 
-        // جلب بيانات GitHub مع التخزين المؤقت Caching عند اقتراب قسم الأرقام فقط
-        let githubStatsFetched = false;
-        async function fetchGitHubStats() {
-          if (githubStatsFetched) return;
-          githubStatsFetched = true;
-
-          let cachedRepos = null;
-          let cachedTime = null;
-          try {
-            cachedRepos = localStorage.getItem("github_repos");
-            cachedTime = localStorage.getItem("github_repos_time");
-          } catch (e) {}
-
-          if (cachedRepos && cachedTime && !isNaN(Number(cachedTime)) && (Date.now() - Number(cachedTime) < 3600000)) {
-            const sanitizedCachedRepos = String(Number(cachedRepos) || 0);
-            const repoElement = document.getElementById("stat-repos");
-            if (repoElement) {
-              repoElement.setAttribute("data-target", sanitizedCachedRepos);
-              repoElement.textContent = sanitizedCachedRepos;
-            }
-            return;
-          }
-          try {
-            // Using a safe, resilient fetch call with an 8-second timeout & HTTPS strictly
-            const res = await fetchWithTimeout("https://api.github.com/users/Eissa89", { timeout: 8000 });
-            if (res.ok) {
-              const data = await res.json();
-              if (data && typeof data === "object") {
-                const repoCount = Number.isFinite(data.public_repos) ? data.public_repos : 0;
-                const repoElement = document.getElementById("stat-repos");
-                if (repoElement) {
-                  repoElement.setAttribute("data-target", String(repoCount));
-                  repoElement.textContent = String(repoCount);
-                }
-                try {
-                  localStorage.setItem("github_repos", String(repoCount));
-                  localStorage.setItem("github_repos_time", Date.now().toString());
-                } catch (e) {}
-              }
-            }
-          } catch (_) {}
-        }
-        // لوحة الأوامر السريعة (Ctrl+K)
-        const cmdPalette = document.getElementById("cmd-palette");
-        const cmdInput = document.getElementById("cmd-input");
+        // Keydown escape for open modals
         window.addEventListener("keydown", (e) => {
-          if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
-            e.preventDefault();
-            if (cmdPalette.classList.contains("open")) {
-              closeModal("cmd-palette");
-            } else {
-              cmdInput.value = "";
-              commandItems.forEach((item) => item.closest("li").hidden = false);
-              openModal("cmd-palette");
-            }
-          }
           if (e.key === "Escape") {
-            const openSurfaces = [...document.querySelectorAll(".modal.open, .cmd-palette.open")];
+            const openSurfaces = [...document.querySelectorAll(".modal.open")];
             const topSurface = openSurfaces[openSurfaces.length - 1];
             if (topSurface) closeModal(topSurface.id);
           }
-        });
-        document.getElementById("cmd-btn").addEventListener("click", () => {
-          cmdInput.value = "";
-          commandItems.forEach((item) => item.closest("li").hidden = false);
-          openModal("cmd-palette");
-        });
-        const commandItems = [...document.querySelectorAll(".cmd-item")];
-        cmdInput.addEventListener("input", () => {
-          const query = cmdInput.value.trim().toLocaleLowerCase();
-          commandItems.forEach((item) => {
-            const visible = !query || item.textContent.toLocaleLowerCase().includes(query);
-            item.closest("li").hidden = !visible;
-          });
-        });
-
-        document.querySelectorAll(".cmd-item").forEach((item) => {
-          item.addEventListener("click", function () {
-            const action = this.dataset.action;
-            if (action === "nav") {
-              document.querySelector(this.dataset.target).scrollIntoView({ behavior: "smooth" });
-            } else if (action === "resume") {
-              closeModal("cmd-palette", false);
-              openModal("resume-modal");
-            } else if (action === "theme") {
-              setTheme(currentTheme === "dark" ? "light" : "dark");
-            } else if (action === "lang") {
-              setLanguage(currentLang === "ar" ? "en" : "ar");
-            }
-            closeModal("cmd-palette", false);
-          });
         });
 
         // الخصوصية
@@ -2378,38 +2530,6 @@
           const error = document.getElementById(`${input.id}-error`);
           if (error) error.textContent = "";
         });
-
-        // إحصائية GitHub — تُحمّل عند الاقتراب من القسم وتُحفظ مؤقتاً.
-        const statsSection = document.getElementById("stats");
-        const statsObserver = new IntersectionObserver(async (entries, observer) => {
-          if (!entries.some((entry) => entry.isIntersecting)) return;
-
-          observer.disconnect();
-          const repoElement = document.getElementById("stat-repos");
-          await fetchGitHubStats();
-
-          const target = Number(repoElement.dataset.target);
-          if (!Number.isFinite(target)) return;
-
-          repoElement.textContent = "0";
-          let count = 0;
-          const step = Math.max(1, Math.ceil(target / 18));
-
-          const countFrame = () => {
-            count = Math.min(target, count + step);
-            repoElement.textContent = String(count);
-            if (count < target && !document.hidden) requestAnimationFrame(countFrame);
-            else if (count < target) repoElement.textContent = String(target);
-          };
-
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            repoElement.textContent = String(target);
-          } else {
-            requestAnimationFrame(countFrame);
-          }
-        }, { threshold: 0.2 });
-
-        if (statsSection) statsObserver.observe(statsSection);
 
         // التهيئة
         setLanguage(currentLang);
