@@ -583,76 +583,12 @@
         box-shadow: var(--shadow);
       }
 
-      /* Profile Hub Grid */
-      .profile-grid {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 32px;
-        margin-top: 48px;
-      }
-      .profile-card { padding: 40px; }
-      .profile-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-      .identity { display: flex; align-items: center; gap: 20px; }
-      .avatar {
-        width: 80px;
-        height: 80px;
-        display: grid;
-        place-items: center;
-        border-radius: var(--radius-md);
-        background: var(--accent);
-        color: var(--bg);
-        font: 700 28px var(--font-serif);
-        overflow: hidden;
-        border: 2px solid var(--accent);
-        aspect-ratio: 1 / 1;
-      }
-      .avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .identity h3 { margin: 0; font-size: 24px; font-family: var(--font-serif); font-weight: 700; color: var(--ink); }
-      .identity p { margin: 6px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
-      .available-label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--accent);
-        font-size: 13px;
-        font-weight: 800;
-        border: 1px solid var(--line);
-        padding: 4px 12px;
-        border-radius: 99px;
-      }
-      .available-label i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-      .divider { height: 1px; margin: 32px 0; background: var(--line); }
-      .info-list { display: grid; gap: 20px; }
-      .info-row { display: flex; align-items: center; gap: 16px; }
-      .info-icon {
-        width: 42px;
-        height: 42px;
-        display: grid;
-        place-items: center;
-        border-radius: var(--radius-sm);
-        background: var(--bg-soft);
-        color: var(--accent);
-        font-size: 16px;
-        border: 1px solid var(--line);
-      }
-      .info-main { flex: 1; min-width: 0; }
-      .info-main small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 2px; }
-      .info-main a, .info-main span { display: block; font-size: 15px; font-weight: 700; color: var(--ink); }
+      /* Contact & Sharing UI Elements */
       .copy-button {
-        border: 0; border-radius: var(--radius-sm); padding: 8px; color: var(--muted); background: transparent; font-size: 18px; transition: 0.2s;
+        border: 0; border-radius: var(--radius-sm); padding: 8px; color: var(--muted); background: transparent; font-size: 18px; transition: 0.2s; cursor: pointer;
       }
       .copy-button:hover { background: var(--accent); color: var(--bg); }
 
-      .card-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
       .small-button {
         display: inline-flex;
         align-items: center;
@@ -665,18 +601,15 @@
         font-size: 13px;
         font-weight: 800;
         transition: 0.2s ease;
+        cursor: pointer;
       }
       .small-button:hover { border-color: var(--accent); color: var(--accent); }
       .small-button.primary { border-color: var(--accent); background: var(--accent); color: var(--bg); }
       .small-button.primary:hover { border-color: var(--ink); background: var(--ink); color: var(--bg); }
 
-      /* QR and Share cards */
-      .side-stack { display: grid; gap: 32px; }
-      .side-panel { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
       .qr-box {
         width: 150px;
         height: 150px;
-        margin: 24px auto;
         padding: 10px;
         border-radius: var(--radius-sm);
         background: white;
@@ -689,7 +622,7 @@
         height: 100%;
         object-fit: contain;
       }
-      .socials { display: flex; gap: 12px; margin-top: 20px; }
+      .socials { display: flex; gap: 12px; }
       .social-button {
         width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; color: white; transition: transform 0.2s, filter 0.2s; font-weight: 700;
       }
@@ -698,45 +631,8 @@
       .facebook { background: #1877f2; }
       .linkedin { background: #0a66c2; }
 
-      /* Capabilities Section */
-      .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
-      .skill-card { padding: 32px; }
-      .skill-card h3 { margin: 0; color: var(--accent); font: 800 13px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-      .skill-items { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
-      .skill-items li { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 15px; font-weight: 700; }
-      .skill-items li::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--secondary); }
       .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
       .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 700; color: var(--muted); background: var(--panel); }
-
-      /* Journey timeline */
-      .timeline { position: relative; display: grid; gap: 32px; margin-top: 48px; }
-      .timeline::before {
-        content: ""; position: absolute; right: 15px; top: 12px; bottom: 12px; width: 1px; background: var(--line);
-      }
-      html[dir="ltr"] .timeline::before {
-        right: auto;
-        left: 15px;
-      }
-      .timeline-item { position: relative; padding-right: 48px; }
-      html[dir="ltr"] .timeline-item {
-        padding-right: 0;
-        padding-left: 48px;
-      }
-      .timeline-dot {
-        position: absolute; right: 4px; top: 14px; width: 24px; height: 24px; border: 4px solid var(--bg); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent);
-      }
-      html[dir="ltr"] .timeline-dot {
-        right: auto;
-        left: 4px;
-      }
-      .timeline-card { padding: 32px; }
-      .timeline-date { color: var(--accent); font: 700 13px var(--font-mono); margin-bottom: 10px; display: block; }
-
-      /* Statistics Grid */
-      .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
-      .stat-card { padding: 36px 24px; text-align: center; }
-      .stat-card-wide { max-width: 420px; margin: auto; }
-      .stat-num { font-size: 3.2rem; font-weight: 700; font-family: var(--font-serif); color: var(--accent); line-height: 1; margin-bottom: 8px; }
 
       /* Selected Work */
       .projects-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
@@ -859,10 +755,9 @@
       @media (max-width: 900px) {
         .main-nav, .header-actions > .outline-button { display: none; }
         .menu-button { display: grid; }
-        .hero, .profile-grid, .contact-grid, .stats-grid { grid-template-columns: 1fr; }
+        .hero, .contact-grid { grid-template-columns: 1fr; }
         .hero-art { min-height: 460px; order: -1; }
         .projects-grid { grid-template-columns: 1fr; }
-        .skills-grid { grid-template-columns: 1fr; }
         .hero { min-height: auto; padding-top: 40px; padding-bottom: 60px; gap: 40px; }
         .hero-copy { order: 2; }
         .hero-art { order: 1; }
@@ -879,12 +774,7 @@
         .art-message { padding: 24px; }
         .floating-note { right: 8px; bottom: -10px; max-width: calc(100% - 16px); }
         html[dir="rtl"] .floating-note { right: auto; left: 8px; }
-        .profile-card, .side-panel, .timeline-card, .project-card, .contact-form { padding: 24px; }
-        .profile-top { align-items: flex-start; flex-direction: column; gap: 16px; }
-        .stats-grid { grid-template-columns: 1fr; gap: 12px; }
-        .stat-card { padding: 24px 16px; }
-        .stat-card-wide { max-width: none; }
-        .stat-num { font-size: 2.2rem; }
+        .project-card, .contact-form { padding: 24px; }
         .form-grid, .case-study-grid { grid-template-columns: 1fr; }
         .modal { padding: 12px; }
         .modal-card { padding: 48px 24px 24px; max-height: calc(100dvh - 24px); }
@@ -1196,85 +1086,6 @@
           </div>
         </div>
 
-        <!-- Live Eissa Card Interactive Panel -->
-        <div class="profile-grid" style="margin-top: 36px;">
-          <article class="panel profile-card">
-            <div class="profile-top">
-              <div class="identity">
-                <div class="avatar">
-                  <img src="1000081078.png" alt="عيسى محمد — EISSA 89" width="80" height="80" loading="lazy" />
-                </div>
-                <div>
-                  <h3 data-i18n="profile.name">عيسى محمد</h3>
-                  <p data-i18n="profile.role">Frontend Developer • Student</p>
-                </div>
-              </div>
-              <div class="available-label"><i></i> <span data-i18n="profile.status">متاح</span></div>
-            </div>
-            <div class="divider"></div>
-
-            <div class="info-list">
-              <div class="info-row">
-                <span class="info-icon">✉</span>
-                <div class="info-main">
-                  <small data-i18n="profile.email_lbl">البريد الإلكتروني</small>
-                  <a href="mailto:ysym7003@gmail.com">ysym7003@gmail.com</a>
-                </div>
-                <button class="copy-button" type="button" data-copy="ysym7003@gmail.com" data-label="البريد" aria-label="نسخ البريد الإلكتروني">⧉</button>
-              </div>
-              <div class="info-row">
-                <span class="info-icon">☎</span>
-                <div class="info-main">
-                  <small data-i18n="profile.phone_lbl">رقم الهاتف</small>
-                  <a href="tel:+201288840809" dir="ltr">01288840809</a>
-                </div>
-                <button class="copy-button" type="button" data-copy="01288840809" data-label="الهاتف" aria-label="نسخ رقم الهاتف">⧉</button>
-              </div>
-              <div class="info-row">
-                <span class="info-icon">⌖</span>
-                <div class="info-main">
-                  <small data-i18n="profile.location_lbl">الموقع</small>
-                  <span data-i18n="profile.location_val">وادي القمر، الإسكندرية، مصر</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-actions">
-              <button class="small-button primary" type="button" id="vcard-button" data-i18n="profile.vcard">
-                ⇩ حفظ جهة الاتصال (.vcf)
-              </button>
-              <button class="small-button" type="button" id="print-button" data-i18n="profile.print">
-                ▣ طباعة
-              </button>
-            </div>
-          </article>
-
-          <div class="side-stack">
-            <article class="panel side-panel">
-              <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
-                <span style="color:var(--lime)">▦</span> <span data-i18n="profile.share">شارك بياناتي</span>
-              </div>
-              <div class="qr-box" id="qr-container">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Feissa-dev%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
-              </div>
-              <p style="margin:0; color:var(--muted); text-align:center; font-size:12px;" data-i18n="profile.qr_desc">
-                امسح الكود بواسطة كاميرا الهاتف لمشاركة جهة الاتصال
-              </p>
-            </article>
-
-            <article class="panel side-panel">
-              <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
-                <span style="color:var(--lime)">⌯</span> <span data-i18n="profile.social">روابط التواصل</span>
-              </div>
-              <div class="socials">
-                <a class="social-button linkedin" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على LinkedIn">in</a>
-                <a class="social-button whatsapp" href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر WhatsApp">◔</a>
-                <a class="social-button facebook" href="https://www.facebook.com/share/16uQ1C3d2y/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على Facebook">f</a>
-                <button class="social-button" style="border:1px solid var(--line);" type="button" data-copy="https://eissa89.github.io/eissa-card/" data-label="رابط الموقع" aria-label="نسخ رابط الموقع">◎</button>
-              </div>
-            </article>
-          </div>
-        </div>
       </section>
 
       <!-- SECTION 06 — MY BIOLOGY EXPERIENCE CASE STUDY -->
@@ -1357,6 +1168,36 @@
             <p class="section-kicker" data-i18n="contact.kicker">GET IN TOUCH — 08</p>
             <h2 class="contact-title" data-i18n="contact.title">لديك<br /><span class="coral">فكرة؟</span></h2>
             <p style="margin-top:20px; font-size:18px;" data-i18n="contact.lede">لنجعلها مفيدة، حقيقية، ومبسطة تعمل بكفاءة عالية.</p>
+
+            <div style="margin-top:28px; display:grid; gap:16px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="color:var(--accent); font-weight:800;">✉</span>
+                <a href="mailto:ysym7003@gmail.com" style="color:var(--ink); font-weight:700;">ysym7003@gmail.com</a>
+                <button class="copy-button" type="button" data-copy="ysym7003@gmail.com" data-label="البريد" aria-label="نسخ البريد الإلكتروني">⧉</button>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="color:var(--accent); font-weight:800;">☎</span>
+                <a href="tel:+201288840809" dir="ltr" style="color:var(--ink); font-weight:700;">01288840809</a>
+                <button class="copy-button" type="button" data-copy="01288840809" data-label="الهاتف" aria-label="نسخ رقم الهاتف">⧉</button>
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+                <button class="small-button primary" type="button" id="vcard-button" data-i18n="profile.vcard">
+                  ⇩ حفظ جهة الاتصال (.vcf)
+                </button>
+                <button class="small-button" type="button" id="resume-open-contact-btn" data-i18n="hero.resume">
+                  السيرة الذاتية (PDF)
+                </button>
+              </div>
+              <div style="display:flex; gap:12px; align-items:center; margin-top:12px;">
+                <a class="social-button linkedin" href="https://www.linkedin.com/in/eissa-dev" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على LinkedIn">in</a>
+                <a class="social-button whatsapp" href="https://wa.me/qr/KZIOEFQDMGOBF1" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر WhatsApp">◔</a>
+                <a class="social-button facebook" href="https://www.facebook.com/share/16uQ1C3d2y/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة على Facebook">f</a>
+                <button class="social-button" style="border:1px solid var(--line);" type="button" data-copy="https://eissa89.github.io/eissa-card/" data-label="رابط الموقع" aria-label="نسخ رابط الموقع">◎</button>
+              </div>
+              <div class="qr-box" id="qr-container" style="margin-top:16px; max-width:180px;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AEissa%20Mohammed%0ATEL%3A%2B201288840809%0AEMAIL%3Aysym7003%40gmail.com%0AURL%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Feissa-dev%0AEND%3AVCARD" alt="رمز QR لجهة الاتصال" width="140" height="140" loading="lazy" />
+              </div>
+            </div>
           </div>
 
           <form class="contact-form" id="contact-form" data-mailto="ysym7003@gmail.com" novalidate>
@@ -1398,7 +1239,7 @@
           <div style="font:700 22px var(--font-serif); color:#f4f0e8;">
             Eissa Mohammed <span class="lime">عيسى محمد</span>
           </div>
-          <div style="font:10px var(--font-mono); margin-top:4px;">FRONT-END / UI / UX / ALEXANDRIA — v4.2.0</div>
+          <div style="font:10px var(--font-mono); margin-top:4px;">FRONTEND DEVELOPER / ALEXANDRIA — v4.2.0</div>
         </div>
         <div style="display:flex; gap:16px;">
           <button type="button" id="privacy-link" class="footer-link" data-i18n="footer.privacy">الخصوصية</button>
@@ -1435,7 +1276,7 @@
             <img src="1000081078.png" alt="عيسى محمد" style="width:64px; height:64px; border-radius:16px; object-fit:cover;" width="64" height="64" />
             <div>
               <h2 id="resume-title" style="margin:0; font-size:24px;" data-i18n="profile.name">عيسى محمد</h2>
-              <p style="color:var(--lime); font-weight:700; margin:2px 0 0;">Front-End Web Developer & UI/UX Designer</p>
+              <p style="color:var(--lime); font-weight:700; margin:2px 0 0;" data-i18n="profile.role_en">Frontend Developer</p>
             </div>
           </div>
           <p style="color:var(--muted); font-size:13px;">ysym7003@gmail.com | +201288840809 | الإسكندرية، مصر</p>
@@ -1715,26 +1556,10 @@
             "form.email_placeholder": "name@example.com",
             "form.subject_placeholder": "كيف يمكنني مساعدتك؟",
             "form.message_placeholder": "اكتب رسالتك هنا...",
-            "cmd.placeholder": "اكتب أمراً أو ابحث...",
             "footer.privacy": "الخصوصية",
             "footer.top": "للأعلى ↗",
             "skip": "تجاوز إلى المحتوى الرئيسي",
-            "profile.kicker": "01 / بطاقة التعريف", "profile.title": "بياناتي،<br /><span class=\"lime\">بوضوح.</span>", "about.kicker": "02 / عني", "about.title": "مطور<br />يفكر<br /><span class=\"coral\">بعين مصمم.</span>", "skills.kicker": "03 / المهارات والقدرات", "skills.title": "الأدوات التي<br /><span class=\"lime\">أصل بها للفكرة.</span>",
-            "process.kicker": "05 / منهجية العمل",
-            "process.title": "كيف أبني",
-            "process.s1": "01 اكتشاف",
-            "process.s1_desc": "فهم المشكلة والهدف الرئيسي.",
-            "process.s2": "02 تحديد",
-            "process.s2_desc": "صياغة المكونات والمتطلبات.",
-            "process.s3": "03 تصميم",
-            "process.s3_desc": "تخطيط النواحي البصرية والتفاعلية.",
-            "process.s4": "04 بناء",
-            "process.s4_desc": "كتابة كود نظيف، سريع ومتجاوب.",
-            "process.s5": "05 اختبار",
-            "process.s5_desc": "التحقق من الوصولية والأداء.",
-            "process.s6": "06 مراجعة",
-            "process.s6_desc": "التبسيط والتحسين بناءً على الواقع.",
-            "experience.kicker": "04 / المسار والخبرات", "experience.title": "رحلة تعلم<br /><span class=\"coral\">مستمرة.</span>", "experience.current": "2024 — الحالي", "experience.previous": "2023 — 2024", "stats.kicker": "05 / الأرقام والإحصائيات", "stats.title": "مؤشرات الأداء<br /><span class=\"lime\">المباشرة.</span>", "projects.kicker": "06 / المشاريع", "projects.title": "أعمال تصنع<br /><span class=\"lime\">فرقاً.</span>", "projects.filter_label": "تصفية المشاريع", "contact.kicker": "07 / تواصل معي", "contact.title": "لديك<br /><span class=\"coral\">فكرة؟</span>", "project.details": "التفاصيل", "project.details_aria": "فتح تفاصيل", "project.open": "فتح المشروع ↗", "project.preview": "معاينة مباشرة ↗", "project.no_preview": "لا توجد معاينة منشورة", "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية بأسلوب منظّم باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "cmd.title": "لوحة الأوامر", "cmd.search_label": "البحث", "cmd.home": "الرئيسية", "cmd.projects": "المشاريع", "cmd.resume": "السيرة الذاتية", "cmd.theme": "تبديل المظهر", "cmd.lang": "تبديل اللغة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
+            "privacy.title": "سياسة الخصوصية", "privacy.body": "يحترم هذا الموقع خصوصيتك ولا يجمع أي بيانات شخصية دون إذنك. يتم استخدام نموذج التواصل فقط لإرسال الاستفسارات المباشرة.", "resume.summary_title": "الملخص المهني", "resume.summary": "مطور واجهات أمامية متخصص في بناء تطبيقات ويب تفاعلية بأسلوب منظّم باستخدام React, TypeScript, HTML5, و CSS3 مع مراعاة معايير سهولة الوصول.", "resume.download": "تحميل PDF حقيقي ⇩", "resume.print": "طباعة", "aria.close": "إغلاق النافذة", "form.invalid_required": "هذا الحقل مطلوب.", "form.invalid_email": "أدخل بريدًا إلكترونيًا صحيحًا.", "form.invalid_summary": "يرجى ملء جميع الحقول المطلوبة.", "toast.email": "سيتم فتح تطبيق البريد الآن...", "toast.vcard": "تم تنزيل جهة الاتصال vCard", "toast.copy_failed": "تعذر النسخ تلقائياً", "toast.pdf": "جاري تجهيز ملف الـ PDF...", "modal.problem": "المشكلة / Problem", "modal.solution": "الحل / Solution", "modal.role": "الدور / Role", "modal.preview": "المعاينة / Preview", "modal.available_later": "ستضاف عند توفر تفاصيل دراسة الحالة.", "modal.link_available": "الرابط متاح أدناه عند توفره."
           },
           en: {
             "nav.home": "HOME",
@@ -1854,14 +1679,9 @@
             "exp.e1_desc": "Building interactive web applications adhering to modern industry standards.",
             "exp.e2_title": "Software Engineering Student",
             "exp.e2_desc": "Focusing on UI development, accessibility, and intuitive visual designs.",
-            "stats.repos": "GitHub Repositories",
-            "stats.stars": "Total Stars",
-            "stats.lighthouse": "Lighthouse Score %",
-            "stats.tools": "Tech Stack Tools",
             "proj.all": "All",
             "proj.web": "Web",
-            "proj.ui": "UI/UX",
-            "contact.lede": "Let's make it impactful, elegant, and unique.",
+            "proj.ui": "UI Engineering",
             "form.name": "Name",
             "form.email": "Email",
             "form.subject": "Subject",
@@ -1871,11 +1691,10 @@
             "form.email_placeholder": "name@example.com",
             "form.subject_placeholder": "How can I help you?",
             "form.message_placeholder": "Write your message here...",
-            "cmd.placeholder": "Type a command or search...",
             "footer.privacy": "Privacy",
             "footer.top": "Back to Top ↗",
             "skip": "Skip to main content",
-            "profile.kicker": "01 / Profile", "profile.title": "My details,<br /><span class=\"lime\">clearly.</span>", "about.kicker": "02 / About", "about.title": "A developer<br />who thinks<br /><span class=\"coral\">like a designer.</span>", "skills.kicker": "03 / Skills & Capabilities", "skills.title": "The tools I<br /><span class=\"lime\">use to shape ideas.</span>", "experience.kicker": "04 / Journey & Experience", "experience.title": "A continuous<br /><span class=\"coral\">learning journey.</span>", "experience.current": "2024 — Present", "experience.previous": "2023 — 2024", "stats.kicker": "05 / Metrics & Statistics", "stats.title": "Live performance<br /><span class=\"lime\">indicators.</span>", "projects.kicker": "06 / Projects", "projects.title": "Work that makes<br /><span class=\"lime\">a difference.</span>", "projects.filter_label": "Project filters", "contact.kicker": "07 / Contact", "contact.title": "Have an<br /><span class=\"coral\">idea?</span>", "project.details": "Details", "project.details_aria": "Open details for", "project.open": "Open project ↗", "project.preview": "Live preview ↗", "project.no_preview": "No published preview", "privacy.title": "Privacy Policy", "privacy.body": "This website respects your privacy and does not collect personal data without your permission. The contact form is used only to send direct inquiries.", "resume.summary_title": "Professional Summary", "resume.summary": "Front-end developer focused on building interactive web applications using React, TypeScript, HTML5, and CSS3, with attention to accessibility.", "resume.download": "Download PDF ⇩", "resume.print": "Print", "cmd.title": "Command Palette", "cmd.search_label": "Search", "cmd.home": "Home", "cmd.projects": "Projects", "cmd.resume": "Resume", "cmd.theme": "Toggle Theme", "cmd.lang": "Switch Language", "aria.close": "Close window", "form.invalid_required": "This field is required.", "form.invalid_email": "Enter a valid email address.", "form.invalid_summary": "Please complete all required fields.", "toast.email": "Opening your email app...", "toast.vcard": "Contact vCard downloaded", "toast.copy_failed": "Automatic copy failed", "toast.pdf": "Preparing the PDF...", "modal.problem": "Problem", "modal.solution": "Solution", "modal.role": "Role", "modal.preview": "Preview", "modal.available_later": "Details will be added when a case study is available.", "modal.link_available": "The link is available below when published."
+            "privacy.title": "Privacy Policy", "privacy.body": "This website respects your privacy and does not collect personal data without your permission. The contact form is used only to send direct inquiries.", "resume.summary_title": "Professional Summary", "resume.summary": "Frontend developer focused on building interactive web applications using React, TypeScript, HTML5, and CSS3, with attention to accessibility.", "resume.download": "Download PDF ⇩", "resume.print": "Print", "aria.close": "Close window", "form.invalid_required": "This field is required.", "form.invalid_email": "Enter a valid email address.", "form.invalid_summary": "Please complete all required fields.", "toast.email": "Opening your email app...", "toast.vcard": "Contact vCard downloaded", "toast.copy_failed": "Automatic copy failed", "toast.pdf": "Preparing the PDF...", "modal.problem": "Problem", "modal.solution": "Solution", "modal.role": "Role", "modal.preview": "Preview", "modal.available_later": "Details will be added when a case study is available.", "modal.link_available": "The link is available below when published."
           }
         };
 
@@ -2070,7 +1889,6 @@
             const key = el.getAttribute("data-i18n-aria-label");
             if (translations[lang][key]) el.setAttribute("aria-label", translations[lang][key]);
           });
-          renderSkills();
           renderProjects(document.querySelector("[data-filter].active")?.dataset.filter || "all");
           updateClock();
         }
@@ -2141,7 +1959,7 @@
           const vcard = [
             "BEGIN:VCARD", "VERSION:3.0",
             "FN:Eissa Mohammed", "N:Mohammed;Eissa;;;",
-            "TITLE:Front-End Web Developer / UI/UX Designer",
+            "TITLE:Frontend Developer",
             "EMAIL;TYPE=INTERNET:ysym7003@gmail.com",
             "TEL;TYPE=CELL:+201288840809",
             "ADR;TYPE=HOME:;;Alexandria;;;Egypt",
@@ -2159,65 +1977,7 @@
           showToast(translations[currentLang]["toast.vcard"]);
         });
 
-        document.getElementById("print-button").addEventListener("click", () => window.print());
-
-        // المهارات: سياق الاستخدام أوضح من نسب تقديرية غير قابلة للتحقق
-        const skills = [
-          { title: "Frontend", items: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"] },
-          { title: "UI / UX", items: ["Interface systems", "Responsive flows", "Prototyping & interaction"] },
-          { title: "Performance", items: ["Accessibility", "Performance budgets", "Responsive & PWA architecture"] },
-          { title: "Tools", items: ["Git & GitHub", "Design tokens", "Testing-minded workflows"] },
-          { title: "Creative Development", items: ["Motion direction", "Immersive web", "Visual storytelling"] }
-        ];
-        const skillTranslations = {
-          ar: { Frontend: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"], "UI / UX": ["أنظمة الواجهات", "تدفقات متجاوبة", "النمذجة والتفاعل"], Performance: ["سهولة الوصول", "ميزانيات الأداء", "بنية Responsive وPWA"], Tools: ["Git & GitHub", "Design tokens", "سير عمل يراعي الاختبار"], "Creative Development": ["توجيه الحركة", "ويب غامر", "السرد البصري"] },
-          en: { Frontend: ["HTML5 / Modern CSS3", "JavaScript (ES2024)", "React / TypeScript"], "UI / UX": ["Interface systems", "Responsive flows", "Prototyping & interaction"], Performance: ["Accessibility", "Performance budgets", "Responsive & PWA architecture"], Tools: ["Git & GitHub", "Design tokens", "Testing-minded workflows"], "Creative Development": ["Motion direction", "Immersive web", "Visual storytelling"] }
-        };
-        const skillTitles = { ar: { Frontend: "الواجهة الأمامية", "UI / UX": "UI / UX", Performance: "الأداء", Tools: "الأدوات", "Creative Development": "التطوير الإبداعي" }, en: { Frontend: "Frontend", "UI / UX": "UI / UX", Performance: "Performance", Tools: "Tools", "Creative Development": "Creative Development" } };
-
-        function renderSkills() {
-          const skillsGrid = document.getElementById("skills-grid");
-          if (!skillsGrid) return;
-
-          const fragment = document.createDocumentFragment();
-          skills.forEach((skill) => {
-            const items = skillTranslations[currentLang][skill.title] || [];
-
-            const article = document.createElement("article");
-            article.className = "panel skill-card";
-
-            const h3 = document.createElement("h3");
-            h3.textContent = skillTitles[currentLang][skill.title] || "";
-
-            const ul = document.createElement("ul");
-            ul.className = "skill-items";
-
-            items.forEach((itemText) => {
-              const li = document.createElement("li");
-              li.textContent = itemText;
-              ul.appendChild(li);
-            });
-
-            article.append(h3, ul);
-            fragment.appendChild(article);
-          });
-
-          skillsGrid.replaceChildren(fragment);
-        }
-        renderSkills();
-
-        const tags = ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Git & GitHub", "PWA", "Accessibility", "UI/UX", "Tailwind CSS"];
-        const tagList = document.getElementById("tag-list");
-        if (tagList) {
-          const tagFragment = document.createDocumentFragment();
-          tags.forEach((t) => {
-            const span = document.createElement("span");
-            span.className = "tag";
-            span.textContent = t;
-            tagFragment.appendChild(span);
-          });
-          tagList.replaceChildren(tagFragment);
-        }
+        document.getElementById("print-button")?.addEventListener("click", () => window.print());
 
         // قائمة المشاريع
         const projects = [
@@ -2422,6 +2182,7 @@
 
         // نافذة السيرة الذاتية PDF
         document.getElementById("resume-open-btn").addEventListener("click", () => openModal("resume-modal"));
+        document.getElementById("resume-open-contact-btn")?.addEventListener("click", () => openModal("resume-modal"));
         document.getElementById("resume-modal-close").addEventListener("click", () => closeModal("resume-modal"));
         document.getElementById("resume-print-btn").addEventListener("click", () => window.print());
 
